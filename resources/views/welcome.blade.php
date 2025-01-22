@@ -1,176 +1,1822 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
 
-        <title>Laravel</title>
+<!-- Mirrored from eduport.webestica.com/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 16 Jan 2025 10:11:18 GMT -->
+<head>
+	<title>Eduport - LMS, Education and Course Theme</title>
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+	<!-- Meta Tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Webestica.com">
+	<meta name="description" content="Eduport- LMS, Education and Course Theme">
 
-        <!-- Styles / Scripts -->
-        @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
-            @vite(['resources/css/app.css', 'resources/js/app.js'])
-        @else
-            <style>
-                /* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,:before,:after{--tw-border-spacing-x: 0;--tw-border-spacing-y: 0;--tw-translate-x: 0;--tw-translate-y: 0;--tw-rotate: 0;--tw-skew-x: 0;--tw-skew-y: 0;--tw-scale-x: 1;--tw-scale-y: 1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness: proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width: 0px;--tw-ring-offset-color: #fff;--tw-ring-color: rgb(59 130 246 / .5);--tw-ring-offset-shadow: 0 0 #0000;--tw-ring-shadow: 0 0 #0000;--tw-shadow: 0 0 #0000;--tw-shadow-colored: 0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x: 0;--tw-border-spacing-y: 0;--tw-translate-x: 0;--tw-translate-y: 0;--tw-rotate: 0;--tw-skew-x: 0;--tw-skew-y: 0;--tw-scale-x: 1;--tw-scale-y: 1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness: proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width: 0px;--tw-ring-offset-color: #fff;--tw-ring-color: rgb(59 130 246 / .5);--tw-ring-offset-shadow: 0 0 #0000;--tw-ring-shadow: 0 0 #0000;--tw-shadow: 0 0 #0000;--tw-shadow-colored: 0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }*,:before,:after{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}:before,:after{--tw-content: ""}html,:host{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:Figtree,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dl,dd,h1,h2,h3,h4,h5,h6,hr,figure,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}ol,ul,menu{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}button,[role=button]{cursor:pointer}:disabled{cursor:default}img,svg,video,canvas,audio,iframe,embed,object{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.absolute{position:absolute}.relative{position:relative}.-bottom-16{bottom:-4rem}.-left-16{left:-4rem}.-left-20{left:-5rem}.top-0{top:0}.z-0{z-index:0}.\!row-span-1{grid-row:span 1 / span 1!important}.-mx-3{margin-left:-.75rem;margin-right:-.75rem}.-ml-px{margin-left:-1px}.ml-3{margin-left:.75rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.flex{display:flex}.inline-flex{display:inline-flex}.table{display:table}.grid{display:grid}.\!hidden{display:none!important}.hidden{display:none}.aspect-video{aspect-ratio:16 / 9}.size-12{width:3rem;height:3rem}.size-5{width:1.25rem;height:1.25rem}.size-6{width:1.5rem;height:1.5rem}.h-12{height:3rem}.h-40{height:10rem}.h-5{height:1.25rem}.h-full{height:100%}.min-h-screen{min-height:100vh}.w-5{width:1.25rem}.w-\[calc\(100\%_\+_8rem\)\]{width:calc(100% + 8rem)}.w-auto{width:auto}.w-full{width:100%}.max-w-2xl{max-width:42rem}.max-w-\[877px\]{max-width:877px}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-default{cursor:default}.resize{resize:both}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.\!flex-row{flex-direction:row!important}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.items-stretch{align-items:stretch}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.justify-items-center{justify-items:center}.gap-2{gap:.5rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.self-center{align-self:center}.overflow-hidden{overflow:hidden}.rounded-\[10px\]{border-radius:10px}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-md{border-radius:.375rem}.rounded-sm{border-radius:.125rem}.rounded-l-md{border-top-left-radius:.375rem;border-bottom-left-radius:.375rem}.rounded-r-md{border-top-right-radius:.375rem;border-bottom-right-radius:.375rem}.border{border-width:1px}.border-gray-300{--tw-border-opacity: 1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1))}.bg-\[\#FF2D20\]\/10{background-color:#ff2d201a}.bg-gray-50{--tw-bg-opacity: 1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity: 1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-gradient-to-b{background-image:linear-gradient(to bottom,var(--tw-gradient-stops))}.from-transparent{--tw-gradient-from: transparent var(--tw-gradient-from-position);--tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);--tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)}.via-white{--tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);--tw-gradient-stops: var(--tw-gradient-from), #fff var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-white{--tw-gradient-to: #fff var(--tw-gradient-to-position)}.to-zinc-900{--tw-gradient-to: #18181b var(--tw-gradient-to-position)}.stroke-\[\#FF2D20\]{stroke:#ff2d20}.object-cover{-o-object-fit:cover;object-fit:cover}.object-top{-o-object-position:top;object-position:top}.p-6{padding:1.5rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-10{padding-top:2.5rem;padding-bottom:2.5rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.pt-3{padding-top:.75rem}.text-center{text-align:center}.font-sans{font-family:Figtree,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji"}.text-sm{font-size:.875rem;line-height:1.25rem}.text-sm\/relaxed{font-size:.875rem;line-height:1.625}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-medium{font-weight:500}.font-semibold{font-weight:600}.leading-5{line-height:1.25rem}.text-black{--tw-text-opacity: 1;color:rgb(0 0 0 / var(--tw-text-opacity, 1))}.text-black\/50{color:#00000080}.text-gray-500{--tw-text-opacity: 1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity: 1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity: 1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.underline{text-decoration-line:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.shadow-\[0px_14px_34px_0px_rgba\(0\,0\,0\,0\.08\)\]{--tw-shadow: 0px 14px 34px 0px rgba(0,0,0,.08);--tw-shadow-colored: 0px 14px 34px 0px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow)}.shadow-sm{--tw-shadow: 0 1px 2px 0 rgb(0 0 0 / .05);--tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow)}.ring-1{--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow, 0 0 #0000)}.ring-black{--tw-ring-opacity: 1;--tw-ring-color: rgb(0 0 0 / var(--tw-ring-opacity, 1))}.ring-gray-300{--tw-ring-opacity: 1;--tw-ring-color: rgb(209 213 219 / var(--tw-ring-opacity, 1))}.ring-transparent{--tw-ring-color: transparent}.ring-white{--tw-ring-opacity: 1;--tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity, 1))}.ring-white\/\[0\.05\]{--tw-ring-color: rgb(255 255 255 / .05)}.drop-shadow-\[0px_4px_34px_rgba\(0\,0\,0\,0\.06\)\]{--tw-drop-shadow: drop-shadow(0px 4px 34px rgba(0,0,0,.06));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.drop-shadow-\[0px_4px_34px_rgba\(0\,0\,0\,0\.25\)\]{--tw-drop-shadow: drop-shadow(0px 4px 34px rgba(0,0,0,.25));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.duration-150{transition-duration:.15s}.duration-300{transition-duration:.3s}.ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.selection\:bg-\[\#FF2D20\] *::-moz-selection{--tw-bg-opacity: 1;background-color:rgb(255 45 32 / var(--tw-bg-opacity, 1))}.selection\:bg-\[\#FF2D20\] *::selection{--tw-bg-opacity: 1;background-color:rgb(255 45 32 / var(--tw-bg-opacity, 1))}.selection\:text-white *::-moz-selection{--tw-text-opacity: 1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.selection\:text-white *::selection{--tw-text-opacity: 1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.selection\:bg-\[\#FF2D20\]::-moz-selection{--tw-bg-opacity: 1;background-color:rgb(255 45 32 / var(--tw-bg-opacity, 1))}.selection\:bg-\[\#FF2D20\]::selection{--tw-bg-opacity: 1;background-color:rgb(255 45 32 / var(--tw-bg-opacity, 1))}.selection\:text-white::-moz-selection{--tw-text-opacity: 1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.selection\:text-white::selection{--tw-text-opacity: 1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:text-black:hover{--tw-text-opacity: 1;color:rgb(0 0 0 / var(--tw-text-opacity, 1))}.hover\:text-black\/70:hover{color:#000000b3}.hover\:text-gray-400:hover{--tw-text-opacity: 1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.hover\:text-gray-500:hover{--tw-text-opacity: 1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.hover\:ring-black\/20:hover{--tw-ring-color: rgb(0 0 0 / .2)}.focus\:z-10:focus{z-index:10}.focus\:border-blue-300:focus{--tw-border-opacity: 1;border-color:rgb(147 197 253 / var(--tw-border-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring:focus{--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow, 0 0 #0000)}.focus-visible\:ring-1:focus-visible{--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow, 0 0 #0000)}.focus-visible\:ring-\[\#FF2D20\]:focus-visible{--tw-ring-opacity: 1;--tw-ring-color: rgb(255 45 32 / var(--tw-ring-opacity, 1))}.active\:bg-gray-100:active{--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.active\:text-gray-500:active{--tw-text-opacity: 1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.active\:text-gray-700:active{--tw-text-opacity: 1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}@media (min-width: 640px){.sm\:flex{display:flex}.sm\:hidden{display:none}.sm\:size-16{width:4rem;height:4rem}.sm\:size-6{width:1.5rem;height:1.5rem}.sm\:flex-1{flex:1 1 0%}.sm\:items-center{align-items:center}.sm\:justify-between{justify-content:space-between}.sm\:pt-5{padding-top:1.25rem}}@media (min-width: 768px){.md\:row-span-3{grid-row:span 3 / span 3}}@media (min-width: 1024px){.lg\:col-start-2{grid-column-start:2}.lg\:h-16{height:4rem}.lg\:max-w-7xl{max-width:80rem}.lg\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.lg\:flex-col{flex-direction:column}.lg\:items-end{align-items:flex-end}.lg\:justify-center{justify-content:center}.lg\:gap-8{gap:2rem}.lg\:p-10{padding:2.5rem}.lg\:pb-10{padding-bottom:2.5rem}.lg\:pt-0{padding-top:0}.lg\:text-\[\#FF2D20\]{--tw-text-opacity: 1;color:rgb(255 45 32 / var(--tw-text-opacity, 1))}}.rtl\:flex-row-reverse:where([dir=rtl],[dir=rtl] *){flex-direction:row-reverse}@media (prefers-color-scheme: dark){.dark\:block{display:block}.dark\:hidden{display:none}.dark\:border-gray-600{--tw-border-opacity: 1;border-color:rgb(75 85 99 / var(--tw-border-opacity, 1))}.dark\:bg-black{--tw-bg-opacity: 1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.dark\:bg-gray-800{--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}.dark\:bg-zinc-900{--tw-bg-opacity: 1;background-color:rgb(24 24 27 / var(--tw-bg-opacity, 1))}.dark\:via-zinc-900{--tw-gradient-to: rgb(24 24 27 / 0) var(--tw-gradient-to-position);--tw-gradient-stops: var(--tw-gradient-from), #18181b var(--tw-gradient-via-position), var(--tw-gradient-to)}.dark\:to-zinc-900{--tw-gradient-to: #18181b var(--tw-gradient-to-position)}.dark\:text-gray-300{--tw-text-opacity: 1;color:rgb(209 213 219 / var(--tw-text-opacity, 1))}.dark\:text-gray-400{--tw-text-opacity: 1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.dark\:text-gray-600{--tw-text-opacity: 1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.dark\:text-white{--tw-text-opacity: 1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.dark\:text-white\/50{color:#ffffff80}.dark\:text-white\/70{color:#ffffffb3}.dark\:ring-zinc-800{--tw-ring-opacity: 1;--tw-ring-color: rgb(39 39 42 / var(--tw-ring-opacity, 1))}.dark\:hover\:text-gray-300:hover{--tw-text-opacity: 1;color:rgb(209 213 219 / var(--tw-text-opacity, 1))}.dark\:hover\:text-white:hover{--tw-text-opacity: 1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.dark\:hover\:text-white\/70:hover{color:#ffffffb3}.dark\:hover\:text-white\/80:hover{color:#fffc}.dark\:hover\:ring-zinc-700:hover{--tw-ring-opacity: 1;--tw-ring-color: rgb(63 63 70 / var(--tw-ring-opacity, 1))}.dark\:focus\:border-blue-700:focus{--tw-border-opacity: 1;border-color:rgb(29 78 216 / var(--tw-border-opacity, 1))}.dark\:focus\:border-blue-800:focus{--tw-border-opacity: 1;border-color:rgb(30 64 175 / var(--tw-border-opacity, 1))}.dark\:focus-visible\:ring-\[\#FF2D20\]:focus-visible{--tw-ring-opacity: 1;--tw-ring-color: rgb(255 45 32 / var(--tw-ring-opacity, 1))}.dark\:focus-visible\:ring-white:focus-visible{--tw-ring-opacity: 1;--tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity, 1))}.dark\:active\:bg-gray-700:active{--tw-bg-opacity: 1;background-color:rgb(55 65 81 / var(--tw-bg-opacity, 1))}.dark\:active\:text-gray-300:active{--tw-text-opacity: 1;color:rgb(209 213 219 / var(--tw-text-opacity, 1))}}
-            </style>
-        @endif
-    </head>
-    <body class="font-sans antialiased dark:bg-black dark:text-white/50">
-        <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
-            <img id="background" class="absolute -left-20 top-0 max-w-[877px]" src="https://laravel.com/assets/img/welcome/background.svg" alt="Laravel background" />
-            <div class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
-                <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
-                    <header class="grid grid-cols-2 items-center gap-2 py-10 lg:grid-cols-3">
-                        <div class="flex lg:justify-center lg:col-start-2">
-                            <svg class="h-12 w-auto text-white lg:h-16 lg:text-[#FF2D20]" viewBox="0 0 62 65" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M61.8548 14.6253C61.8778 14.7102 61.8895 14.7978 61.8897 14.8858V28.5615C61.8898 28.737 61.8434 28.9095 61.7554 29.0614C61.6675 29.2132 61.5409 29.3392 61.3887 29.4265L49.9104 36.0351V49.1337C49.9104 49.4902 49.7209 49.8192 49.4118 49.9987L25.4519 63.7916C25.3971 63.8227 25.3372 63.8427 25.2774 63.8639C25.255 63.8714 25.2338 63.8851 25.2101 63.8913C25.0426 63.9354 24.8666 63.9354 24.6991 63.8913C24.6716 63.8838 24.6467 63.8689 24.6205 63.8589C24.5657 63.8389 24.5084 63.8215 24.456 63.7916L0.501061 49.9987C0.348882 49.9113 0.222437 49.7853 0.134469 49.6334C0.0465019 49.4816 0.000120578 49.3092 0 49.1337L0 8.10652C0 8.01678 0.0124642 7.92953 0.0348998 7.84477C0.0423783 7.8161 0.0598282 7.78993 0.0697995 7.76126C0.0884958 7.70891 0.105946 7.65531 0.133367 7.6067C0.152063 7.5743 0.179485 7.54812 0.20192 7.51821C0.230588 7.47832 0.256763 7.43719 0.290416 7.40229C0.319084 7.37362 0.356476 7.35243 0.388883 7.32751C0.425029 7.29759 0.457436 7.26518 0.498568 7.2415L12.4779 0.345059C12.6296 0.257786 12.8015 0.211853 12.9765 0.211853C13.1515 0.211853 13.3234 0.257786 13.475 0.345059L25.4531 7.2415H25.4556C25.4955 7.26643 25.5292 7.29759 25.5653 7.32626C25.5977 7.35119 25.6339 7.37362 25.6625 7.40104C25.6974 7.43719 25.7224 7.47832 25.7523 7.51821C25.7735 7.54812 25.8021 7.5743 25.8196 7.6067C25.8483 7.65656 25.8645 7.70891 25.8844 7.76126C25.8944 7.78993 25.9118 7.8161 25.9193 7.84602C25.9423 7.93096 25.954 8.01853 25.9542 8.10652V33.7317L35.9355 27.9844V14.8846C35.9355 14.7973 35.948 14.7088 35.9704 14.6253C35.9792 14.5954 35.9954 14.5692 36.0053 14.5405C36.0253 14.4882 36.0427 14.4346 36.0702 14.386C36.0888 14.3536 36.1163 14.3274 36.1375 14.2975C36.1674 14.2576 36.1923 14.2165 36.2272 14.1816C36.2559 14.1529 36.292 14.1317 36.3244 14.1068C36.3618 14.0769 36.3942 14.0445 36.4341 14.0208L48.4147 7.12434C48.5663 7.03694 48.7383 6.99094 48.9133 6.99094C49.0883 6.99094 49.2602 7.03694 49.4118 7.12434L61.3899 14.0208C61.4323 14.0457 61.4647 14.0769 61.5021 14.1055C61.5333 14.1305 61.5694 14.1529 61.5981 14.1803C61.633 14.2165 61.6579 14.2576 61.6878 14.2975C61.7103 14.3274 61.7377 14.3536 61.7551 14.386C61.7838 14.4346 61.8 14.4882 61.8199 14.5405C61.8312 14.5692 61.8474 14.5954 61.8548 14.6253ZM59.893 27.9844V16.6121L55.7013 19.0252L49.9104 22.3593V33.7317L59.8942 27.9844H59.893ZM47.9149 48.5566V37.1768L42.2187 40.4299L25.953 49.7133V61.2003L47.9149 48.5566ZM1.99677 9.83281V48.5566L23.9562 61.199V49.7145L12.4841 43.2219L12.4804 43.2194L12.4754 43.2169C12.4368 43.1945 12.4044 43.1621 12.3682 43.1347C12.3371 43.1097 12.3009 43.0898 12.2735 43.0624L12.271 43.0586C12.2386 43.0275 12.2162 42.9888 12.1887 42.9539C12.1638 42.9203 12.1339 42.8916 12.114 42.8567L12.1127 42.853C12.0903 42.8156 12.0766 42.7707 12.0604 42.7283C12.0442 42.6909 12.023 42.656 12.013 42.6161C12.0005 42.5688 11.998 42.5177 11.9931 42.4691C11.9881 42.4317 11.9781 42.3943 11.9781 42.3569V15.5801L6.18848 12.2446L1.99677 9.83281ZM12.9777 2.36177L2.99764 8.10652L12.9752 13.8513L22.9541 8.10527L12.9752 2.36177H12.9777ZM18.1678 38.2138L23.9574 34.8809V9.83281L19.7657 12.2459L13.9749 15.5801V40.6281L18.1678 38.2138ZM48.9133 9.14105L38.9344 14.8858L48.9133 20.6305L58.8909 14.8846L48.9133 9.14105ZM47.9149 22.3593L42.124 19.0252L37.9323 16.6121V27.9844L43.7219 31.3174L47.9149 33.7317V22.3593ZM24.9533 47.987L39.59 39.631L46.9065 35.4555L36.9352 29.7145L25.4544 36.3242L14.9907 42.3482L24.9533 47.987Z" fill="currentColor"/></svg>
-                        </div>
-                        @if (Route::has('login'))
-                            <nav class="-mx-3 flex flex-1 justify-end">
-                                @auth
-                                    <a
-                                        href="{{ url('/dashboard') }}"
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                    >
-                                        Dashboard
-                                    </a>
-                                @else
-                                    <a
-                                        href="{{ route('login') }}"
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                    >
-                                        Log in
-                                    </a>
+	<!-- Dark mode -->
+	<script>
+		const storedTheme = localStorage.getItem('theme')
 
-                                    @if (Route::has('register'))
-                                        <a
-                                            href="{{ route('register') }}"
-                                            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                        >
-                                            Register
-                                        </a>
-                                    @endif
-                                @endauth
-                            </nav>
-                        @endif
-                    </header>
+		const getPreferredTheme = () => {
+			if (storedTheme) {
+				return storedTheme
+			}
+			return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
+		}
 
-                    <main class="mt-6">
-                        <div class="grid gap-6 lg:grid-cols-2 lg:gap-8">
-                            <a
-                                href="https://laravel.com/docs"
-                                id="docs-card"
-                                class="flex flex-col items-start gap-6 overflow-hidden rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] md:row-span-3 lg:p-10 lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]"
-                            >
-                                <div id="screenshot-container" class="relative flex w-full flex-1 items-stretch">
-                                    <img
-                                        src="https://laravel.com/assets/img/welcome/docs-light.svg"
-                                        alt="Laravel documentation screenshot"
-                                        class="aspect-video h-full w-full flex-1 rounded-[10px] object-top object-cover drop-shadow-[0px_4px_34px_rgba(0,0,0,0.06)] dark:hidden"
-                                        onerror="
-                                            document.getElementById('screenshot-container').classList.add('!hidden');
-                                            document.getElementById('docs-card').classList.add('!row-span-1');
-                                            document.getElementById('docs-card-content').classList.add('!flex-row');
-                                            document.getElementById('background').classList.add('!hidden');
-                                        "
-                                    />
-                                    <img
-                                        src="https://laravel.com/assets/img/welcome/docs-dark.svg"
-                                        alt="Laravel documentation screenshot"
-                                        class="hidden aspect-video h-full w-full flex-1 rounded-[10px] object-top object-cover drop-shadow-[0px_4px_34px_rgba(0,0,0,0.25)] dark:block"
-                                    />
-                                    <div
-                                        class="absolute -bottom-16 -left-16 h-40 w-[calc(100%_+_8rem)] bg-gradient-to-b from-transparent via-white to-white dark:via-zinc-900 dark:to-zinc-900"
-                                    ></div>
-                                </div>
+		const setTheme = function (theme) {
+			if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+				document.documentElement.setAttribute('data-bs-theme', 'dark')
+			} else {
+				document.documentElement.setAttribute('data-bs-theme', theme)
+			}
+		}
 
-                                <div class="relative flex items-center gap-6 lg:items-end">
-                                    <div id="docs-card-content" class="flex items-start gap-6 lg:flex-col">
-                                        <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                            <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path fill="#FF2D20" d="M23 4a1 1 0 0 0-1.447-.894L12.224 7.77a.5.5 0 0 1-.448 0L2.447 3.106A1 1 0 0 0 1 4v13.382a1.99 1.99 0 0 0 1.105 1.79l9.448 4.728c.14.065.293.1.447.1.154-.005.306-.04.447-.105l9.453-4.724a1.99 1.99 0 0 0 1.1-1.789V4ZM3 6.023a.25.25 0 0 1 .362-.223l7.5 3.75a.251.251 0 0 1 .138.223v11.2a.25.25 0 0 1-.362.224l-7.5-3.75a.25.25 0 0 1-.138-.22V6.023Zm18 11.2a.25.25 0 0 1-.138.224l-7.5 3.75a.249.249 0 0 1-.329-.099.249.249 0 0 1-.033-.12V9.772a.251.251 0 0 1 .138-.224l7.5-3.75a.25.25 0 0 1 .362.224v11.2Z"/><path fill="#FF2D20" d="m3.55 1.893 8 4.048a1.008 1.008 0 0 0 .9 0l8-4.048a1 1 0 0 0-.9-1.785l-7.322 3.706a.506.506 0 0 1-.452 0L4.454.108a1 1 0 0 0-.9 1.785H3.55Z"/></svg>
-                                        </div>
+		setTheme(getPreferredTheme())
 
-                                        <div class="pt-3 sm:pt-5 lg:pt-0">
-                                            <h2 class="text-xl font-semibold text-black dark:text-white">Documentation</h2>
+		window.addEventListener('DOMContentLoaded', () => {
+		    var el = document.querySelector('.theme-icon-active');
+			if(el != 'undefined' && el != null) {
+				const showActiveTheme = theme => {
+				const activeThemeIcon = document.querySelector('.theme-icon-active use')
+				const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+				const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
 
-                                            <p class="mt-4 text-sm/relaxed">
-                                                Laravel has wonderful documentation covering every aspect of the framework. Whether you are a newcomer or have prior experience with Laravel, we recommend reading our documentation from beginning to end.
-                                            </p>
-                                        </div>
-                                    </div>
+				document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+					element.classList.remove('active')
+				})
 
-                                    <svg class="size-6 shrink-0 stroke-[#FF2D20]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"/></svg>
-                                </div>
-                            </a>
+				btnToActive.classList.add('active')
+				activeThemeIcon.setAttribute('href', svgOfActiveBtn)
+			}
 
-                            <a
-                                href="https://laracasts.com"
-                                class="flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]"
-                            >
-                                <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                    <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><g fill="#FF2D20"><path d="M24 8.25a.5.5 0 0 0-.5-.5H.5a.5.5 0 0 0-.5.5v12a2.5 2.5 0 0 0 2.5 2.5h19a2.5 2.5 0 0 0 2.5-2.5v-12Zm-7.765 5.868a1.221 1.221 0 0 1 0 2.264l-6.626 2.776A1.153 1.153 0 0 1 8 18.123v-5.746a1.151 1.151 0 0 1 1.609-1.035l6.626 2.776ZM19.564 1.677a.25.25 0 0 0-.177-.427H15.6a.106.106 0 0 0-.072.03l-4.54 4.543a.25.25 0 0 0 .177.427h3.783c.027 0 .054-.01.073-.03l4.543-4.543ZM22.071 1.318a.047.047 0 0 0-.045.013l-4.492 4.492a.249.249 0 0 0 .038.385.25.25 0 0 0 .14.042h5.784a.5.5 0 0 0 .5-.5v-2a2.5 2.5 0 0 0-1.925-2.432ZM13.014 1.677a.25.25 0 0 0-.178-.427H9.101a.106.106 0 0 0-.073.03l-4.54 4.543a.25.25 0 0 0 .177.427H8.4a.106.106 0 0 0 .073-.03l4.54-4.543ZM6.513 1.677a.25.25 0 0 0-.177-.427H2.5A2.5 2.5 0 0 0 0 3.75v2a.5.5 0 0 0 .5.5h1.4a.106.106 0 0 0 .073-.03l4.54-4.543Z"/></g></svg>
-                                </div>
+			window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+				if (storedTheme !== 'light' || storedTheme !== 'dark') {
+					setTheme(getPreferredTheme())
+				}
+			})
 
-                                <div class="pt-3 sm:pt-5">
-                                    <h2 class="text-xl font-semibold text-black dark:text-white">Laracasts</h2>
+			showActiveTheme(getPreferredTheme())
 
-                                    <p class="mt-4 text-sm/relaxed">
-                                        Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                    </p>
-                                </div>
+			document.querySelectorAll('[data-bs-theme-value]')
+				.forEach(toggle => {
+					toggle.addEventListener('click', () => {
+						const theme = toggle.getAttribute('data-bs-theme-value')
+						localStorage.setItem('theme', theme)
+						setTheme(theme)
+						showActiveTheme(theme)
+					})
+				})
 
-                                <svg class="size-6 shrink-0 self-center stroke-[#FF2D20]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"/></svg>
-                            </a>
+			}
+		})
 
-                            <a
-                                href="https://laravel-news.com"
-                                class="flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]"
-                            >
-                                <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                    <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><g fill="#FF2D20"><path d="M8.75 4.5H5.5c-.69 0-1.25.56-1.25 1.25v4.75c0 .69.56 1.25 1.25 1.25h3.25c.69 0 1.25-.56 1.25-1.25V5.75c0-.69-.56-1.25-1.25-1.25Z"/><path d="M24 10a3 3 0 0 0-3-3h-2V2.5a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2V20a3.5 3.5 0 0 0 3.5 3.5h17A3.5 3.5 0 0 0 24 20V10ZM3.5 21.5A1.5 1.5 0 0 1 2 20V3a.5.5 0 0 1 .5-.5h14a.5.5 0 0 1 .5.5v17c0 .295.037.588.11.874a.5.5 0 0 1-.484.625L3.5 21.5ZM22 20a1.5 1.5 0 1 1-3 0V9.5a.5.5 0 0 1 .5-.5H21a1 1 0 0 1 1 1v10Z"/><path d="M12.751 6.047h2a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-2A.75.75 0 0 1 12 7.3v-.5a.75.75 0 0 1 .751-.753ZM12.751 10.047h2a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-2A.75.75 0 0 1 12 11.3v-.5a.75.75 0 0 1 .751-.753ZM4.751 14.047h10a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-10A.75.75 0 0 1 4 15.3v-.5a.75.75 0 0 1 .751-.753ZM4.75 18.047h7.5a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-7.5A.75.75 0 0 1 4 19.3v-.5a.75.75 0 0 1 .75-.753Z"/></g></svg>
-                                </div>
+	</script>
 
-                                <div class="pt-3 sm:pt-5">
-                                    <h2 class="text-xl font-semibold text-black dark:text-white">Laravel News</h2>
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="assets/images/favicon.ico">
 
-                                    <p class="mt-4 text-sm/relaxed">
-                                        Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                    </p>
-                                </div>
+	<!-- Google Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&amp;family=Roboto:wght@400;500;700&amp;display=swap">
 
-                                <svg class="size-6 shrink-0 self-center stroke-[#FF2D20]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"/></svg>
-                            </a>
+	<!-- Plugins CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/tiny-slider/tiny-slider.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/glightbox/css/glightbox.css">
 
-                            <div class="flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]">
-                                <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                    <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                        <g fill="#FF2D20">
-                                            <path
-                                                d="M16.597 12.635a.247.247 0 0 0-.08-.237 2.234 2.234 0 0 1-.769-1.68c.001-.195.03-.39.084-.578a.25.25 0 0 0-.09-.267 8.8 8.8 0 0 0-4.826-1.66.25.25 0 0 0-.268.181 2.5 2.5 0 0 1-2.4 1.824.045.045 0 0 0-.045.037 12.255 12.255 0 0 0-.093 3.86.251.251 0 0 0 .208.214c2.22.366 4.367 1.08 6.362 2.118a.252.252 0 0 0 .32-.079 10.09 10.09 0 0 0 1.597-3.733ZM13.616 17.968a.25.25 0 0 0-.063-.407A19.697 19.697 0 0 0 8.91 15.98a.25.25 0 0 0-.287.325c.151.455.334.898.548 1.328.437.827.981 1.594 1.619 2.28a.249.249 0 0 0 .32.044 29.13 29.13 0 0 0 2.506-1.99ZM6.303 14.105a.25.25 0 0 0 .265-.274 13.048 13.048 0 0 1 .205-4.045.062.062 0 0 0-.022-.07 2.5 2.5 0 0 1-.777-.982.25.25 0 0 0-.271-.149 11 11 0 0 0-5.6 2.815.255.255 0 0 0-.075.163c-.008.135-.02.27-.02.406.002.8.084 1.598.246 2.381a.25.25 0 0 0 .303.193 19.924 19.924 0 0 1 5.746-.438ZM9.228 20.914a.25.25 0 0 0 .1-.393 11.53 11.53 0 0 1-1.5-2.22 12.238 12.238 0 0 1-.91-2.465.248.248 0 0 0-.22-.187 18.876 18.876 0 0 0-5.69.33.249.249 0 0 0-.179.336c.838 2.142 2.272 4 4.132 5.353a.254.254 0 0 0 .15.048c1.41-.01 2.807-.282 4.117-.802ZM18.93 12.957l-.005-.008a.25.25 0 0 0-.268-.082 2.21 2.21 0 0 1-.41.081.25.25 0 0 0-.217.2c-.582 2.66-2.127 5.35-5.75 7.843a.248.248 0 0 0-.09.299.25.25 0 0 0 .065.091 28.703 28.703 0 0 0 2.662 2.12.246.246 0 0 0 .209.037c2.579-.701 4.85-2.242 6.456-4.378a.25.25 0 0 0 .048-.189 13.51 13.51 0 0 0-2.7-6.014ZM5.702 7.058a.254.254 0 0 0 .2-.165A2.488 2.488 0 0 1 7.98 5.245a.093.093 0 0 0 .078-.062 19.734 19.734 0 0 1 3.055-4.74.25.25 0 0 0-.21-.41 12.009 12.009 0 0 0-10.4 8.558.25.25 0 0 0 .373.281 12.912 12.912 0 0 1 4.826-1.814ZM10.773 22.052a.25.25 0 0 0-.28-.046c-.758.356-1.55.635-2.365.833a.25.25 0 0 0-.022.48c1.252.43 2.568.65 3.893.65.1 0 .2 0 .3-.008a.25.25 0 0 0 .147-.444c-.526-.424-1.1-.917-1.673-1.465ZM18.744 8.436a.249.249 0 0 0 .15.228 2.246 2.246 0 0 1 1.352 2.054c0 .337-.08.67-.23.972a.25.25 0 0 0 .042.28l.007.009a15.016 15.016 0 0 1 2.52 4.6.25.25 0 0 0 .37.132.25.25 0 0 0 .096-.114c.623-1.464.944-3.039.945-4.63a12.005 12.005 0 0 0-5.78-10.258.25.25 0 0 0-.373.274c.547 2.109.85 4.274.901 6.453ZM9.61 5.38a.25.25 0 0 0 .08.31c.34.24.616.561.8.935a.25.25 0 0 0 .3.127.631.631 0 0 1 .206-.034c2.054.078 4.036.772 5.69 1.991a.251.251 0 0 0 .267.024c.046-.024.093-.047.141-.067a.25.25 0 0 0 .151-.23A29.98 29.98 0 0 0 15.957.764a.25.25 0 0 0-.16-.164 11.924 11.924 0 0 0-2.21-.518.252.252 0 0 0-.215.076A22.456 22.456 0 0 0 9.61 5.38Z"
-                                            />
-                                        </g>
-                                    </svg>
-                                </div>
+	<!-- Theme CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-                                <div class="pt-3 sm:pt-5">
-                                    <h2 class="text-xl font-semibold text-black dark:text-white">Vibrant Ecosystem</h2>
+</head>
 
-                                    <p class="mt-4 text-sm/relaxed">
-                                        Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white dark:focus-visible:ring-[#FF2D20]">Forge</a>, <a href="https://vapor.laravel.com" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Vapor</a>, <a href="https://nova.laravel.com" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Nova</a>, <a href="https://envoyer.io" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Envoyer</a>, and <a href="https://herd.laravel.com" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Herd</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Echo</a>, <a href="https://laravel.com/docs/horizon" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Telescope</a>, and more.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </main>
+<body>
 
-                    <footer class="py-16 text-center text-sm text-black dark:text-white/70">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
-                    </footer>
-                </div>
-            </div>
-        </div>
-    </body>
+<!-- Header START -->
+<header class="navbar-light navbar-sticky header-static">
+	<!-- Nav START -->
+	<nav class="navbar navbar-expand-xl">
+		<div class="container-fluid px-3 px-xl-5">
+			<!-- Logo START -->
+			<a class="navbar-brand" href="index.html">
+				<img class="light-mode-item navbar-brand-item" src="assets/images/logo.svg" alt="logo">
+				<img class="dark-mode-item navbar-brand-item" src="assets/images/logo-light.svg" alt="logo">
+			</a>
+			<!-- Logo END -->
+
+			<!-- Responsive navbar toggler -->
+			<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-animation">
+					<span></span>
+					<span></span>
+					<span></span>
+				</span>
+			</button>
+
+			<!-- Main navbar START -->
+			<div class="navbar-collapse w-100 collapse" id="navbarCollapse">
+
+				<!-- Nav category menu START -->
+				<ul class="navbar-nav navbar-nav-scroll me-auto">
+					<!-- Nav item 1 Demos -->
+					<li class="nav-item dropdown dropdown-menu-shadow-stacked">
+						<a class="nav-link bg-primary bg-opacity-10 rounded-3 text-primary px-3 py-3 py-xl-0" href="#" id="categoryMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="bi bi-ui-radios-grid me-2"></i><span>Category</span></a>
+						<ul class="dropdown-menu" aria-labelledby="categoryMenu">
+
+							<!-- Dropdown submenu -->
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-toggle" href="#">Development</a>
+								<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+									<!-- dropdown submenu open right -->
+									<li class="dropdown-submenu dropend">
+										<a class="dropdown-item dropdown-toggle" href="#">Web Development</a>
+										<ul class="dropdown-menu" data-bs-popper="none">
+											<li> <a class="dropdown-item" href="#">CSS</a> </li>
+											<li> <a class="dropdown-item" href="#">JavaScript</a> </li>
+											<li> <a class="dropdown-item" href="#">Angular</a> </li>
+											<li> <a class="dropdown-item" href="#">PHP</a> </li>
+											<li> <a class="dropdown-item" href="#">HTML</a> </li>
+											<li> <a class="dropdown-item" href="#">React</a> </li>
+										</ul>
+									</li>
+									<li> <a class="dropdown-item" href="#">Data Science</a> </li>
+									<li> <a class="dropdown-item" href="#">Mobile Development</a> </li>
+									<li> <a class="dropdown-item" href="#">Programing Language</a> </li>
+									<li> <a class="dropdown-item" href="#">Software Testing</a> </li>
+									<li> <a class="dropdown-item" href="#">Software Engineering</a> </li>
+									<li> <a class="dropdown-item" href="#">Software Development Tools</a> </li>
+								</ul>
+							</li>
+							<li> <a class="dropdown-item" href="#">Design</a></li>
+							<!-- Dropdown submenu -->
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-toggle" href="#">Marketing</a>
+								<div class="dropdown-menu dropdown-menu-start dropdown-width-lg" data-bs-popper="none">
+									<div class="row p-4">
+										<!-- Dropdown column item -->
+										<div class="col-xl-6 col-xxl-4 mb-4 mb-xl-0">
+											<h6 class="mb-0">Get started</h6>
+											<hr> <!-- Divider -->
+											<ul class="list-unstyled">
+												<li> <a class="dropdown-item" href="#">Market Research</a> </li>
+												<li> <a class="dropdown-item" href="#">Advertising</a> </li>
+												<li> <a class="dropdown-item" href="#">Consumer Behavior</a> </li>
+												<li> <a class="dropdown-item" href="#">Digital Marketing</a> </li>
+												<li> <a class="dropdown-item" href="#">Marketing Ethics</a> </li>
+												<li> <a class="dropdown-item" href="#">Social Media Marketing</a> </li>
+												<li> <a class="dropdown-item" href="#">Public Relations</a> </li>
+												<li> <a class="dropdown-item" href="#">Advertising</a> </li>
+												<li> <a class="dropdown-item" href="#">Decision Science</a> </li>
+												<li> <a class="dropdown-item" href="#">SEO</a> </li>
+												<li> <a class="dropdown-item" href="#">Business Marketing</a> </li>
+											</ul>
+										</div>
+
+										<!-- Dropdown column item -->
+										<div class="col-xl-6 col-xxl-4 mb-4 mb-xl-0">
+											<h6 class="mb-0">Degree</h6>
+											<hr> <!-- Divider -->
+											<!-- Dropdown item -->
+											<div class="d-flex mb-4 position-relative">
+												<img src="assets/images/client/uni-logo-01.svg" class="icon-md" alt="">
+												<div class="ms-3">
+													<a class="stretched-link h6 mb-0" href="#">American Century University, New Mexico</a>
+													<p class="mb-0 small">Bachelor of computer science</p>
+												</div>
+											</div>
+											<!-- Dropdown item -->
+											<div class="d-flex mb-4 position-relative">
+												<img src="assets/images/client/uni-logo-02.svg" class="icon-md" alt="">
+												<div class="ms-3">
+													<a class="stretched-link h6 mb-0" href="#">Indiana College of - Bloomington</a>
+													<p class="mb-0 small">Masters of computer science</p>
+												</div>
+											</div>
+											<!-- Dropdown item -->
+											<div class="d-flex mb-4 position-relative">
+												<img src="assets/images/client/uni-logo-03.svg" class="icon-md" alt="">
+												<div class="ms-3">
+													<a class="stretched-link h6 mb-0" href="#">College of South Florida</a>
+													<p class="mb-0 small">Medical science college</p>
+												</div>
+											</div>
+											<!-- Dropdown item -->
+											<div class="d-flex mb-4 position-relative">
+												<img src="assets/images/client/uni-logo-01.svg" class="icon-md" alt="">
+												<div class="ms-3">
+													<a class="stretched-link h6 mb-0" href="#">Andeerson Campus</a>
+													<p class="mb-0 small">Bachelor of computer science</p>
+												</div>
+											</div>
+											<!-- Dropdown item -->
+											<div class="d-flex position-relative">
+												<img src="assets/images/client/uni-logo-04.svg" class="icon-md" alt="">
+												<div class="ms-3">
+													<a class="stretched-link h6 mb-0" href="#">University of South California</a>
+													<p class="mb-0 small">Masters of business development</p>
+												</div>
+											</div>
+										</div>
+
+										<!-- Dropdown column item -->
+										<div class="col-xl-6 col-xxl-4">
+											<h6 class="mb-0">Certificate</h6>
+											<hr> <!-- Divider -->
+											<!-- Dropdown item -->
+											<div class="d-flex mb-4 position-relative">
+												<h2 class="mb-0"><i class="fab fa-fw fa-google text-google-icon"></i></h2>
+												<div class="ms-2">
+													<a class="stretched-link h6 mb-0" href="#">Google SEO certificate</a>
+													<p class="mb-0 small">No prerequisites</p>
+												</div>
+											</div>
+											<!-- Dropdown item -->
+											<div class="d-flex mb-4 position-relative">
+												<h2 class="mb-0"><i class="fab fa-fw fa-linkedin-in text-linkedin"></i></h2>
+												<div class="ms-2">
+													<a class="stretched-link h6 mb-0" href="#">Business Development Executive(BDE)</a>
+													<p class="mb-0 small">No prerequisites</p>
+												</div>
+											</div>
+											<!-- Dropdown item -->
+											<div class="d-flex mb-4 position-relative">
+												<h2 class="mb-0"><i class="fab fa-fw fa-facebook text-facebook"></i></h2>
+												<div class="ms-2">
+													<a class="stretched-link h6 mb-0" href="#">Facebook social media marketing</a>
+													<p class="mb-0 small">Expert advice</p>
+												</div>
+											</div>
+											<!-- Dropdown item -->
+											<div class="d-flex mb-4 position-relative">
+												<h2 class="mb-0"><i class="fas fa-fw fa-basketball-ball text-dribbble"></i></h2>
+												<div class="ms-2">
+													<a class="stretched-link h6 mb-0" href="#">Creative graphics design</a>
+													<p class="mb-0 small">No prerequisites</p>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!-- Advertisement -->
+									<div class="row">
+										<div class="col-12">
+											<div class="card bg-blue rounded-0 rounded-bottom p-3 position-relative overflow-hidden" style="background:url(assets/images/pattern/05.png) no-repeat center center; background-size:cover;">
+												<!-- SVG decoration -->
+												<figure class="position-absolute bottom-0 end-0 mb-n4 d-none d-md-block">
+													<svg width="92.6px" height="135.2px">
+														<path class="fill-white" d="M71.5,131.4c0.2,0.1,0.4,0.1,0.6-0.1c0,0,0.6-0.7,1.6-1.9c0.2-0.2,0.1-0.5-0.1-0.7c-0.2-0.2-0.5-0.1-0.7,0.1 c-1,1.2-1.6,1.8-1.6,1.8c-0.2,0.2-0.2,0.5,0,0.7C71.4,131.3,71.4,131.4,71.5,131.4z"></path>
+														<path class="fill-white" d="M76,125.5c-0.2-0.2-0.3-0.5-0.1-0.7c1-1.4,1.9-2.8,2.8-4.2c0.1-0.2,0.4-0.3,0.7-0.2c0.2,0.1,0.3,0.4,0.2,0.7 c-0.9,1.4-1.8,2.9-2.8,4.2C76.6,125.6,76.3,125.6,76,125.5C76.1,125.5,76.1,125.5,76,125.5z M81.4,116.9 c-0.2-0.1-0.3-0.4-0.2-0.7c0.2-0.5,0.5-0.9,0.7-1.4c0.5-1.1,1-2.1,1.5-3.2c0.1-0.3,0.4-0.4,0.6-0.3c0.3,0.1,0.4,0.4,0.3,0.6 c-0.5,1.1-1,2.1-1.5,3.2c-0.2,0.5-0.5,0.9-0.7,1.4C81.9,117,81.6,117,81.4,116.9C81.4,116.9,81.4,116.9,81.4,116.9z M85.1,107.1 c0.5-1.6,1-3.2,1.3-4.8c0.1-0.3,0.3-0.4,0.6-0.4c0.3,0.1,0.4,0.3,0.4,0.6c-0.4,1.6-0.8,3.3-1.3,4.9c-0.1,0.3-0.4,0.4-0.6,0.3 c0,0,0,0-0.1,0C85.1,107.6,85,107.3,85.1,107.1z M47.3,83c-1.5-1.1-2.5-2.5-3.1-4.2c-0.1-0.3,0-0.5,0.3-0.6 c0.3-0.1,0.5,0,0.6,0.3c0.5,1.5,1.5,2.7,2.8,3.7c0.2,0.2,0.3,0.5,0.1,0.7C47.9,83.1,47.6,83.1,47.3,83C47.4,83,47.4,83,47.3,83z  M51.7,84.6c0-0.3,0.3-0.5,0.5-0.4c1.4,0.2,2.9-0.3,4.3-1.4c0.2-0.2,0.5-0.1,0.7,0.1c0.2,0.2,0.1,0.5-0.1,0.7 c-1.6,1.2-3.4,1.8-5,1.6c-0.1,0-0.1,0-0.2,0C51.8,85,51.7,84.8,51.7,84.6z M87.2,97.4c0.2-1.7,0.2-3.3,0.2-5 c0-0.3,0.2-0.5,0.5-0.5c0.3,0,0.5,0.2,0.5,0.5c0.1,1.7,0,3.4-0.2,5.1c0,0.3-0.3,0.5-0.5,0.4c-0.1,0-0.1,0-0.2,0 C87.3,97.8,87.1,97.6,87.2,97.4z M43.7,73.6c0.2-1.6,0.7-3.2,1.5-4.8l0.1-0.1c0.1-0.2,0.4-0.3,0.7-0.2c0,0,0,0,0,0 c0.2,0.1,0.3,0.4,0.2,0.7l-0.1,0.1c-0.7,1.5-1.2,3-1.4,4.5c0,0.3-0.3,0.5-0.6,0.4c-0.1,0-0.1,0-0.2,0 C43.8,74,43.7,73.8,43.7,73.6z M60,79.8c-0.2-0.1-0.3-0.5-0.1-0.7c0.4-0.6,0.8-1.3,1.1-2c0.4-0.8,0.7-1.6,1-2.4 c0.1-0.3,0.4-0.4,0.6-0.3c0.3,0.1,0.4,0.4,0.3,0.6c-0.3,0.9-0.7,1.7-1.1,2.5c-0.4,0.7-0.8,1.4-1.2,2.1C60.5,79.9,60.2,80,60,79.8 C60,79.9,60,79.8,60,79.8z M86.8,87.5c-0.3-1.6-0.7-3.2-1.2-4.8c-0.1-0.3,0.1-0.5,0.3-0.6c0.3-0.1,0.5,0.1,0.6,0.3 c0.5,1.6,1,3.3,1.2,4.9c0,0.3-0.1,0.5-0.4,0.6c-0.1,0-0.2,0-0.3,0C87,87.7,86.9,87.6,86.8,87.5z M48.2,65.1 c-0.2-0.2-0.2-0.5,0-0.7c1.2-1.3,2.5-2.4,3.9-3.4c0.2-0.1,0.5-0.1,0.7,0.1c0.1,0.2,0.1,0.5-0.1,0.7c-1.4,0.9-2.6,2-3.7,3.2 c-0.2,0.2-0.4,0.2-0.6,0.1C48.3,65.2,48.3,65.1,48.2,65.1z M63.3,70c0.3-1.6,0.5-3.3,0.5-4.9c0-0.3,0.2-0.5,0.5-0.5 c0.3,0,0.5,0.2,0.5,0.5c-0.1,1.7-0.2,3.4-0.5,5.1c0,0.3-0.3,0.4-0.6,0.4c0,0-0.1,0-0.1,0C63.3,70.4,63.2,70.2,63.3,70z M83.8,78 c-0.7-1.5-1.5-3-2.4-4.3c-0.1-0.2-0.1-0.5,0.1-0.7c0.2-0.1,0.5-0.1,0.7,0.2c0.9,1.4,1.7,2.9,2.5,4.4c0.1,0.2,0,0.5-0.2,0.7 c-0.1,0.1-0.3,0.1-0.4,0C83.9,78.2,83.8,78.1,83.8,78z M56.5,59.6c-0.1-0.3,0.1-0.5,0.4-0.6c1.7-0.4,3.4-0.5,5.2-0.3 c0.3,0,0.5,0.3,0.4,0.5c0,0.3-0.3,0.5-0.5,0.4c-1.7-0.2-3.3-0.1-4.8,0.3c-0.1,0-0.2,0-0.3,0C56.6,59.8,56.5,59.7,56.5,59.6z  M78.4,69.7c-1.1-1.3-2.2-2.5-3.4-3.6c-0.2-0.2-0.2-0.5,0-0.7c0.2-0.2,0.5-0.2,0.7,0c1.2,1.1,2.4,2.4,3.5,3.7 c0.2,0.2,0.1,0.5-0.1,0.7c-0.2,0.1-0.4,0.1-0.5,0.1C78.5,69.8,78.4,69.7,78.4,69.7z M63.6,60.1c-0.2-1.6-0.4-3.3-0.8-4.9 c-0.1-0.3,0.1-0.5,0.4-0.6c0.3-0.1,0.5,0.1,0.6,0.4c0.4,1.7,0.7,3.4,0.8,5c0,0.3-0.2,0.5-0.4,0.5c-0.1,0-0.2,0-0.3,0 C63.7,60.4,63.6,60.2,63.6,60.1z M71,63.1c-1.4-0.9-2.9-1.7-4.4-2.3c-0.3-0.1-0.4-0.4-0.3-0.6c0.1-0.3,0.4-0.4,0.6-0.3 c1.5,0.6,3.1,1.4,4.6,2.3c0.2,0.1,0.3,0.5,0.1,0.7C71.6,63.1,71.3,63.2,71,63.1C71.1,63.1,71.1,63.1,71,63.1z M61.3,50.4 c-0.6-1.5-1.3-3-2.1-4.5c-0.1-0.2-0.1-0.5,0.2-0.7c0.2-0.1,0.5-0.1,0.7,0.2c0.9,1.5,1.6,3.1,2.2,4.6c0.1,0.3,0,0.5-0.3,0.6 c-0.1,0.1-0.3,0-0.4,0C61.5,50.6,61.4,50.5,61.3,50.4z M56.5,41.8c-1-1.3-2.1-2.6-3.2-3.8c-0.2-0.2-0.2-0.5,0-0.7 c0.2-0.2,0.5-0.2,0.7,0c1.2,1.3,2.3,2.6,3.3,3.9c0.2,0.2,0.1,0.5-0.1,0.7c-0.2,0.1-0.4,0.1-0.5,0C56.6,41.9,56.5,41.8,56.5,41.8z  M49.7,34.5c-1.2-1.1-2.5-2.1-3.9-3.2c-0.2-0.2-0.3-0.5-0.1-0.7c0.2-0.2,0.5-0.3,0.7-0.1c1.4,1,2.7,2.1,3.9,3.2 c0.2,0.2,0.2,0.5,0,0.7c-0.2,0.2-0.4,0.2-0.6,0.1C49.7,34.6,49.7,34.5,49.7,34.5z M41.7,28.5c-1.4-0.9-2.8-1.8-4.3-2.6 c-0.2-0.1-0.3-0.4-0.2-0.7c0.1-0.2,0.4-0.3,0.7-0.2c1.5,0.8,2.9,1.7,4.3,2.6c0.2,0.1,0.3,0.5,0.1,0.7 C42.2,28.6,42,28.6,41.7,28.5C41.7,28.5,41.7,28.5,41.7,28.5z"></path>
+														<path class="fill-white" d="M30.7,22.6C30.7,22.6,30.7,22.6,30.7,22.6c0,0,0.9,0.4,2.3,1c0.2,0.1,0.5,0,0.7-0.2c0.1-0.2,0-0.5-0.2-0.7 c0,0,0,0,0,0c-1.4-0.7-2.2-1-2.3-1c-0.3-0.1-0.5,0-0.6,0.3C30.3,22.2,30.4,22.5,30.7,22.6z"></path>
+														<path class="fill-warning" d="M22.6,23.6l-1.1-4.1c0,0-11.7-7.5-11.9-7.6c-0.1-0.2-4.9-6.5-4.9-6.5l8.2,3.5l12.2,8.4L22.6,23.6z"></path>
+														<polygon class="fill-warning opacity-6" points="31.2,12.3 4.7,5.4 25.1,17.2"></polygon>
+														<polygon class="fill-warning opacity-6" points="21.5,19.5 15,24.8 4.7,5.4 "></polygon>
+													</svg>
+												</figure>
+												<!-- Body -->
+												<div class="card-body">
+													<!-- Title -->
+													<h5 class="card-title text-white mb-2">Access 25K Online courses from 120 institutions, Start today!</h5>
+													<p class="text-white text-opacity-75">Here is the description of premium features which will allow users to get benefits and save a lot of money</p>
+													<!-- Button -->
+													<a href="#" class="btn btn-sm btn-dark mb-0">Purchase Premium</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li> <a class="dropdown-item" href="#">Music</a></li>
+							<li> <a class="dropdown-item" href="#">Lifestyle</a></li>
+							<li> <a class="dropdown-item" href="#">IT & software</a></li>
+							<li> <a class="dropdown-item" href="#">Personal development</a></li>
+							<li> <a class="dropdown-item" href="#">Health & fitness</a></li>
+							<li> <a class="dropdown-item" href="#">Teaching</a></li>
+							<li> <a class="dropdown-item" href="#">Social science</a></li>
+							<li> <a class="dropdown-item" href="#">Math & logic</a></li>
+							<li> <hr class="dropdown-divider"></li>
+							<li> <a class="dropdown-item bg-primary text-primary bg-opacity-10 rounded-2 mb-0" href="#">View all categories</a></li>
+						</ul>
+					</li>
+				</ul>
+				<!-- Nav category menu END -->
+
+				<!-- Nav Main menu START -->
+				<ul class="navbar-nav navbar-nav-scroll me-auto">
+					<!-- Nav item 1 Demos -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle active" href="#" id="demoMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Demos</a>
+						<ul class="dropdown-menu" aria-labelledby="demoMenu">
+							<li> <a class="dropdown-item active" href="index.html">Home Default</a></li>
+							<li> <a class="dropdown-item" href="index-2.html">Home Education</a></li>
+							<li> <a class="dropdown-item" href="index-3.html">Home Academy</a></li>
+							<li> <a class="dropdown-item" href="index-4.html">Home Course</a></li>
+							<li> <a class="dropdown-item" href="index-5.html">Home University</a></li>
+							<li> <a class="dropdown-item" href="index-6.html">Home Kindergarten</a></li>
+							<li> <a class="dropdown-item" href="index-7.html">Home Landing</a></li>
+							<li> <a class="dropdown-item" href="index-8.html">Home Tutor</a></li>
+							<li> <a class="dropdown-item" href="index-9.html">Home School</a><li>
+							<li> <a class="dropdown-item" href="index-10.html">Home Abroad</a></li>
+							<li> <a class="dropdown-item" href="index-11.html">Home Workshop</a></li>
+						</ul>
+					</li>
+
+					<!-- Nav item 2 Pages -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="pagesMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+						<ul class="dropdown-menu" aria-labelledby="pagesMenu">
+							<!-- Dropdown submenu -->
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-toggle" href="#">Course</a>
+								<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+									<li> <a class="dropdown-item" href="course-categories.html">Course Categories</a></li>
+									<li> <hr class="dropdown-divider"></li>
+									<li> <a class="dropdown-item" href="course-grid.html">Course Grid Classic</a></li>
+									<li> <a class="dropdown-item" href="course-grid-2.html">Course Grid Minimal</a></li>
+									<li> <hr class="dropdown-divider"></li>
+									<li> <a class="dropdown-item" href="course-list.html">Course List Classic</a></li>
+									<li> <a class="dropdown-item" href="course-list-2.html">Course List Minimal</a></li>
+									<li> <hr class="dropdown-divider"></li>
+									<li> <a class="dropdown-item" href="course-detail.html">Course Detail Classic</a></li>
+									<li> <a class="dropdown-item" href="course-detail-min.html">Course Detail Minimal</a></li>
+									<li> <a class="dropdown-item" href="course-detail-adv.html">Course Detail Advance</a></li>
+									<li> <a class="dropdown-item" href="course-detail-module.html">Course Detail Module</a></li>
+									<li> <a class="dropdown-item" href="course-video-player.html">Course Full Screen Video</a></li>
+								</ul>
+							</li>
+
+							<!-- Dropdown submenu -->
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-toggle" href="#">About</a>
+								<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+									<li> <a class="dropdown-item" href="about.html">About Us</a></li>
+									<li> <a class="dropdown-item" href="contact-us.html">Contact Us</a></li>
+									<li> <a class="dropdown-item" href="blog-grid.html">Blog Grid</a></li>
+									<li> <a class="dropdown-item" href="blog-masonry.html">Blog Masonry</a></li>
+									<li> <a class="dropdown-item" href="blog-detail.html">Blog Detail</a></li>
+									<li> <a class="dropdown-item" href="pricing.html">Pricing</a></li>
+								</ul>
+							</li>
+
+							<!-- Dropdown submenu -->
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-toggle" href="#">Hero Banner</a>
+								<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+									<li> <a class="dropdown-item" href="docs/snippet-hero-12.html">Hero Form</a></li>
+									<li> <a class="dropdown-item" href="docs/snippet-hero-13.html">Hero Vector</a></li>
+									<li> <p class="dropdown-item mb-0">Coming soon....</p></li>
+								</ul>
+							</li>
+
+							<li> <a class="dropdown-item" href="instructor-list.html">Instructor List</a></li>
+							<li> <a class="dropdown-item" href="instructor-single.html">Instructor Single</a></li>
+							<li> <a class="dropdown-item" href="become-instructor.html">Become an Instructor</a></li>
+							<li> <a class="dropdown-item" href="abroad-single.html">Abroad Single</a></li>
+							<li> <a class="dropdown-item" href="workshop-detail.html">Workshop Detail</a></li>
+							<li> <a class="dropdown-item" href="event-detail.html">Event Detail</a></li>
+
+							<!-- Dropdown submenu -->
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-toggle" href="#">Shop</a>
+								<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+									<li> <a class="dropdown-item" href="shop.html">Shop grid</a></li>
+									<li> <a class="dropdown-item" href="shop-product-detail.html">Product detail</a></li>
+									<li> <a class="dropdown-item" href="cart.html">Cart</a></li>
+									<li> <a class="dropdown-item" href="checkout.html">Checkout</a></li>
+									<li> <a class="dropdown-item" href="empty-cart.html">Empty Cart</a></li>
+									<li> <a class="dropdown-item" href="wishlist.html">Wishlist</a></li>
+								</ul>
+							</li>
+
+							<!-- Dropdown submenu -->
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-toggle" href="#">Help</a>
+								<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+									<li> <a class="dropdown-item" href="help-center.html">Help Center</a></li>
+									<li> <a class="dropdown-item" href="help-center-detail.html">Help Center Single</a></li>
+									<li> <a class="dropdown-item" href="faq.html">FAQs</a></li>
+								</ul>
+							</li>
+
+							<!-- Dropdown submenu -->
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-toggle" href="#">Authentication</a>
+								<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+									<li> <a class="dropdown-item" href="sign-in.html">Sign In</a></li>
+									<li> <a class="dropdown-item" href="sign-up.html">Sign Up</a></li>
+									<li> <a class="dropdown-item" href="forgot-password.html">Forgot Password</a></li>
+								</ul>
+							</li>
+
+							<!-- Dropdown submenu -->
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-toggle" href="#">Form</a>
+								<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+									<li> <a class="dropdown-item" href="request-demo.html">Request a demo</a></li>
+									<li> <a class="dropdown-item" href="book-class.html">Book a Class</a></li>
+									<li> <a class="dropdown-item" href="request-access.html">Free Access</a></li>
+									<li> <a class="dropdown-item" href="university-admission-form.html">Admission Form</a></li>
+								</ul>
+							</li>
+
+							<!-- Dropdown submenu -->
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-toggle" href="#">Specialty</a>
+								<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+									<li> <a class="dropdown-item" href="error-404.html">Error 404</a></li>
+									<li> <a class="dropdown-item" href="coming-soon.html">Coming Soon</a></li>
+								</ul>
+							</li>
+
+						</ul>
+					</li>
+
+					<!-- Nav item 3 Account -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="accounntMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Accounts</a>
+						<ul class="dropdown-menu" aria-labelledby="accounntMenu">
+							<!-- Dropdown submenu -->
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-toggle" href="#"><i class="fas fa-user-tie fa-fw me-1"></i>Instructor</a>
+								<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+									<li> <a class="dropdown-item" href="instructor-dashboard.html"><i class="bi bi-grid-fill fa-fw me-1"></i>Dashboard</a> </li>
+									<li> <a class="dropdown-item" href="instructor-manage-course.html"><i class="bi bi-basket-fill fa-fw me-1"></i>Courses</a> </li>
+									<li> <a class="dropdown-item" href="instructor-create-course.html"><i class="bi bi-file-earmark-plus-fill fa-fw me-1"></i>Create Course</a> </li>
+									<li> <a class="dropdown-item" href="course-added.html"><i class="bi bi-file-check-fill fa-fw me-1"></i>Course Added</a> </li>
+									<li> <a class="dropdown-item" href="instructor-quiz.html"><i class="bi bi-question-diamond fa-fw me-1"></i>Quiz</a> </li>
+									<li> <a class="dropdown-item" href="instructor-earning.html"><i class="fas fa-chart-line fa-fw me-1"></i>Earnings</a> </li>
+									<li> <a class="dropdown-item" href="instructor-studentlist.html"><i class="fas fa-user-graduate fa-fw me-1"></i>Students</a> </li>
+									<li> <a class="dropdown-item" href="instructor-order.html"><i class="bi bi-cart-check-fill fa-fw me-1"></i>Orders</a> </li>
+									<li> <a class="dropdown-item" href="instructor-review.html"><i class="bi bi-star-fill fa-fw me-1"></i>Reviews</a> </li>
+									<li> <a class="dropdown-item" href="instructor-payout.html"><i class="fas fa-wallet fa-fw me-1"></i>Payout</a> </li>
+								</ul>
+							</li>
+
+							<!-- Dropdown submenu -->
+								<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-toggle" href="#"><i class="fas fa-user-graduate fa-fw me-1"></i>Student</a>
+								<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+									<li> <a class="dropdown-item" href="student-dashboard.html"><i class="bi bi-grid-fill fa-fw me-1"></i>Dashboard</a> </li>
+									<li> <a class="dropdown-item" href="student-subscription.html"><i class="bi bi-card-checklist fa-fw me-1"></i>My Subscriptions</a> </li>
+									<li> <a class="dropdown-item" href="student-course-list.html"><i class="bi bi-basket-fill fa-fw me-1"></i>Courses</a> </li>
+									<li> <a class="dropdown-item" href="student-course-resume.html"><i class="far fa-fw fa-file-alt me-1"></i>Course Resume</a> </li>
+									<li> <a class="dropdown-item" href="student-quiz.html"><i class="bi bi-question-diamond fa-fw me-1"></i>Quiz </a> </li>
+									<li> <a class="dropdown-item" href="student-payment-info.html"><i class="bi bi-credit-card-2-front-fill fa-fw me-1"></i>Payment Info</a> </li>
+									<li> <a class="dropdown-item" href="student-bookmark.html"><i class="fas bi-cart-check-fill fa-fw me-1"></i>Wishlist</a> </li>
+								</ul>
+							</li>
+
+							<li> <a class="dropdown-item" href="admin-dashboard.html"><i class="fas fa-user-cog fa-fw me-1"></i>Admin</a> </li>
+							<li> <hr class="dropdown-divider"></li>
+							<li> <a class="dropdown-item" href="instructor-edit-profile.html"><i class="fas fa-fw fa-edit me-1"></i>Edit Profile</a> </li>
+							<li> <a class="dropdown-item" href="instructor-setting.html"><i class="fas fa-fw fa-cog me-1"></i>Settings</a> </li>
+							<li> <a class="dropdown-item" href="instructor-delete-account.html"><i class="fas fa-fw fa-trash-alt me-1"></i>Delete Profile</a> </li>
+
+							<li> <hr class="dropdown-divider"></li>
+							<!-- Dropdown Level -->
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-toggle" href="#">Dropdown levels</a>
+								<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+
+									<!-- dropdown submenu open right -->
+									<li class="dropdown-submenu dropend">
+										<a class="dropdown-item dropdown-toggle" href="#">Dropdown (end)</a>
+										<ul class="dropdown-menu" data-bs-popper="none">
+											<li> <a class="dropdown-item" href="#">Dropdown item</a> </li>
+											<li> <a class="dropdown-item" href="#">Dropdown item</a> </li>
+										</ul>
+									</li>
+									<li> <a class="dropdown-item" href="#">Dropdown item</a> </li>
+
+									<!-- dropdown submenu open left -->
+									<li class="dropdown-submenu dropstart">
+										<a class="dropdown-item dropdown-toggle" href="#">Dropdown (start)</a>
+										<ul class="dropdown-menu dropdown-menu-end" data-bs-popper="none">
+											<li> <a class="dropdown-item" href="#">Dropdown item</a> </li>
+											<li> <a class="dropdown-item" href="#">Dropdown item</a> </li>
+										</ul>
+									</li>
+									<li> <a class="dropdown-item" href="#">Dropdown item</a> </li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+
+					<!-- Nav item 4 Megamenu-->
+					<li class="nav-item dropdown dropdown-fullwidth">
+						<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Megamenu</a>
+						<div class="dropdown-menu dropdown-menu-end" data-bs-popper="none">
+							<div class="row p-4">
+								<!-- Dropdown column item -->
+								<div class="col-xl-6 col-xxl-3 mb-3">
+									<h6 class="mb-0">Get started</h6>
+									<hr>
+									<ul class="list-unstyled">
+										<li> <a class="dropdown-item" href="#">Market research</a> </li>
+										<li> <a class="dropdown-item" href="#">Advertising</a> </li>
+										<li> <a class="dropdown-item" href="#">Consumer behavior</a> </li>
+										<li> <a class="dropdown-item" href="#">Digital marketing</a> </li>
+										<li> <a class="dropdown-item" href="#">Marketing ethics</a> </li>
+										<li> <a class="dropdown-item" href="#">Social media marketing</a> </li>
+										<li> <a class="dropdown-item" href="#">Public relations</a> </li>
+										<li> <a class="dropdown-item" href="#">Advertising</a> </li>
+										<li> <a class="dropdown-item" href="#">Decision science</a> </li>
+										<li> <a class="dropdown-item" href="#">SEO</a> </li>
+										<li> <a class="dropdown-item" href="#">Business marketing</a> </li>
+									</ul>
+								</div>
+
+								<!-- Dropdown column item -->
+								<div class="col-xl-6 col-xxl-3 mb-3">
+									<h6 class="mb-0">Degree</h6>
+									<hr>
+									<!-- Dropdown item -->
+									<div class="mb-2 position-relative bg-primary-soft-hover rounded-2 transition-base p-3">
+										<a class="stretched-link h6 mb-0" href="#">Contact management</a>
+										<p class="mb-0 small text-truncate-2">Speedily say has suitable disposal add boy. On forth doubt miles of child.</p>
+									</div>
+									<!-- Dropdown item -->
+									<div class="mb-2 position-relative bg-primary-soft-hover rounded-2 transition-base p-3">
+										<a class="stretched-link h6 mb-0" href="#">Sales pipeline</a>
+										<p class="mb-0 small text-truncate-2">Speedily say has suitable disposal add boy. On forth doubt miles of child.</p>
+									</div>
+									<!-- Dropdown item -->
+									<div class="position-relative bg-primary-soft-hover rounded-2 transition-base p-3">
+										<a class="stretched-link h6 mb-0" href="#">Security & Permission</a>
+										<p class="mb-0 small text-truncate-2">Speedily say has suitable disposal add boy. On forth doubt miles of child.</p>
+									</div>
+								</div>
+
+								<!-- Dropdown column item -->
+								<div class="col-xl-6 col-xxl-3 mb-3">
+									<h6 class="mb-0">Certificate</h6>
+									<hr>
+									<!-- Dropdown item -->
+									<div class="d-flex mb-4 position-relative">
+										<h2 class="mb-0"><i class="fab fa-fw fa-google text-google-icon"></i></h2>
+										<div class="ms-2">
+											<a class="stretched-link h6 mb-0" href="#">Google SEO certificate</a>
+											<p class="mb-0 small">No prerequisites</p>
+										</div>
+									</div>
+									<!-- Dropdown item -->
+									<div class="d-flex mb-4 position-relative">
+										<h2 class="mb-0"><i class="fab fa-fw fa-linkedin-in text-linkedin"></i></h2>
+										<div class="ms-2">
+											<a class="stretched-link h6 mb-0" href="#">Business Development Executive(BDE)</a>
+											<p class="mb-0 small">No prerequisites</p>
+										</div>
+									</div>
+									<!-- Dropdown item -->
+									<div class="d-flex mb-4 position-relative">
+										<h2 class="mb-0"><i class="fab fa-fw fa-facebook text-facebook"></i></h2>
+										<div class="ms-2">
+											<a class="stretched-link h6 mb-0" href="#">Facebook social media marketing</a>
+											<p class="mb-0 small">Expert advice</p>
+										</div>
+									</div>
+									<!-- Dropdown item -->
+									<div class="d-flex mb-4 position-relative">
+										<h2 class="mb-0"><i class="fas fa-fw fa-basketball-ball text-dribbble"></i></h2>
+										<div class="ms-2">
+											<a class="stretched-link h6 mb-0" href="#">Creative graphics design</a>
+											<p class="mb-0 small">No prerequisites</p>
+										</div>
+									</div>
+								</div>
+
+								<!-- Dropdown column item -->
+								<div class="col-xl-6 col-xxl-3 mb-3">
+									<h6 class="mb-0">Download Eduport</h6>
+									<hr>
+									<!-- Image -->
+									<img src="assets/images/element/14.svg" alt="">
+
+									<!-- Download button -->
+									<div class="row g-2 justify-content-center mt-3">
+										<!-- Google play store button -->
+										<div class="col-6 col-sm-4 col-xxl-6">
+											<a href="#"> <img src="assets/images/client/google-play.svg" class="btn-transition" alt="google-store"> </a>
+										</div>
+										<!-- App store button -->
+										<div class="col-6 col-sm-4 col-xxl-6">
+											<a href="#"> <img src="assets/images/client/app-store.svg" class="btn-transition" alt="app-store"> </a>
+										</div>
+									</div>
+								</div>
+
+								<!-- Action box -->
+								<div class="col-12">
+									<div class="alert alert-success alert-dismissible fade show mt-2 mb-0 rounded-3" role="alert">
+										<!-- Avatar -->
+										<div class="avatar avatar-xs me-2">
+											<img class="avatar-img rounded-circle" src="assets/images/avatar/09.jpg" alt="avatar">
+										</div>
+										<!-- Info -->
+										The personality development class starts at 2:00 pm, click to <a href="#" class="alert-link">Join Now</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<!-- Nav item 5 link-->
+					<li class="nav-item dropdown">
+						<a class="nav-link" href="#" id="advanceMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="fas fa-ellipsis-h"></i>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-end min-w-auto" data-bs-popper="none">
+							<li>
+								<a class="dropdown-item" href="https://support.webestica.com/" target="_blank">
+									<i class="text-warning fa-fw bi bi-life-preserver me-2"></i>Support
+								</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="docs/index.html" target="_blank">
+									<i class="text-danger fa-fw bi bi-card-text me-2"></i>Documentation
+								</a>
+							</li>
+							<li> <hr class="dropdown-divider"></li>
+							<li>
+								<a class="dropdown-item" href="rtl/index.html" target="_blank">
+									<i class="text-info fa-fw bi bi-toggle-off me-2"></i>RTL demo
+								</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="https://themes.getbootstrap.com/store/webestica/" target="_blank">
+									<i class="text-success fa-fw bi bi-cloud-download-fill me-2"></i>Buy Eduport!
+								</a>
+							</li>
+							<li> <hr class="dropdown-divider"></li>
+							<li>
+								<a class="dropdown-item" href="docs/alerts.html" target="_blank">
+									<i class="text-orange fa-fw bi bi-puzzle-fill me-2"></i>Components
+								</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="docs/snippets.html">
+									<i class="text-purple fa-fw bi bi-stickies-fill me-2"></i>Snippets
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!-- Nav Main menu END -->
+
+				<!-- Nav Search START -->
+				<div class="nav my-3 my-xl-0 px-4 flex-nowrap align-items-center">
+					<div class="nav-item w-100">
+						<form class="position-relative">
+							<input class="form-control pe-5 bg-transparent" type="search" placeholder="Search" aria-label="Search">
+							<button class="bg-transparent p-2 position-absolute top-50 end-0 translate-middle-y border-0 text-primary-hover text-reset" type="submit">
+								<i class="fas fa-search fs-6 "></i>
+							</button>
+						</form>
+					</div>
+				</div>
+				<!-- Nav Search END -->
+			</div>
+			<!-- Main navbar END -->
+
+			<!-- Profile START -->
+			<div class="dropdown ms-1 ms-lg-0">
+				<a class="avatar avatar-sm p-0" href="#" id="profileDropdown" role="button" data-bs-auto-close="outside" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">
+					<img class="avatar-img rounded-circle" src="assets/images/avatar/01.jpg" alt="avatar">
+				</a>
+				<ul class="dropdown-menu dropdown-animation dropdown-menu-end shadow pt-3" aria-labelledby="profileDropdown">
+					<!-- Profile info -->
+					<li class="px-3 mb-3">
+						<div class="d-flex align-items-center">
+							<!-- Avatar -->
+							<div class="avatar me-3">
+								<img class="avatar-img rounded-circle shadow" src="assets/images/avatar/01.jpg" alt="avatar">
+							</div>
+							<div>
+								<a class="h6" href="#">Lori Ferguson</a>
+								<p class="small m-0">example@gmail.com</p>
+							</div>
+						</div>
+					</li>
+					<li> <hr class="dropdown-divider"></li>
+					<!-- Links -->
+					<li><a class="dropdown-item" href="#"><i class="bi bi-person fa-fw me-2"></i>Edit Profile</a></li>
+					<li><a class="dropdown-item" href="#"><i class="bi bi-gear fa-fw me-2"></i>Account Settings</a></li>
+					<li><a class="dropdown-item" href="#"><i class="bi bi-info-circle fa-fw me-2"></i>Help</a></li>
+					<li><a class="dropdown-item bg-danger-soft-hover" href="#"><i class="bi bi-power fa-fw me-2"></i>Sign Out</a></li>
+					<li> <hr class="dropdown-divider"></li>
+					<!-- Dark mode options START -->
+					<li>
+						<div class="bg-light dark-mode-switch theme-icon-active d-flex align-items-center p-1 rounded mt-2">
+							<button type="button" class="btn btn-sm mb-0" data-bs-theme-value="light">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun fa-fw mode-switch" viewBox="0 0 16 16">
+									<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+									<use href="#"></use>
+								</svg> Light
+							</button>
+							<button type="button" class="btn btn-sm mb-0" data-bs-theme-value="dark">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars fa-fw mode-switch" viewBox="0 0 16 16">
+									<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
+									<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+									<use href="#"></use>
+								</svg> Dark
+							</button>
+							<button type="button" class="btn btn-sm mb-0 active" data-bs-theme-value="auto">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-half fa-fw mode-switch" viewBox="0 0 16 16">
+									<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+									<use href="#"></use>
+								</svg> Auto
+							</button>
+						</div>
+					</li>
+					<!-- Dark mode options END-->
+				</ul>
+			</div>
+			<!-- Profile START -->
+		</div>
+	</nav>
+	<!-- Nav END -->
+</header>
+<!-- Header END -->
+
+<!-- **************** MAIN CONTENT START **************** -->
+<main>
+
+
+<!-- =======================
+Counter START -->
+<section class="py-0 py-xl-5">
+	<div class="container">
+		<div class="row g-4">
+			<!-- Counter item -->
+			<div class="col-sm-6 col-xl-3">
+				<div class="d-flex justify-content-center align-items-center p-4 bg-warning bg-opacity-15 rounded-3">
+					<span class="display-6 lh-1 text-warning mb-0"><i class="fas fa-tv"></i></span>
+					<div class="ms-4 h6 fw-normal mb-0">
+						<div class="d-flex">
+							<h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="10"	data-purecounter-delay="200">0</h5>
+							<span class="mb-0 h5">K</span>
+						</div>
+						<p class="mb-0">Online Courses</p>
+					</div>
+				</div>
+			</div>
+			<!-- Counter item -->
+			<div class="col-sm-6 col-xl-3">
+				<div class="d-flex justify-content-center align-items-center p-4 bg-blue bg-opacity-10 rounded-3">
+					<span class="display-6 lh-1 text-blue mb-0"><i class="fas fa-user-tie"></i></span>
+					<div class="ms-4 h6 fw-normal mb-0">
+						<div class="d-flex">
+							<h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="200" data-purecounter-delay="200">0</h5>
+							<span class="mb-0 h5">+</span>
+						</div>
+						<p class="mb-0">Expert Tutors</p>
+					</div>
+				</div>
+			</div>
+			<!-- Counter item -->
+			<div class="col-sm-6 col-xl-3">
+				<div class="d-flex justify-content-center align-items-center p-4 bg-purple bg-opacity-10 rounded-3">
+					<span class="display-6 lh-1 text-purple mb-0"><i class="fas fa-user-graduate"></i></span>
+					<div class="ms-4 h6 fw-normal mb-0">
+						<div class="d-flex">
+							<h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="60"	data-purecounter-delay="200">0</h5>
+							<span class="mb-0 h5">K+</span>
+						</div>
+						<p class="mb-0">Online Students</p>
+					</div>
+				</div>
+			</div>
+			<!-- Counter item -->
+			<div class="col-sm-6 col-xl-3">
+				<div class="d-flex justify-content-center align-items-center p-4 bg-info bg-opacity-10 rounded-3">
+					<span class="display-6 lh-1 text-info mb-0"><i class="bi bi-patch-check-fill"></i></span>
+					<div class="ms-4 h6 fw-normal mb-0">
+						<div class="d-flex">
+							<h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="6" data-purecounter-delay="300">0</h5>
+							<span class="mb-0 h5">K+</span>
+						</div>
+						<p class="mb-0">Certified Courses</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- =======================
+Counter END -->
+
+<!-- =======================
+Popular course START -->
+<section>
+	<div class="container">
+		<!-- Title -->
+		<div class="row mb-4">
+			<div class="col-lg-8 mx-auto text-center">
+				<h2 class="fs-1">Most Popular Courses</h2>
+				<p class="mb-0">Choose from hundreds of courses from specialist organizations</p>
+			</div>
+		</div>
+
+		<!-- Tabs START -->
+		<ul class="nav nav-pills nav-pills-bg-soft justify-content-sm-center mb-4 px-3" id="course-pills-tab" role="tablist">
+			<!-- Tab item -->
+			<li class="nav-item me-2 me-sm-5">
+				<button class="nav-link mb-2 mb-md-0 active" id="course-pills-tab-1" data-bs-toggle="pill" data-bs-target="#course-pills-tabs-1" type="button" role="tab" aria-controls="course-pills-tabs-1" aria-selected="false">Web Design</button>
+			</li>
+			<!-- Tab item -->
+			<li class="nav-item me-2 me-sm-5">
+				<button class="nav-link mb-2 mb-md-0" id="course-pills-tab-2" data-bs-toggle="pill" data-bs-target="#course-pills-tabs-2" type="button" role="tab" aria-controls="course-pills-tabs-2"	aria-selected="false">Development</button>
+			</li>
+			<!-- Tab item -->
+			<li class="nav-item me-2 me-sm-5">
+				<button class="nav-link mb-2 mb-md-0" id="course-pills-tab-3" data-bs-toggle="pill" data-bs-target="#course-pills-tabs-3" type="button" role="tab" aria-controls="course-pills-tabs-3" aria-selected="false">Graphic Design</button>
+			</li>
+			<!-- Tab item -->
+			<li class="nav-item me-2 me-sm-5">
+				<button class="nav-link mb-2 mb-md-0" id="course-pills-tab-4" data-bs-toggle="pill" data-bs-target="#course-pills-tabs-4" type="button" role="tab" aria-controls="course-pills-tabs-4" aria-selected="false">Marketing</button>
+			</li>
+			<!-- Tab item -->
+			<li class="nav-item me-2 me-sm-5">
+				<button class="nav-link mb-2 mb-md-0" id="course-pills-tab-5" data-bs-toggle="pill" data-bs-target="#course-pills-tabs-5" type="button" role="tab" aria-controls="course-pills-tabs-5"	aria-selected="false">Finance</button>
+			</li>
+		</ul>
+		<!-- Tabs END -->
+
+		<!-- Tabs content START -->
+		<div class="tab-content" id="course-pills-tabContent">
+			<!-- Content START -->
+			<div class="tab-pane fade show active" id="course-pills-tabs-1" role="tabpanel" aria-labelledby="course-pills-tab-1">
+				<div class="row g-4">
+
+					<!-- Card item START -->
+					<div class="col-sm-6 col-lg-4 col-xl-3">
+						<div class="card shadow h-100">
+							<!-- Image -->
+							<img src="assets/images/courses/4by3/08.jpg" class="card-img-top" alt="course image">
+							<!-- Card body -->
+							<div class="card-body pb-0">
+								<!-- Badge and favorite -->
+								<div class="d-flex justify-content-between mb-2">
+									<a href="#" class="badge bg-purple bg-opacity-10 text-purple">All level</a>
+									<a href="#" class="h6 mb-0"><i class="far fa-heart"></i></a>
+								</div>
+								<!-- Title -->
+								<h5 class="card-title fw-normal"><a href="#">Sketch from A to Z: for app designer</a></h5>
+								<p class="mb-2 text-truncate-2">Proposal indulged no do sociable he throwing settling.</p>
+								<!-- Rating star -->
+								<ul class="list-inline mb-0">
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="far fa-star text-warning"></i></li>
+									<li class="list-inline-item ms-2 h6 fw-light mb-0">4.0/5.0</li>
+								</ul>
+							</div>
+							<!-- Card footer -->
+							<div class="card-footer pt-0 pb-3">
+								<hr>
+								<div class="d-flex justify-content-between">
+									<span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>12h 56m</span>
+									<span class="h6 fw-light mb-0"><i class="fas fa-table text-orange me-2"></i>15 lectures</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Card item END -->
+
+					<!-- Card item START -->
+					<div class="col-sm-6 col-lg-4 col-xl-3">
+						<div class="card shadow h-100">
+							<!-- Image -->
+							<img src="assets/images/courses/4by3/02.jpg" class="card-img-top" alt="course image">
+							<div class="card-body pb-0">
+								<!-- Badge and favorite -->
+								<div class="d-flex justify-content-between mb-2">
+									<a href="#" class="badge bg-success bg-opacity-10 text-success">Beginner</a>
+									<a href="#" class="text-danger"><i class="fas fa-heart"></i></a>
+								</div>
+								<!-- Title -->
+								<h5 class="card-title fw-normal"><a href="#">Graphic Design Masterclass</a></h5>
+								<p class="mb-2 text-truncate-2">Rooms oh fully taken by worse do Points afraid but may end Rooms Points afraid but may end Rooms</p>
+								<!-- Rating star -->
+								<ul class="list-inline mb-0">
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star-half-alt text-warning"></i></li>
+									<li class="list-inline-item ms-2 h6 fw-light mb-0">4.5/5.0</li>
+								</ul>
+							</div>
+							<!-- Card footer -->
+							<div class="card-footer pt-0 pb-3">
+								<hr>
+								<div class="d-flex justify-content-between ">
+									<span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>9h 56m</span>
+									<span class="h6 fw-light mb-0"><i class="fas fa-table text-orange me-2"></i>65 lectures</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Card item END -->
+
+					<!-- Card item START -->
+					<div class="col-sm-6 col-lg-4 col-xl-3">
+						<div class="card shadow h-100">
+							<!-- Image -->
+							<img src="assets/images/courses/4by3/03.jpg" class="card-img-top" alt="course image">
+							<div class="card-body pb-0">
+								<!-- Badge and favorite -->
+								<div class="d-flex justify-content-between mb-2">
+									<a href="#" class="badge bg-success bg-opacity-10 text-success">Beginner</a>
+									<a href="#" class="h6 fw-light mb-0"><i class="far fa-heart"></i></a>
+								</div>
+								<!-- Title -->
+								<h5 class="card-title fw-normal"><a href="#">Create a Design System in Figma</a></h5>
+								<p class="mb-2 text-truncate-2">Rooms oh fully taken by worse do. Points afraid but may end afraid but may end.</p>
+								<!-- Rating star -->
+								<ul class="list-inline mb-0">
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star-half-alt text-warning"></i></li>
+									<li class="list-inline-item ms-2 h6 fw-light mb-0">4.5/5.0</li>
+								</ul>
+							</div>
+							<!-- Card footer -->
+							<div class="card-footer pt-0 pb-3">
+								<hr>
+								<div class="d-flex justify-content-between">
+									<span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>5h 56m</span>
+									<span class="h6 fw-light mb-0"><i class="fas fa-table text-orange me-2"></i>32 lectures</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Card item END -->
+
+					<!-- Card item START -->
+					<div class="col-sm-6 col-lg-4 col-xl-3">
+						<div class="card shadow h-100">
+							<!-- Image -->
+							<img src="assets/images/courses/4by3/07.jpg" class="card-img-top" alt="course image">
+							<div class="card-body pb-0">
+								<!-- Badge and favorite -->
+								<div class="d-flex justify-content-between mb-2">
+									<a href="#" class="badge bg-success bg-opacity-10 text-success">Beginner</a>
+									<a href="#" class="text-danger"><i class="fas fa-heart"></i></a>
+								</div>
+								<!-- Title -->
+								<h5 class="card-title fw-normal"><a href="#">Deep Learning with React-Native </a></h5>
+								<p class="mb-2 text-truncate-2">Far advanced settling say finished raillery. Offered chiefly farther</p>
+								<!-- Rating star -->
+								<ul class="list-inline mb-0">
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="far fa-star text-warning"></i></li>
+									<li class="list-inline-item ms-2 h6 fw-light mb-0">4.0/5.0</li>
+								</ul>
+							</div>
+							<!-- Card footer -->
+							<div class="card-footer pt-0 pb-3">
+								<hr>
+								<div class="d-flex justify-content-between">
+									<span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>18h 56m</span>
+									<span class="h6 fw-light mb-0"><i class="fas fa-table text-orange me-2"></i>99 lectures</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Card item END -->
+
+					<!-- Card item START -->
+					<div class="col-sm-6 col-lg-4 col-xl-3">
+						<div class="card shadow h-100">
+							<!-- Image -->
+							<img src="assets/images/courses/4by3/11.jpg" class="card-img-top" alt="course image">
+							<div class="card-body pb-0">
+								<!-- Badge and favorite -->
+								<div class="d-flex justify-content-between mb-2">
+									<a href="#" class="badge bg-purple bg-opacity-10 text-purple">All level</a>
+									<a href="#" class="text-danger"><i class="fas fa-heart"></i></a>
+								</div>
+								<!-- Title -->
+								<h5 class="card-title fw-normal"><a href="#">Build Responsive Websites with HTML</a></h5>
+								<p class="mb-2 text-truncate-2">Far advanced settling say finished raillery. Offered chiefly farther</p>
+								<!-- Rating star -->
+								<ul class="list-inline mb-0">
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="far fa-star text-warning"></i></li>
+									<li class="list-inline-item ms-2 h6 fw-light mb-0">4.0/5.0</li>
+								</ul>
+							</div>
+							<!-- Card footer -->
+							<div class="card-footer pt-0 pb-3">
+								<hr>
+								<div class="d-flex justify-content-between">
+									<span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>15h 30m</span>
+									<span class="h6 fw-light mb-0"><i class="fas fa-table text-orange me-2"></i>68 lectures</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Card item END -->
+
+					<!-- Card item START -->
+					<div class="col-sm-6 col-lg-4 col-xl-3">
+						<div class="card shadow h-100">
+							<!-- Image -->
+							<img src="assets/images/courses/4by3/12.jpg" class="card-img-top" alt="course image">
+							<div class="card-body pb-0">
+								<!-- Badge and favorite -->
+								<div class="d-flex justify-content-between mb-2">
+									<a href="#" class="badge bg-success bg-opacity-10 text-success">Beginner</a>
+									<a href="#" class="h6 fw-light mb-0"><i class="far fa-heart"></i></a>
+								</div>
+								<!-- Title -->
+								<h5 class="card-title fw-normal"><a href="#">Build Websites with CSS</a></h5>
+								<p class="text-truncate-2 mb-2">Far advanced settling say finished raillery. Offered chiefly farther</p>
+								<!-- Rating star -->
+								<ul class="list-inline mb-0">
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star-half-alt text-warning"></i></li>
+									<li class="list-inline-item ms-2 h6 fw-light mb-0">4.5/5.0</li>
+								</ul>
+							</div>
+							<!-- Card footer -->
+							<div class="card-footer pt-0 pb-3">
+								<hr>
+								<div class="d-flex justify-content-between mt-2">
+									<span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>36h 30m</span>
+									<span class="h6 fw-light mb-0"><i class="fas fa-table text-orange me-2"></i>72 lectures</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Card item END -->
+
+					<!-- Card item START -->
+					<div class="col-sm-6 col-lg-4 col-xl-3">
+						<div class="card shadow h-100">
+							<!-- Image -->
+							<img src="assets/images/courses/4by3/04.jpg" class="card-img-top" alt="course image">
+							<div class="card-body pb-0">
+								<!-- Badge and favorite -->
+								<div class="d-flex justify-content-between mb-2">
+									<a href="#" class="badge bg-purple bg-opacity-10 text-purple">All level</a>
+									<a href="#" class="text-danger"><i class="fas fa-heart"></i></a>
+								</div>
+								<!-- Title -->
+								<h5 class="card-title fw-normal"><a href="#">Learn Invision</a></h5>
+								<p class="mb-2">Arrived off she elderly beloved him Course regard to up he hardly.</p>
+								<!-- Rating star -->
+								<ul class="list-inline mb-0">
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star-half-alt text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="far fa-star text-warning"></i></li>
+									<li class="list-inline-item ms-2 h6 fw-light mb-0">3.5/5.0</li>
+								</ul>
+							</div>
+							<!-- Card footer -->
+							<div class="card-footer pt-0 pb-3">
+								<hr>
+								<div class="d-flex justify-content-between mt-2">
+									<span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>6h 56m</span>
+									<span class="h6 fw-light mb-0"><i class="fas fa-table text-orange me-2"></i>82 lectures</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Card item END -->
+
+					<!-- Card item START -->
+					<div class="col-sm-6 col-lg-4 col-xl-3">
+						<div class="card shadow h-100">
+							<!-- Image -->
+							<img src="assets/images/courses/4by3/09.jpg" class="card-img-top" alt="course image">
+							<div class="card-body pb-0">
+								<!-- Badge and favorite -->
+								<div class="d-flex justify-content-between mb-2">
+									<a href="#" class="badge bg-purple bg-opacity-10 text-purple">All level</a>
+									<a href="#" class="h6 fw-light mb-0"><i class="far fa-heart"></i></a>
+								</div>
+								<!-- Title -->
+								<h5 class="card-title fw-normal"><a href="#">JavaScript: Full Understanding</a></h5>
+								<p class="text-truncate-2 mb-2">Far advanced settling say finished raillery. Offered chiefly farther.</p>
+								<!-- Rating star -->
+								<ul class="list-inline mb-0">
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item ms-2 h6 fw-light mb-0">5.0/5.0</li>
+								</ul>
+							</div>
+							<!-- Card footer -->
+							<div class="card-footer pt-0 pb-3">
+								<hr>
+								<div class="d-flex justify-content-between">
+									<span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>35h 20m</span>
+									<span class="h6 fw-light mb-0"><i class="fas fa-table text-orange me-2"></i>89 lectures</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Card item END -->
+				</div> <!-- Row END -->
+			</div>
+			<!-- Content END -->
+
+			<!-- Content START -->
+			<div class="tab-pane fade" id="course-pills-tabs-2" role="tabpanel" aria-labelledby="course-pills-tab-2">
+				<div class="row g-4">
+					<!-- Card item START -->
+					<div class="col-sm-6 col-lg-4 col-xl-3">
+						<div class="card shadow h-100">
+							<!-- Image -->
+							<img src="assets/images/courses/4by3/05.jpg" class="card-img-top" alt="course image">
+							<div class="card-body pb-0">
+								<!-- Badge and favorite -->
+								<div class="d-flex justify-content-between mb-2">
+									<a href="#" class="badge bg-success bg-opacity-10 text-success">Beginner</a>
+									<a href="#" class="h6 fw-light mb-0"><i class="far fa-heart"></i></a>
+								</div>
+								<!-- Title -->
+								<h5 class="card-title fw-normal"><a href="#">The Complete Web Development in python</a></h5>
+								<p class="text-truncate-2 mb-2">Mention Mr manners opinion if garrets enabled.</p>
+								<!-- Rating star -->
+								<ul class="list-inline mb-0">
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star-half-alt text-warning"></i></li>
+									<li class="list-inline-item ms-2 h6 fw-light mb-0">4.5/5.0</li>
+								</ul>
+							</div>
+							<!-- Card footer -->
+							<div class="card-footer pt-0 pb-3">
+								<hr>
+								<div class="d-flex justify-content-between mt-2">
+									<span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>10h 00m</span>
+									<span class="h6 fw-light mb-0"><i class="fas fa-table text-orange me-2"></i>26 lectures</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Card item END -->
+
+					<!-- Card item START -->
+					<div class="col-sm-6 col-lg-4 col-xl-3">
+						<div class="card shadow h-100">
+							<!-- Image -->
+							<img src="assets/images/courses/4by3/06.jpg" class="card-img-top" alt="course image">
+							<div class="card-body pb-0">
+								<!-- Badge and favorite -->
+								<div class="d-flex justify-content-between mb-2">
+									<a href="#" class="badge bg-info bg-opacity-10 text-info">Intermediate</a>
+									<a href="#" class="h6 fw-light mb-0"><i class="far fa-heart"></i></a>
+								</div>
+								<!-- Title -->
+								<h5 class="card-title fw-normal"><a href="#">Angular – The Complete Guider</a></h5>
+								<p class="text-truncate-2 mb-2">Rooms oh fully taken by worse do. Points afraid but may end.</p>
+								<!-- Rating star -->
+								<ul class="list-inline mb-0">
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star-half-alt text-warning"></i></li>
+									<li class="list-inline-item ms-2 h6 fw-light mb-0">4.5/5.0</li>
+								</ul>
+							</div>
+							<!-- Card footer -->
+							<div class="card-footer pt-0 pb-3">
+								<hr>
+								<div class="d-flex justify-content-between mt-2">
+									<span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>9h 32m</span>
+									<span class="h6 fw-light mb-0"><i class="fas fa-table text-orange me-2"></i>42 lectures</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Card item END -->
+
+					<!-- Card item START -->
+					<div class="col-sm-6 col-lg-4 col-xl-3">
+						<div class="card shadow">
+							<!-- Image -->
+							<img src="assets/images/courses/4by3/07.jpg" class="card-img-top" alt="course image">
+							<div class="card-body pb-0">
+								<!-- Badge and favorite -->
+								<div class="d-flex justify-content-between mb-2">
+									<a href="#" class="badge bg-success bg-opacity-10 text-success">Beginner</a>
+									<a href="#" class="text-danger"><i class="fas fa-heart"></i></a>
+								</div>
+								<!-- Title -->
+								<h5 class="card-title fw-normal"><a href="#">Deep Learning with React-Native</a></h5>
+								<p class="text-truncate-2 mb-2">Far advanced settling say finished raillery. Offered chiefly farther</p>
+								<!-- Rating star -->
+								<ul class="list-inline mb-0">
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="far fa-star text-warning"></i></li>
+									<li class="list-inline-item ms-2 h6 fw-light mb-0">4.0/5.0</li>
+								</ul>
+							</div>
+							<!-- Card footer -->
+							<div class="card-footer pt-0 pb-3">
+								<hr>
+								<div class="d-flex justify-content-between">
+									<span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>18h 56m</span>
+									<span class="h6 fw-light mb-0"><i class="fas fa-table text-orange me-2"></i>99 lectures</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Card item END -->
+
+					<!-- Card item START -->
+					<div class="col-sm-6 col-lg-4 col-xl-3">
+						<div class="card shadow h-100">
+							<!-- Image -->
+							<img src="assets/images/courses/4by3/09.jpg" class="card-img-top" alt="course image">
+							<div class="card-body pb-0">
+								<!-- Badge and favorite -->
+								<div class="d-flex justify-content-between mb-2">
+									<a href="#" class="badge bg-purple bg-opacity-10 text-purple">All level</a>
+									<a href="#" class="h6 fw-light mb-0"><i class="far fa-heart"></i></a>
+								</div>
+								<!-- Title -->
+								<h5 class="card-title fw-normal"><a href="#">JavaScript: Full Understanding</a></h5>
+								<p class="text-truncate-2 mb-2">Far advanced settling say finished raillery. Offered chiefly farther</p>
+								<!-- Rating star -->
+								<ul class="list-inline mb-0">
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item ms-2 h6 fw-light mb-0">5.0/5.0</li>
+								</ul>
+							</div>
+							<!-- Card footer -->
+							<div class="card-footer pt-0 pb-3">
+								<hr>
+								<div class="d-flex justify-content-between">
+									<span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>35h 20m</span>
+									<span class="h6 fw-light mb-0"><i class="fas fa-table text-orange me-2"></i>89 lectures</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Card item END -->
+
+					<!-- Card item START -->
+					<div class="col-sm-6 col-lg-4 col-xl-3">
+						<div class="card shadow h-100">
+							<!-- Image -->
+							<img src="assets/images/courses/4by3/10.jpg" class="card-img-top" alt="course image">
+							<div class="card-body pb-0">
+								<!-- Badge and favorite -->
+								<div class="d-flex justify-content-between mb-2">
+									<a href="#" class="badge bg-info bg-opacity-10 text-info">Intermediate</a>
+									<a href="#" class="text-danger"><i class="fas fa-heart"></i></a>
+								</div>
+								<!-- Title -->
+								<h5 class="card-title fw-normal"><a href="#">Bootstrap 5 From Scratch</a></h5>
+								<p class="text-truncate-2 mb-2">Far advanced settling say finished raillery. Offered chiefly farther</p>
+								<!-- Rating star -->
+								<ul class="list-inline mb-0">
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star-half-alt text-warning"></i></li>
+									<li class="list-inline-item ms-2 h6 fw-light mb-0">4.5/5.0</li>
+								</ul>
+							</div>
+							<!-- Card footer -->
+							<div class="card-footer pt-0 pb-3">
+								<hr>
+								<div class="d-flex justify-content-between mt-2">
+									<span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>25h 56m</span>
+									<span class="h6 fw-light mb-0"><i class="fas fa-table text-orange me-2"></i>38 lectures</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Card item END -->
+
+					<!-- Card item START -->
+					<div class="col-sm-6 col-lg-4 col-xl-3">
+						<div class="card shadow h-100">
+							<!-- Image -->
+							<img src="assets/images/courses/4by3/13.jpg" class="card-img-top" alt="course image">
+							<div class="card-body pb-0">
+								<!-- Badge and favorite -->
+								<div class="d-flex justify-content-between mb-2">
+									<a href="#" class="badge bg-success bg-opacity-10 text-success">Beginner</a>
+									<a href="#" class="h6 fw-light mb-0"><i class="far fa-heart"></i></a>
+								</div>
+								<!-- Title -->
+								<h5 class="card-title fw-normal"><a href="#">PHP with - CMS Project</a></h5>
+								<p class="text-truncate-2 mb-2">Far advanced settling say finished raillery. Offered chiefly farther</p>
+								<!-- Rating star -->
+								<ul class="list-inline mb-0">
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="far fa-star text-warning"></i></li>
+									<li class="list-inline-item ms-2 h6 fw-light mb-0">4.0/5.0</li>
+								</ul>
+							</div>
+							<!-- Card footer -->
+							<div class="card-footer pt-0 pb-3">
+								<hr>
+								<div class="d-flex justify-content-between">
+									<span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>21h 22m</span>
+									<span class="h6 fw-light mb-0"><i class="fas fa-table text-orange me-2"></i>30 lectures</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Card item END -->
+				</div>
+			</div>
+			<!-- Content END -->
+
+			<!-- Content START -->
+			<div class="tab-pane fade" id="course-pills-tabs-3" role="tabpanel" aria-labelledby="course-pills-tab-3">
+				<div class="row g-4">
+					<!-- Card item START -->
+					<div class="col-sm-6 col-lg-4 col-xl-3">
+						<div class="card shadow h-100">
+							<!-- Image -->
+							<img src="assets/images/courses/4by3/08.jpg" class="card-img-top" alt="course image">
+							<div class="card-body pb-0">
+								<!-- Badge and favorite -->
+								<div class="d-flex justify-content-between mb-2">
+									<a href="#" class="badge bg-purple bg-opacity-10 text-purple">All level</a>
+									<a href="#" class="h6 fw-light mb-0"><i class="far fa-heart"></i></a>
+								</div>
+								<!-- Title -->
+								<h5 class="card-title fw-normal"><a href="#">Sketch from A to Z: for app designer</a></h5>
+								<p class="text-truncate-2 mb-2">Proposal indulged no do sociable he throwing settling</p>
+								<!-- Rating star -->
+								<ul class="list-inline mb-0">
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="far fa-star text-warning"></i></li>
+									<li class="list-inline-item ms-2 h6 fw-light mb-0">4.0/5.0</li>
+								</ul>
+							</div>
+							<!-- Card footer -->
+							<div class="card-footer pt-0 pb-3">
+								<hr>
+								<div class="d-flex justify-content-between">
+									<span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>12h 56m</span>
+									<span class="h6 fw-light mb-0"><i class="fas fa-table text-orange me-2"></i>15 lectures</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Card item END -->
+
+					<!-- Card item START -->
+					<div class="col-sm-6 col-lg-4 col-xl-3">
+						<div class="card shadow h-100">
+							<!-- Image -->
+							<img src="assets/images/courses/4by3/04.jpg" class="card-img-top" alt="course image">
+							<div class="card-body pb-0">
+								<!-- Badge and favorite -->
+								<div class="d-flex justify-content-between mb-2">
+									<a href="#" class="badge bg-purple bg-opacity-10 text-purple">All level</a>
+									<a href="#" class="text-danger"><i class="fas fa-heart"></i></a>
+								</div>
+								<!-- Title -->
+								<h5 class="card-title fw-normal"><a href="#">Learn Invision</a></h5>
+								<p class="mb-2">Arrived off she elderly beloved him Course regard to up he hardly.</p>
+								<!-- Rating star -->
+								<ul class="list-inline mb-0">
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star-half-alt text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="far fa-star text-warning"></i></li>
+									<li class="list-inline-item ms-2 h6 fw-light mb-0">3.5/5.0</li>
+								</ul>
+							</div>
+							<!-- Card footer -->
+							<div class="card-footer pt-0 pb-3">
+								<hr>
+								<div class="d-flex justify-content-between mt-2">
+									<span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>6h 56m</span>
+									<span class="h6 fw-light mb-0"><i class="fas fa-table text-orange me-2"></i>82 lectures</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Card item END -->
+
+					<!-- Card item START -->
+					<div class="col-sm-6 col-lg-4 col-xl-3">
+						<div class="card shadow h-100">
+							<!-- Image -->
+							<img src="assets/images/courses/4by3/02.jpg" class="card-img-top" alt="course image">
+							<div class="card-body pb-0">
+								<!-- Badge and favorite -->
+								<div class="d-flex justify-content-between mb-2">
+									<a href="#" class="badge bg-success bg-opacity-10 text-success">Beginner</a>
+									<a href="#" class="text-danger"><i class="fas fa-heart"></i></a>
+								</div>
+								<!-- Title -->
+								<h5 class="card-title fw-normal"><a href="#">Graphic Design Masterclass</a></h5>
+								<p class="text-truncate-2 mb-2">Rooms oh fully taken by worse do. Points afraid but may end.</p>
+								<!-- Rating star -->
+								<ul class="list-inline mb-0">
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star-half-alt text-warning"></i></li>
+									<li class="list-inline-item ms-2 h6 fw-light mb-0">4.5/5.0</li>
+								</ul>
+							</div>
+							<!-- Card footer -->
+							<div class="card-footer pt-0 pb-3">
+								<hr>
+								<div class="d-flex justify-content-between">
+									<span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>9h 56m</span>
+									<span class="h6 fw-light mb-0"><i class="fas fa-table text-orange me-2"></i>65 lectures</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Card item END -->
+
+					<!-- Card item START -->
+					<div class="col-sm-6 col-lg-4 col-xl-3">
+						<div class="card shadow h-100">
+							<!-- Image -->
+							<img src="assets/images/courses/4by3/03.jpg" class="card-img-top" alt="course image">
+							<div class="card-body pb-0">
+								<!-- Badge and favorite -->
+								<div class="d-flex justify-content-between mb-2">
+									<a href="#" class="badge bg-success bg-opacity-10 text-success">Beginner</a>
+									<a href="#" class="h6 fw-light mb-0"><i class="far fa-heart"></i></a>
+								</div>
+								<!-- Title -->
+								<h5 class="card-title fw-normal"><a href="#">Create a Design System in Figma</a></h5>
+								<p class="text-truncate-2 mb-2">Rooms oh fully taken by worse do. Points afraid but may end.</p>
+								<!-- Rating star -->
+								<ul class="list-inline mb-0">
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star-half-alt text-warning"></i></li>
+									<li class="list-inline-item ms-2 h6 fw-light mb-0">4.5/5.0</li>
+								</ul>
+							</div>
+							<!-- Card footer -->
+							<div class="card-footer pt-0 pb-3">
+								<hr>
+								<div class="d-flex justify-content-between">
+									<span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>5h 56m</span>
+									<span class="h6 fw-light mb-0"><i class="fas fa-table text-orange me-2"></i>32 lectures</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Card item END -->
+				</div>
+			</div>
+			<!-- Content END -->
+
+			<!-- Content START -->
+			<div class="tab-pane fade" id="course-pills-tabs-4" role="tabpanel" aria-labelledby="course-pills-tab-4">
+				<div class="row g-4">
+					<!-- Card item START -->
+					<div class="col-sm-6 col-lg-4 col-xl-3">
+						<div class="card shadow h-100">
+							<!-- Image -->
+							<img src="assets/images/courses/4by3/01.jpg" class="card-img-top" alt="course image">
+							<div class="card-body pb-0">
+								<!-- Badge and favorite -->
+								<div class="d-flex justify-content-between mb-2">
+									<a href="#" class="badge bg-success bg-opacity-10 text-success">Beginner</a>
+									<a href="#" class="text-danger"><i class="fas fa-heart"></i></a>
+								</div>
+								<!-- Title -->
+								<h5 class="card-title fw-normal"><a href="#">Digital Marketing Masterclass</a></h5>
+								<p class="text-truncate-2 mb-2">Delivered dejection necessary objection do Mr prevailed.</p>
+								<!-- Rating star -->
+								<ul class="list-inline mb-0">
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star-half-alt text-warning"></i></li>
+									<li class="list-inline-item ms-2 h6 fw-light mb-0">4.5/5.0</li>
+								</ul>
+							</div>
+							<!-- Card footer -->
+							<div class="card-footer pt-0 pb-3">
+								<hr>
+								<div class="d-flex justify-content-between">
+									<span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>6h 56m</span>
+									<span class="h6 fw-light mb-0"><i class="fas fa-table text-orange me-2"></i>82 lectures</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Card item END -->
+
+					<!-- Card item START -->
+					<div class="col-sm-6 col-lg-4 col-xl-3">
+						<div class="card shadow h-100">
+							<!-- Image -->
+							<img src="assets/images/courses/4by3/08.jpg" class="card-img-top" alt="course image">
+							<div class="card-body pb-0">
+								<!-- Badge and favorite -->
+								<div class="d-flex justify-content-between mb-2">
+									<a href="#" class="badge bg-purple bg-opacity-10 text-purple">All level</a>
+									<a href="#" class="h6 fw-light mb-0"><i class="far fa-heart"></i></a>
+								</div>
+								<!-- Title -->
+								<h5 class="card-title fw-normal"><a href="#">Sketch from A to Z: for app designer</a></h5>
+								<p class="text-truncate-2 mb-2">Proposal indulged no do sociable he throwing settling.</p>
+								<!-- Rating star -->
+								<ul class="list-inline mb-0">
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="far fa-star text-warning"></i></li>
+									<li class="list-inline-item ms-2 h6 fw-light mb-0">4.0/5.0</li>
+								</ul>
+							</div>
+							<!-- Card footer -->
+							<div class="card-footer pt-0 pb-3">
+								<hr>
+								<div class="d-flex justify-content-between">
+									<span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>12h 56m</span>
+									<span class="h6 fw-light mb-0"><i class="fas fa-table text-orange me-2"></i>15 lectures</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Card item END -->
+				</div>
+			</div>
+			<!-- Content END -->
+
+			<!-- Content START -->
+			<div class="tab-pane fade" id="course-pills-tabs-5" role="tabpanel" aria-labelledby="course-pills-tab-5">
+				<div class="row g-4">
+					<!-- Card item START -->
+					<div class="col-sm-6 col-lg-4 col-xl-3">
+						<div class="card shadow h-100">
+							<!-- Image -->
+							<img src="assets/images/courses/4by3/04.jpg" class="card-img-top" alt="course image">
+							<div class="card-body pb-0">
+								<!-- Badge and favorite -->
+								<div class="d-flex justify-content-between mb-2">
+									<a href="#" class="badge bg-purple bg-opacity-10 text-purple">All level</a>
+									<a href="#" class="text-danger"><i class="fas fa-heart"></i></a>
+								</div>
+								<!-- Title -->
+								<h5 class="card-title fw-normal"><a href="#">Learn Invision</a></h5>
+								<p class="text-truncate-2 mb-2">Arrived off she elderly beloved him Course regard to up he hardly.</p>
+								<!-- Rating star -->
+								<ul class="list-inline mb-0">
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star-half-alt text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="far fa-star text-warning"></i></li>
+									<li class="list-inline-item ms-2 h6 fw-light mb-0">3.5/5.0</li>
+								</ul>
+							</div>
+							<!-- Card footer -->
+							<div class="card-footer pt-0 pb-3">
+								<hr>
+								<div class="d-flex justify-content-between">
+									<span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>6h 56m</span>
+									<span class="h6 fw-light mb-0"><i class="fas fa-table text-orange me-2"></i>82 lectures</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Card item END -->
+
+					<!-- Card item START -->
+					<div class="col-sm-6 col-lg-4 col-xl-3">
+						<div class="card shadow h-100">
+							<!-- Image -->
+							<img src="assets/images/courses/4by3/09.jpg" class="card-img-top" alt="course image">
+							<div class="card-body pb-0">
+								<!-- Badge and favorite -->
+								<div class="d-flex justify-content-between mb-2">
+									<a href="#" class="badge bg-purple bg-opacity-10 text-purple">All level</a>
+									<a href="#" class="h6 fw-light mb-0"><i class="far fa-heart"></i></a>
+								</div>
+								<!-- Title -->
+								<h5 class="card-title fw-normal"><a href="#">JavaScript: Full Understanding</a></h5>
+								<p class="text-truncate-2 mb-2">Far advanced settling say finished raillery. Offered chiefly farther.</p>
+								<!-- Rating star -->
+								<ul class="list-inline mb-0">
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+									<li class="list-inline-item ms-2 h6 fw-light mb-0">5.0/5.0</li>
+								</ul>
+							</div>
+							<!-- Card footer -->
+							<div class="card-footer pt-0 pb-3">
+								<hr>
+								<div class="d-flex justify-content-between">
+									<span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>35h 20m</span>
+									<span class="h6 fw-light mb-0"><i class="fas fa-table text-orange me-2"></i>89 lectures</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Card item END -->
+				</div>
+			</div>
+			<!-- Content END -->
+		</div>
+		<!-- Tabs content END -->
+	</div>
+</section>
+<!-- =======================
+Popular course END -->
+
+</main>
+<!-- **************** MAIN CONTENT END **************** -->
+
+<!-- =======================
+Footer START -->
+<footer class="pt-5">
+	<div class="container">
+		<!-- Row START -->
+		<div class="row g-4">
+
+			<!-- Widget 1 START -->
+			<div class="col-lg-3">
+				<!-- logo -->
+				<a class="me-0" href="index.html">
+					<img class="light-mode-item h-40px" src="assets/images/logo.svg" alt="logo">
+					<img class="dark-mode-item h-40px" src="assets/images/logo-light.svg" alt="logo">
+				</a>
+				<p class="my-3">Eduport education theme, built specifically for the education centers which is dedicated to teaching and involve learners.</p>
+				<!-- Social media icon -->
+				<ul class="list-inline mb-0 mt-3">
+					<li class="list-inline-item"> <a class="btn btn-white btn-sm shadow px-2 text-facebook" href="#"><i class="fab fa-fw fa-facebook-f"></i></a> </li>
+					<li class="list-inline-item"> <a class="btn btn-white btn-sm shadow px-2 text-instagram" href="#"><i class="fab fa-fw fa-instagram"></i></a> </li>
+					<li class="list-inline-item"> <a class="btn btn-white btn-sm shadow px-2 text-twitter" href="#"><i class="fab fa-fw fa-twitter"></i></a> </li>
+					<li class="list-inline-item"> <a class="btn btn-white btn-sm shadow px-2 text-linkedin" href="#"><i class="fab fa-fw fa-linkedin-in"></i></a> </li>
+				</ul>
+			</div>
+			<!-- Widget 1 END -->
+
+			<!-- Widget 2 START -->
+			<div class="col-lg-6">
+				<div class="row g-4">
+					<!-- Link block -->
+					<div class="col-6 col-md-4">
+						<h5 class="mb-2 mb-md-4">Company</h5>
+						<ul class="nav flex-column">
+							<li class="nav-item"><a class="nav-link" href="#">About us</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">Contact us</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">News and Blogs</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">Library</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">Career</a></li>
+						</ul>
+					</div>
+
+					<!-- Link block -->
+					<div class="col-6 col-md-4">
+						<h5 class="mb-2 mb-md-4">Community</h5>
+						<ul class="nav flex-column">
+							<li class="nav-item"><a class="nav-link" href="#">Documentation</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">Faq</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">Forum</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">Sitemap</a></li>
+						</ul>
+					</div>
+
+					<!-- Link block -->
+					<div class="col-6 col-md-4">
+						<h5 class="mb-2 mb-md-4">Teaching</h5>
+						<ul class="nav flex-column">
+							<li class="nav-item"><a class="nav-link" href="#">Become a teacher</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">How to guide</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">Terms &amp; Conditions</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- Widget 2 END -->
+
+			<!-- Widget 3 START -->
+			<div class="col-lg-3">
+				<h5 class="mb-2 mb-md-4">Contact</h5>
+				<!-- Time -->
+				<p class="mb-2">
+					Toll free:<span class="h6 fw-light ms-2">+1234 568 963</span>
+					<span class="d-block small">(9:AM to 8:PM IST)</span>
+				</p>
+
+				<p class="mb-0">Email:<span class="h6 fw-light ms-2">example@gmail.com</span></p>
+
+				<div class="row g-2 mt-2">
+					<!-- Google play store button -->
+					<div class="col-6 col-sm-4 col-md-3 col-lg-6">
+						<a href="#"> <img src="assets/images/client/google-play.svg" alt=""> </a>
+					</div>
+					<!-- App store button -->
+					<div class="col-6 col-sm-4 col-md-3 col-lg-6">
+						<a href="#"> <img src="assets/images/client/app-store.svg" alt="app-store"> </a>
+					</div>
+				</div> <!-- Row END -->
+			</div>
+			<!-- Widget 3 END -->
+		</div><!-- Row END -->
+
+		<!-- Divider -->
+		<hr class="mt-4 mb-0">
+
+		<!-- Bottom footer -->
+		<div class="py-3">
+			<div class="container px-0">
+				<div class="d-lg-flex justify-content-between align-items-center py-3 text-center text-md-left">
+					<!-- copyright text -->
+					<div class="text-body text-primary-hover"> Copyrights ©2024 Eduport. Build by <a href="https://www.webestica.com/" target="_blank" class="text-body">Webestica</a></div>
+					<!-- copyright links-->
+					<div class="justify-content-center mt-3 mt-lg-0">
+						<ul class="nav list-inline justify-content-center mb-0">
+							<li class="list-inline-item">
+								<!-- Language selector -->
+								<div class="dropup mt-0 text-center text-sm-end">
+									<a class="dropdown-toggle nav-link" href="#" role="button" id="languageSwitcher" data-bs-toggle="dropdown" aria-expanded="false">
+										<i class="fas fa-globe me-2"></i>Language
+									</a>
+									<ul class="dropdown-menu min-w-auto" aria-labelledby="languageSwitcher">
+										<li><a class="dropdown-item me-4" href="#"><img class="fa-fw me-2" src="assets/images/flags/uk.svg" alt="">English</a></li>
+										<li><a class="dropdown-item me-4" href="#"><img class="fa-fw me-2" src="assets/images/flags/gr.svg" alt="">German </a></li>
+										<li><a class="dropdown-item me-4" href="#"><img class="fa-fw me-2" src="assets/images/flags/sp.svg" alt="">French</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="list-inline-item"><a class="nav-link" href="#">Terms of use</a></li>
+							<li class="list-inline-item"><a class="nav-link pe-0" href="#">Privacy policy</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- =======================
+Footer END -->
+
+<!-- Back to top -->
+<div class="back-top"><i class="bi bi-arrow-up-short position-absolute top-50 start-50 translate-middle"></i></div>
+
+<!-- Bootstrap JS -->
+<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Vendors -->
+<script src="assets/vendor/tiny-slider/tiny-slider.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.js"></script>
+<script src="assets/vendor/purecounterjs/dist/purecounter_vanilla.js"></script>
+
+<!-- Template Functions -->
+<script src="assets/js/functions.js"></script>
+
+</body>
+
+<!-- Mirrored from eduport.webestica.com/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 16 Jan 2025 10:11:47 GMT -->
 </html>
