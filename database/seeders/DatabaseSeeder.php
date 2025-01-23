@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Category;
+use App\Models\Item;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -34,5 +35,7 @@ class DatabaseSeeder extends Seeder
             ],
             "status" => true
         ]);
+
+        Item::factory(150)->create();
     }
 }
