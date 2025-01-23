@@ -159,7 +159,7 @@
 							</div>
 						</div>
 					</li>
-          <li> <hr class="dropdown-divider"></li>
+                    <li> <hr class="dropdown-divider"></li>
 					<!-- Links -->
 					<li><a class="dropdown-item" href="#"><i class="bi bi-person fa-fw me-2"></i>Edit Profile</a></li>
 					<li><a class="dropdown-item" href="#"><i class="bi bi-gear fa-fw me-2"></i>Account Settings</a></li>
