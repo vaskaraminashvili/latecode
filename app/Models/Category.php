@@ -13,7 +13,7 @@ class Category extends Model
 {
     use SoftDeletes, HasFactory, HasTranslations, NodeTrait;
 
-    public $translatable = ['title', 'description'];
+    public array $translatable = ['title', 'description'];
 
     protected $fillable = [
         'title',

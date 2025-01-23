@@ -10,6 +10,7 @@ return new class extends Migration {
         Schema::create('items', function (Blueprint $table) {
             $table->id();
             $table->json('title');
+            $table->string('slug')->unique();
             $table->json('description')->nullable();
             $table->boolean('status')->default(false);
             $table->foreignId('category_id');

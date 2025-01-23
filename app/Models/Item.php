@@ -15,6 +15,7 @@ class Item extends Model
 
     protected $fillable = [
         'title',
+        'slug',
         'description',
         'status',
         'category_id',

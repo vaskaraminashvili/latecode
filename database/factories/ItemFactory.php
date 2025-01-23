@@ -15,6 +15,7 @@ class ItemFactory extends Factory
         return [
             'title' => $this->generateTranslatableField(['ka', 'en']),
             'description' => $this->generateTranslatableField(['ka', 'en']),
+            'slug' => $this->faker->slug(),
             'status' => 1,
             'category_id' => 1,
             'created_at' => Carbon::now(),
