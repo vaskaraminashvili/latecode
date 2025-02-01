@@ -173,6 +173,9 @@
       <path value="$PROJECT_DIR$/vendor/filament/spatie-laravel-translatable-plugin" />
       <path value="$PROJECT_DIR$/vendor/kalnoy/nestedset" />
       <path value="$PROJECT_DIR$/vendor/laravel/sanctum" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-markdown" />
+      <path value="$PROJECT_DIR$/vendor/spatie/commonmark-shiki-highlighter" />
+      <path value="$PROJECT_DIR$/vendor/spatie/shiki-php" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />

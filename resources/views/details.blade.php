@@ -34,7 +34,7 @@
                             </ul>
                         </div>
                         <!-- Title END -->
-                        
+
                         <!-- About course START -->
                         <div class="col-12">
                             <div class="card border">
@@ -58,26 +58,10 @@
                                                 course</a></strong> syllabus, let’s look at the scope of digital
                                         marketing and what the future holds.</p>
 
-                                    <pre><code class="language-css">p { color: red }</code></pre>
-                                    <pre>
-                                        <code class="language-php">
-use App\Models\Post;
-use Illuminate\Support\Facades\View;
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Support\ServiceProvider;
-
-class AppServiceProvider extends ServiceProvider
-{
-    public function boot()
-    {
-        if (Schema::hasTable('posts')) {
-            View::share('recentPosts', Post::latest()->take(3)->get());
-        }
-    }
-}
-                                        </code>
-                                    </pre>
                                 </div>
+                                <x-code>
+                                    {!! $code !!}
+                                </x-code>
                                 <!-- Card body START -->
                             </div>
                         </div>

@@ -11,6 +11,10 @@ Route::get('/courses', function () {
 });
 
 Route::get('/details', function () {
-    return view('details');
+    $item = \App\Models\Item::find(1);
+    $lang = Str::lower($item->code[0]['language']);
+    $code = "```{$lang} \n";
+    $code .= $item->code[0]['content'];
+    return view('details', compact('code'));
 });
 

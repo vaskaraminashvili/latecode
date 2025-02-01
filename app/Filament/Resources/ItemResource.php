@@ -53,7 +53,7 @@ class ItemResource extends Resource
                                 Select::make('language')
                                     ->options(
                                         CodeLanguage::where('status', 1)
-                                            ->pluck('name', 'id')
+                                            ->pluck('name', 'name')
                                     )
                                     ->searchable()
                                     ->preload(),
