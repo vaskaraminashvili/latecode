@@ -17,6 +17,7 @@ class Item extends Model
         'title',
         'slug',
         'description',
+        'code',
         'status',
         'category_id',
     ];
@@ -24,9 +25,10 @@ class Item extends Model
     protected function casts(): array
     {
         return [
-            'title' => 'array',
+            'title'       => 'array',
             'description' => 'array',
-            'status' => 'boolean',
+            'code'        => 'array',
+            'status'      => 'boolean',
         ];
     }
 }

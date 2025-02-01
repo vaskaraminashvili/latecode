@@ -4,9 +4,13 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\ItemResource\Pages;
 use App\Models\Category;
+use App\Models\CodeLanguage;
 use App\Models\Item;
 use Filament\Forms;
+use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Concerns\Translatable;
@@ -43,6 +47,20 @@ class ItemResource extends Resource
                             ->required(),
                         TextInput::make('slug'),
                         RichEditor::make('description'),
+                        Repeater::make('code')
+                            ->label('კოდის ბლოკი')
+                            ->schema([
+                                Select::make('language')
+                                    ->options(
+                                        CodeLanguage::where('status', 1)
+                                            ->pluck('name', 'id')
+                                    )
+                                    ->searchable()
+                                    ->preload(),
+                                TextArea::make('content')
+                                    ->rows(5),
+                            ])
+                            ->collapsible()
                     ])
 
             ]);
@@ -77,9 +95,9 @@ class ItemResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListItems::route('/'),
+            'index'  => Pages\ListItems::route('/'),
             'create' => Pages\CreateItem::route('/create'),
-            'edit' => Pages\EditItem::route('/{record}/edit'),
+            'edit'   => Pages\EditItem::route('/{record}/edit'),
         ];
     }
 }

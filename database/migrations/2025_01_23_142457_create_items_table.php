@@ -12,6 +12,7 @@ return new class extends Migration {
             $table->json('title');
             $table->string('slug')->unique();
             $table->json('description')->nullable();
+            $table->json('code')->nullable();
             $table->boolean('status')->default(false);
             $table->foreignId('category_id');
             $table->timestamps();
