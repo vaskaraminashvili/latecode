@@ -15,6 +15,7 @@ class ItemFactory extends Factory
         return [
             'title' => $this->generateTranslatableField(['ka', 'en']),
             'description' => $this->generateTranslatableField(['ka', 'en']),
+            'code' => '[{"content": "php aris kvdari ", "language": "PHP"}]',
             'slug' => $this->faker->slug(),
             'status' => 1,
             'category_id' => 1,
