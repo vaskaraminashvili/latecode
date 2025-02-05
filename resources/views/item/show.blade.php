@@ -1,0 +1,109 @@
+<x-layouts.master>
+    <!-- =======================
+    Page content START -->
+    <section class="pt-3 pt-xl-5">
+        <div class="container" data-sticky-container>
+            <div class="row g-4">
+                <!-- Main content START -->
+                <div class="col-xl-8">
+
+                    <div class="row g-4">
+                        <!-- Title START -->
+                        <div class="col-12">
+                            <!-- Title -->
+                            <h2>{{$item->title}}</h2>
+                            <!-- Content -->
+                            <ul class="list-inline mb-0">
+                                <li class="list-inline-item fw-light h6 me-3 mb-1 mb-sm-0">
+                                    <a href="#" class="badge text-bg-light"><i
+                                            class="fas fa-circle me-2 small fw-bold"></i>Secondary</a>
+                                </li>
+                                <li class="list-inline-item fw-light h6 me-3 mb-1 mb-sm-0">
+                                    <a href="#" class="badge text-bg-light"><i
+                                            class="fas fa-circle me-2 small fw-bold"></i>Secondary</a>
+                                </li>
+                                <li class="list-inline-item fw-light h6 me-3 mb-1 mb-sm-0">
+                                    <a href="#" class="badge text-bg-light"><i
+                                            class="fas fa-circle me-2 small fw-bold"></i>Secondary</a>
+                                </li>
+                                <li class="list-inline-item fw-light h6 me-3 mb-1 mb-sm-0">
+                                    <a href="#" class="badge text-bg-light"><i
+                                            class="fas fa-circle me-2 small fw-bold"></i>Secondary</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <!-- Title END -->
+
+                        <!-- About course START -->
+                        <div class="col-12">
+                            <div class="card border">
+                                <!-- Card header START -->
+                                <div class="card-header border-bottom">
+                                    <h3 class="mb-0">Course description</h3>
+                                </div>
+                                <!-- Card header END -->
+
+                                <!-- Card body START -->
+                                <div class="card-body">
+                                    @foreach($item->descriptionCode as $part)
+                                        {!! $part['desc'] !!}
+                                        @if(!empty($part['code']))
+                                            <x-code>
+                                                {!! $part['code'] !!}
+                                            </x-code>
+
+                                        @endif
+                                    @endforeach
+
+                                </div>
+
+                                <!-- Card body START -->
+                            </div>
+                        </div>
+                        <!-- About course END -->
+
+                    </div>
+                </div>
+                <!-- Main content END -->
+
+                <!-- Right sidebar START -->
+                <div class="col-xl-4">
+                    <div data-sticky data-margin-top="80" data-sticky-for="768">
+                        <div class="row g-4">
+                            <!-- Tags START -->
+                            <div class="col-md-6 col-xl-12">
+                                <div class="card card-body border p-4">
+                                    <h4 class="mb-3">Popular Tags</h4>
+                                    <ul class="list-inline mb-0">
+                                        <li class="list-inline-item"><a class="btn btn-outline-light btn-sm" href="#">blog</a>
+                                        </li>
+                                        <li class="list-inline-item"><a class="btn btn-outline-light btn-sm" href="#">business</a>
+                                        </li>
+                                        <li class="list-inline-item"><a class="btn btn-outline-light btn-sm" href="#">theme</a>
+                                        </li>
+                                        <li class="list-inline-item"><a class="btn btn-outline-light btn-sm" href="#">bootstrap</a>
+                                        </li>
+                                        <li class="list-inline-item"><a class="btn btn-outline-light btn-sm" href="#">data
+                                                science</a></li>
+                                        <li class="list-inline-item"><a class="btn btn-outline-light btn-sm" href="#">web
+                                                development</a></li>
+                                        <li class="list-inline-item"><a class="btn btn-outline-light btn-sm" href="#">tips</a>
+                                        </li>
+                                        <li class="list-inline-item"><a class="btn btn-outline-light btn-sm" href="#">machine
+                                                learning</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- Tags END -->
+                        </div><!-- Row End -->
+                    </div>
+                </div>
+                <!-- Right sidebar END -->
+
+            </div><!-- Row END -->
+        </div>
+    </section>
+    <!-- =======================
+    Page content END -->
+</x-layouts.master>

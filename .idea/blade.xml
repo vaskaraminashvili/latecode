@@ -53,6 +53,7 @@
       <data directive="@endif" />
       <data directive="@endisset" />
       <data directive="@endlang" />
+      <data directive="@endmarkdown" />
       <data directive="@endonce" />
       <data directive="@endpersist" />
       <data directive="@endphp" />
@@ -97,6 +98,7 @@
       <data directive="@livewireScriptConfig" />
       <data directive="@livewireScripts" />
       <data directive="@livewireStyles" />
+      <data directive="@markdown" injection="true" prefix="&lt;?php _bladeDirective(" suffix="); ?&gt;" />
       <data directive="@method" injection="true" prefix="&lt;?php&#10;echo method_field(" suffix="); ?&gt;" />
       <data directive="@once" />
       <data directive="@overwrite" />

@@ -46,7 +46,8 @@ class ItemResource extends Resource
                         TextInput::make('title')
                             ->required(),
                         TextInput::make('slug'),
-                        RichEditor::make('description'),
+                        RichEditor::make('description')
+                            ->helperText('where you want code to appear add block @@code@@'),
                         Repeater::make('code')
                             ->label('კოდის ბლოკი')
                             ->schema([
@@ -71,6 +72,12 @@ class ItemResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('title'),
+                TextColumn::make('slug')
+                    ->url(function ($state) {
+                        return route('item.show', ['slug' => $state]);
+                    })
+                    ->openUrlInNewTab()
+                ,
             ])
             ->filters([
                 //
@@ -82,7 +89,8 @@ class ItemResource extends Resource
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
-            ]);
+            ])
+            ->defaultSort('id', 'desc');
     }
 
     public static function getRelations(): array

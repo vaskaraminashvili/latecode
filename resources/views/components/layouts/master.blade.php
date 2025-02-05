@@ -36,10 +36,9 @@
             var el = document.querySelector('.theme-icon-active');
             if (el != 'undefined' && el != null) {
                 const showActiveTheme = theme => {
-                    const activeThemeIcon = document.querySelector('.theme-icon-active use')
+                    const activeThemeIcon = document.querySelector('.theme-icon-active')
                     const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
-                    const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
-
+                    const svgOfActiveBtn = btnToActive.querySelector('.mode-switch').getAttribute('href')
                     document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
                         element.classList.remove('active')
                     })
@@ -81,12 +80,12 @@
           href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&amp;family=Roboto:wght@400;500;700&amp;display=swap">
 
     <!-- Plugins CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
-    <link rel="stylesheet" type="text/css" href="assets/vendor/plyr/plyr.css"/>
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/vendor/font-awesome/css/all.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/vendor/bootstrap-icons/bootstrap-icons.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/vendor/plyr/plyr.css')}}"/>
 
     <!-- Theme CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}">
 
 </head>
 
@@ -99,8 +98,9 @@
         <div class="container">
             <!-- Logo START -->
             <a class="navbar-brand" href="index.html">
-                <img class="light-mode-item navbar-brand-item" src="assets/images/logo.svg" alt="logo">
-                <img class="dark-mode-item navbar-brand-item" src="assets/images/logo-light.svg" alt="logo">
+                <img class="light-mode-item navbar-brand-item" src="{{asset('assets/images/logo.svg')}}" alt="logo">
+                <img class="dark-mode-item navbar-brand-item" src="{{asset('assets/images/logo-light.svg')}}"
+                     alt="logo">
             </a>
             <!-- Logo END -->
 
@@ -149,7 +149,7 @@
             <div class="dropdown ms-1 ms-lg-0">
                 <a class="avatar avatar-sm p-0" href="#" id="profileDropdown" role="button" data-bs-auto-close="outside"
                    data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img class="avatar-img rounded-circle" src="assets/images/avatar/01.jpg" alt="avatar">
+                    <img class="avatar-img rounded-circle" src="{{asset('assets/images/avatar/01.jpg')}}" alt="avatar">
                 </a>
                 <ul class="dropdown-menu dropdown-animation dropdown-menu-end shadow pt-3"
                     aria-labelledby="profileDropdown">
@@ -158,7 +158,8 @@
                         <div class="d-flex align-items-center">
                             <!-- Avatar -->
                             <div class="avatar me-3">
-                                <img class="avatar-img rounded-circle shadow" src="assets/images/avatar/01.jpg"
+                                <img class="avatar-img rounded-circle shadow"
+                                     src="{{asset('assets/images/avatar/01.jpg')}}"
                                      alt="avatar">
                             </div>
                             <div>
@@ -245,8 +246,8 @@ Footer START -->
             <div class="col-lg-3">
                 <!-- logo -->
                 <a class="me-0" href="index.html">
-                    <img class="light-mode-item h-40px" src="assets/images/logo.svg" alt="logo">
-                    <img class="dark-mode-item h-40px" src="assets/images/logo-light.svg" alt="logo">
+                    <img class="light-mode-item h-40px" src="{{asset('assets/images/logo.svg')}}" alt="logo">
+                    <img class="dark-mode-item h-40px" src="{{asset('assets/images/logo-light.svg')}}" alt="logo">
                 </a>
                 <p class="my-3">Eduport education theme, built specifically for the education centers which is dedicated
                     to teaching and involve learners. </p>
@@ -317,11 +318,11 @@ Footer START -->
                 <div class="row g-2 mt-2">
                     <!-- Google play store button -->
                     <div class="col-6 col-sm-4 col-md-3 col-lg-6">
-                        <a href="#"> <img src="assets/images/client/google-play.svg" alt=""> </a>
+                        <a href="#"> <img src="{{asset('assets/images/client/google-play.svg')}}" alt=""> </a>
                     </div>
                     <!-- App store button -->
                     <div class="col-6 col-sm-4 col-md-3 col-lg-6">
-                        <a href="#"> <img src="assets/images/client/app-store.svg" alt="app-store"> </a>
+                        <a href="#"> <img src="{{asset('assets/images/client/app-store.svg')}}" alt="app-store"> </a>
                     </div>
                 </div> <!-- Row END -->
             </div>
@@ -350,13 +351,13 @@ Footer START -->
                                     </a>
                                     <ul class="dropdown-menu min-w-auto" aria-labelledby="languageSwitcher">
                                         <li><a class="dropdown-item me-4" href="#"><img class="fa-fw me-2"
-                                                                                        src="assets/images/flags/uk.svg"
+                                                                                        src="{{asset('assets/images/flags/uk.svg')}}"
                                                                                         alt="">English</a></li>
                                         <li><a class="dropdown-item me-4" href="#"><img class="fa-fw me-2"
-                                                                                        src="assets/images/flags/gr.svg"
+                                                                                        src="{{asset('assets/images/flags/gr.svg')}}"
                                                                                         alt="">German </a></li>
                                         <li><a class="dropdown-item me-4" href="#"><img class="fa-fw me-2"
-                                                                                        src="assets/images/flags/sp.svg"
+                                                                                        src="{{asset('assets/images/flags/sp.svg')}}"
                                                                                         alt="">French</a></li>
                                     </ul>
                                 </div>
@@ -377,14 +378,15 @@ Footer END -->
 <div class="back-top"><i class="bi bi-arrow-up-short position-absolute top-50 start-50 translate-middle"></i></div>
 
 <!-- Bootstrap JS -->
-<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{{asset('assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
 
 <!-- Vendors -->
-<script src="assets/vendor/sticky-js/sticky.min.js"></script>
-<script src="assets/vendor/plyr/plyr.js"></script>
+<script src="{{asset('assets/vendor/sticky-js/sticky.min.js')}}"></script>
+<script src="{{asset('assets/vendor/plyr/plyr.js')}}"></script>
+<script src="{{asset('assets/vendor/purecounterjs/dist/purecounter_vanilla.js')}}"></script>
 
 <!-- Template Functions -->
-<script src="assets/js/functions.js"></script>
+<script src="{{asset('assets/js/functions.js')}}"></script>
 
 </body>
 
