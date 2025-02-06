@@ -2,7 +2,10 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Resources\ItemResource;
+use App\Models\Item;
+use App\Http\Controllers\api\ItemApiController;
+ 
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
@@ -38,3 +41,14 @@ Route::get('/test', function (Request $request) {
         ]
     ];;
 });
+
+
+// Route::get('/item/{id}', function (string $id) {
+//     return new ItemResource(Item::findOrFail($id));
+// });
+
+
+
+Route::get('/items', [ItemApiController::class, 'index']);
+Route::get('/item/{slug}', [ItemApiController::class, 'show']);
+
