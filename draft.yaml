@@ -1,0 +1,6 @@
+models:
+  Tag:
+    title: string
+    status: boolean
+    relationships:
+      hasMany: Item

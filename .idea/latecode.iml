@@ -166,6 +166,8 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/commonmark-shiki-highlighter" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/laravel-markdown" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/shiki-php" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laravel-shift/blueprint" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laravel-shift/faker-registry" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -30,6 +30,11 @@ class Item extends Model
         return 'slug'; // Use the 'slug' column for route binding
     }
 
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class);
+    }
+
     protected function casts(): array
     {
         return [

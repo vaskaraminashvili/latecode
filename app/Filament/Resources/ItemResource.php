@@ -34,6 +34,10 @@ class ItemResource extends Resource
             ->schema([
                 Forms\Components\Section::make()
                     ->schema([
+                        Select::make('tags')
+                            ->multiple()
+                            ->preload()
+                            ->relationship('tags', 'title'),
                         Forms\Components\Select::make('category_id')
                             ->searchable()
                             ->label('Category')

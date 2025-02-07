@@ -1,0 +1,6 @@
+created:
+    - database/factories/TagFactory.php
+    - database/migrations/2025_02_07_201035_create_tags_table.php
+    - app/Models/Tag.php
+models:
+    Tag: { title: string, status: boolean, relationships: { hasMany: Item } }
