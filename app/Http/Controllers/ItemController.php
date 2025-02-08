@@ -17,9 +17,13 @@ class ItemController extends Controller
     public function show($slug)
     {
         $item = Item::query()
+            ->with([
+                'tags'
+            ])
             ->where('status', 1)
             ->where('slug', $slug)
             ->first();
         return view('item.show', ['item' => $item]);
     }
+    
 }

@@ -168,6 +168,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/shiki-php" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel-shift/blueprint" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel-shift/faker-registry" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/laravel-sluggable" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

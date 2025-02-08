@@ -21,6 +21,7 @@ class TagFactory extends Factory
     {
         return [
             'title'  => fake()->word(),
+            'slug'   => fake()->slug(),
             'status' => 1,
         ];
     }
