@@ -10,7 +10,6 @@ use Filament\Forms;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
-use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Concerns\Translatable;
@@ -19,6 +18,7 @@ use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Table;
+use Wiebenieuwenhuis\FilamentCodeEditor\Components\CodeEditor;
 
 class ItemResource extends Resource
 {
@@ -63,8 +63,9 @@ class ItemResource extends Resource
                                     )
                                     ->searchable()
                                     ->preload(),
-                                TextArea::make('content')
-                                    ->rows(5),
+                                CodeEditor::make('content'),
+//                                TextArea::make('content')
+//                                    ->rows(5),
                             ])
                             ->collapsible()
                     ])
