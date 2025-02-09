@@ -93,9 +93,11 @@ Page Banner START -->
                                     <div class="card-body">
                                         <!-- Title -->
                                         <div class="d-flex justify-content-between mb-2">
-                                            <h5 class="card-title mb-0"><a href="#">
+                                            <h5 class="card-title mb-0">
+                                                <a href="{{route('item.show', ['slug' => $item->slug])}}">
                                                     {{$item->title}}
-                                                </a></h5>
+                                                </a>
+                                            </h5>
                                             <!-- Wishlist icon -->
                                         </div>
                                         <!-- Content -->

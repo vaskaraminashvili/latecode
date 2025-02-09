@@ -18,7 +18,9 @@
                                     <li class="list-inline-item fw-light h6 me-3 mb-1 mb-sm-0">
                                         <a href="{{route('tag.index', ['tag' => $tag->slug])}}"
                                            class="badge text-bg-light"><i
-                                                class="fas fa-circle me-2 small fw-bold"></i>{{$tag->title}}</a>
+                                                class="fas fa-circle me-2 small fw-bold"></i>
+                                            <span style="color: {{$tag->color}}">{{$tag->title}}</span>
+                                        </a>
                                     </li>
 
                                 @endforeach
