@@ -14,23 +14,14 @@
                             <h2>{{$item->title}}</h2>
                             <!-- Content -->
                             <ul class="list-inline mb-0">
-                                <li class="list-inline-item fw-light h6 me-3 mb-1 mb-sm-0">
-                                    <a href="#" class="badge text-bg-light"><i
-                                            class="fas fa-circle me-2 small fw-bold"></i>Secondary</a>
-                                </li>
-                                <li class="list-inline-item fw-light h6 me-3 mb-1 mb-sm-0">
-                                    <a href="#" class="badge text-bg-light"><i
-                                            class="fas fa-circle me-2 small fw-bold"></i>Secondary</a>
-                                </li>
-                                <li class="list-inline-item fw-light h6 me-3 mb-1 mb-sm-0">
-                                    <a href="#" class="badge text-bg-light"><i
-                                            class="fas fa-circle me-2 small fw-bold"></i>Secondary</a>
-                                </li>
-                                <li class="list-inline-item fw-light h6 me-3 mb-1 mb-sm-0">
-                                    <a href="#" class="badge text-bg-light"><i
-                                            class="fas fa-circle me-2 small fw-bold"></i>Secondary</a>
-                                </li>
+                                @foreach($item->tags as $tag)
+                                    <li class="list-inline-item fw-light h6 me-3 mb-1 mb-sm-0">
+                                        <a href="{{route('tag.index', ['tag' => $tag->slug])}}"
+                                           class="badge text-bg-light"><i
+                                                class="fas fa-circle me-2 small fw-bold"></i>{{$tag->title}}</a>
+                                    </li>
 
+                                @endforeach
                             </ul>
                         </div>
                         <!-- Title END -->

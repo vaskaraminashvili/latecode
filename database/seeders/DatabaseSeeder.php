@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Category;
 use App\Models\CodeLanguage;
 use App\Models\Item;
+use App\Models\Tag;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -36,8 +37,17 @@ class DatabaseSeeder extends Seeder
             ],
             "status"      => true
         ]);
+        Tag::factory(20)->create();
 
-        Item::factory(150)->create();
+        Item::factory()
+            ->count(500)
+            ->create()
+            ->each(function ($item) {
+                $randomTags = Tag::all()->random(3);
+
+                // Attach the random tags to the item
+                $item->tags()->attach($randomTags);
+            });
 
         $languages = [
             '1C',

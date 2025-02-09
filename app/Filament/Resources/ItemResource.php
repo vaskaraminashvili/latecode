@@ -10,14 +10,15 @@ use Filament\Forms;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
-use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Concerns\Translatable;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Table;
+use Wiebenieuwenhuis\FilamentCodeEditor\Components\CodeEditor;
 
 class ItemResource extends Resource
 {
@@ -29,11 +30,15 @@ class ItemResource extends Resource
 
     public static function form(Form $form): Form
     {
-
         return $form
             ->schema([
                 Forms\Components\Section::make()
                     ->schema([
+                        Forms\Components\Toggle::make('status'),
+                        Select::make('tags')
+                            ->multiple()
+                            ->preload()
+                            ->relationship('tags', 'title'),
                         Forms\Components\Select::make('category_id')
                             ->searchable()
                             ->label('Category')
@@ -58,8 +63,9 @@ class ItemResource extends Resource
                                     )
                                     ->searchable()
                                     ->preload(),
-                                TextArea::make('content')
-                                    ->rows(5),
+                                CodeEditor::make('content'),
+//                                TextArea::make('content')
+//                                    ->rows(5),
                             ])
                             ->collapsible()
                     ])
@@ -76,8 +82,9 @@ class ItemResource extends Resource
                     ->url(function ($state) {
                         return route('item.show', ['slug' => $state]);
                     })
-                    ->openUrlInNewTab()
-                ,
+                    ->openUrlInNewTab(),
+                ToggleColumn::make('status'),
+
             ])
             ->filters([
                 //

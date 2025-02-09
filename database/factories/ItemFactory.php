@@ -12,15 +12,21 @@ class ItemFactory extends Factory
 
     public function definition(): array
     {
+        $code_data = [
+            [
+                "content"  => "php aris kvdari",
+                "language" => "PHP"
+            ]
+        ];
         return [
-            'title' => $this->generateTranslatableField(['ka', 'en']),
+            'title'       => $this->generateTranslatableField(['ka', 'en']),
             'description' => $this->generateTranslatableField(['ka', 'en']),
-            'code' => '[{"content": "php aris kvdari ", "language": "PHP"}]',
-            'slug' => $this->faker->slug(),
-            'status' => 1,
+            'code'        => $code_data,
+            'slug'        => $this->faker->slug(),
+            'status'      => 1,
             'category_id' => 1,
-            'created_at' => Carbon::now(),
-            'updated_at' => Carbon::now(),
+            'created_at'  => Carbon::now(),
+            'updated_at'  => Carbon::now(),
         ];
     }
 
