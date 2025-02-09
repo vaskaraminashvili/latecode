@@ -37,11 +37,17 @@ class DatabaseSeeder extends Seeder
             ],
             "status"      => true
         ]);
+        Tag::factory(20)->create();
 
         Item::factory()
-            ->has(Tag::factory()->count(2))
-            ->count(50)
-            ->create();
+            ->count(500)
+            ->create()
+            ->each(function ($item) {
+                $randomTags = Tag::all()->random(3);
+
+                // Attach the random tags to the item
+                $item->tags()->attach($randomTags);
+            });
 
         $languages = [
             '1C',
