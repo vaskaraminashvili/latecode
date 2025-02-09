@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Enums\DifficultyLevel;
 use App\Models\Item;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Carbon;
@@ -25,6 +26,7 @@ class ItemFactory extends Factory
             'slug'        => $this->faker->slug(),
             'status'      => 1,
             'category_id' => 1,
+            'difficulty'  => $this->faker->randomElement(DifficultyLevel::class),
             'created_at'  => Carbon::now(),
             'updated_at'  => Carbon::now(),
         ];

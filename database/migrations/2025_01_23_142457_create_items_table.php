@@ -14,6 +14,7 @@ return new class extends Migration {
             $table->json('description')->nullable();
             $table->json('code')->nullable();
             $table->boolean('status')->default(false);
+            $table->string('difficulty')->nullable();
             $table->foreignId('category_id');
             $table->timestamps();
             $table->softDeletes();
