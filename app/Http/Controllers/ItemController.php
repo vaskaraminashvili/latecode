@@ -8,10 +8,11 @@ class ItemController extends Controller
 {
     public function index()
     {
-        return Item::query()
+        $items = Item::query()
             ->where('status', 1)
             ->orderBy('created_at', 'desc')
-            ->get();
+            ->paginate(10);
+        return view('item.index', compact('items'));
     }
 
     public function show($slug)
@@ -25,5 +26,5 @@ class ItemController extends Controller
             ->first();
         return view('item.show', ['item' => $item]);
     }
-    
+
 }

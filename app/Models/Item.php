@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\DifficultyLevel;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -44,6 +45,25 @@ class Item extends Model
             ->saveSlugsTo('slug');
     }
 
+    public function wordCount(): Attribute
+    {
+        return Attribute::make(
+            get: function () {
+                return Str::of($this->description)->wordCount();
+            }
+        );
+    }
+
+    public function readingTime(): Attribute
+    {
+        $wordsPerMinute = 200;
+        return Attribute::make(
+            get: function () use ($wordsPerMinute) {
+                return ceil($this->wordCount / $wordsPerMinute);
+            }
+        );
+    }
+
     protected function casts(): array
     {
         return [
@@ -51,6 +71,7 @@ class Item extends Model
             'description' => 'array',
             'code'        => 'array',
             'status'      => 'boolean',
+            'difficulty'  => DifficultyLevel::class,
         ];
     }
 

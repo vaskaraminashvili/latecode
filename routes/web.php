@@ -9,6 +9,7 @@ Route::get('/', function () {
 });
 
 Route::get('/tag/{tag}', [TagController::class, 'index'])->name('tag.index');
+Route::get('/items', [ItemController::class, 'index'])->name('item.index');
 Route::get('{slug}', [ItemController::class, 'show'])->name('item.show');
 
 Route::get('/courses', function () {
