@@ -170,6 +170,8 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel-shift/faker-registry" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/laravel-sluggable" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/wiebenieuwenhuis/filament-code-editor" />
+      <excludeFolder url="file://$MODULE_DIR$/theme" />
+      <excludePattern pattern="theme*" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

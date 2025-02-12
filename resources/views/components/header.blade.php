@@ -4,9 +4,10 @@
     <nav class="navbar navbar-expand-xl">
         <div class="container">
             <!-- Logo START -->
-            <a class="navbar-brand" href="{{route('home')}}">
+            <a class="navbar-brand font-heading fs-1" href="{{route('home')}}">
                 <img class="light-mode-item navbar-brand-item main-logo" src="{{asset('assets/images/logo.png')}}"
                      alt="logo">
+                Late <br> Code
             </a>
             <!-- Logo END -->
 
