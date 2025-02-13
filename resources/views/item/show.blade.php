@@ -16,11 +16,7 @@
                             <ul class="list-inline mb-0">
                                 @foreach($item->tags as $tag)
                                     <li class="list-inline-item fw-light h6 me-3 mb-1 mb-sm-0">
-                                        <a href="{{route('tag.index', ['tag' => $tag->slug])}}"
-                                           class="badge text-bg-light"><i
-                                                class="fas fa-circle me-2 small fw-bold"></i>
-                                            <span style="color: {{$tag->color}}">{{$tag->title}}</span>
-                                        </a>
+                                        <x-tag class="small" :$tag/>
                                     </li>
 
                                 @endforeach
@@ -66,27 +62,7 @@
                         <div class="row g-4">
                             <!-- Tags START -->
                             <div class="col-md-6 col-xl-12">
-                                <div class="card card-body border p-4">
-                                    <h4 class="mb-3">Popular Tags</h4>
-                                    <ul class="list-inline mb-0">
-                                        <li class="list-inline-item"><a class="btn btn-outline-light btn-sm" href="#">blog</a>
-                                        </li>
-                                        <li class="list-inline-item"><a class="btn btn-outline-light btn-sm" href="#">business</a>
-                                        </li>
-                                        <li class="list-inline-item"><a class="btn btn-outline-light btn-sm" href="#">theme</a>
-                                        </li>
-                                        <li class="list-inline-item"><a class="btn btn-outline-light btn-sm" href="#">bootstrap</a>
-                                        </li>
-                                        <li class="list-inline-item"><a class="btn btn-outline-light btn-sm" href="#">data
-                                                science</a></li>
-                                        <li class="list-inline-item"><a class="btn btn-outline-light btn-sm" href="#">web
-                                                development</a></li>
-                                        <li class="list-inline-item"><a class="btn btn-outline-light btn-sm" href="#">tips</a>
-                                        </li>
-                                        <li class="list-inline-item"><a class="btn btn-outline-light btn-sm" href="#">machine
-                                                learning</a></li>
-                                    </ul>
-                                </div>
+                                <x-popular-tags/>
                             </div>
                             <!-- Tags END -->
                         </div><!-- Row End -->

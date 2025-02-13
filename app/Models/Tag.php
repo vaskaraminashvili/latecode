@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
@@ -43,4 +44,12 @@ class Tag extends Model
             ->generateSlugsFrom('title')
             ->saveSlugsTo('slug');
     }
+
+    public function scopePopular(Builder $query): void
+    {
+        $query->where('status', 1)
+            ->withCount('items')
+            ->orderBy('items_count', 'desc');
+    }
+
 }

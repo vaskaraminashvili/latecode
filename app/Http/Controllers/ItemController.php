@@ -11,7 +11,7 @@ class ItemController extends Controller
         $items = Item::query()
             ->where('status', 1)
             ->orderBy('created_at', 'desc')
-            ->paginate(10);
+            ->paginate(12);
         return view('item.index', compact('items'));
     }
 

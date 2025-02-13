@@ -83,45 +83,7 @@ Page Banner START -->
             <!-- Course list START -->
             <div class="row g-4 justify-content-center">
                 @foreach($items as $item)
-                    <!-- Card item START -->
-                    <div class="col-lg-10 col-xxl-6">
-                        <div class="card rounded overflow-hidden shadow">
-                            <div class="row g-0">
-
-                                <!-- Card body -->
-                                <div class="col-md-12">
-                                    <div class="card-body">
-                                        <!-- Title -->
-                                        <div class="d-flex justify-content-between mb-2">
-                                            <h5 class="card-title mb-0">
-                                                <a href="{{route('item.show', ['slug' => $item->slug])}}">
-                                                    {{$item->title}}
-                                                </a>
-                                            </h5>
-                                            <!-- Wishlist icon -->
-                                        </div>
-                                        <!-- Content -->
-                                        <!-- Info -->
-                                        <ul class="list-inline mb-1">
-                                            <li class="list-inline-item h6 fw-light mb-1 mb-sm-0">
-                                                <i class="far fa-clock text-danger me-2"></i>
-                                                {{$item->readingTime . ' ' . __('minutes')}}
-                                            </li>
-                                            <li class="list-inline-item h6 fw-light mb-1 mb-sm-0">
-                                                {{$item->wordCount . ' ' . __('words')}}
-                                            </li>
-                                            <li class="list-inline-item h6 fw-light">
-                                                <i class="fas fa-signal text-success me-2"></i>
-                                                {{$item->difficulty->label()}}
-                                            </li>
-                                        </ul>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card item END -->
+                    <x-item :$item/>
 
                 @endforeach
 
