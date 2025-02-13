@@ -6,7 +6,7 @@ use App\Models\Tag;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Counter extends Component
+class PopularTags extends Component
 {
     public $tags;
 
@@ -14,8 +14,8 @@ class Counter extends Component
     {
         $this->tags = Tag::query()
             ->popular()
-            ->limit(4)
+            ->limit(10)
             ->get();
-        return view('components.counter', ['tags' => $this->tags]);
+        return view('components.popular-tags');
     }
 }

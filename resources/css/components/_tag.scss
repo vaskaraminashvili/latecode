@@ -1,0 +1,57 @@
+// Colours
+$dark-grey: #fff;
+$yellow: #FDE74C;
+$purple: #B8B3E9;
+$blue: #78E0DC;
+$white: #FFFFFF;
+$primary: #4E89DA;
+
+// Typography
+@import url('https://fonts.googleapis.com/css?family=Muli:400,700,800&display=swap');
+
+$font-set-1: 'Muli', Arial, sans-serif;
+
+$normal: 400;
+$bold: 700;
+$extra-bold: 800;
+
+
+// === Button Styles
+@mixin tag-btn($txt, $bx, $bx-hover) {
+
+    display: block;
+    border: 0;
+    border-radius: 5px;
+    color: $txt;
+    font-family: $font-set-1;
+    font-weight: $extra-bold;
+    text-transform: uppercase;
+    padding: 0.5rem 0.7rem;
+    font-size: 1rem;
+    background-color: $bx;
+    box-shadow: 0 8px darken($bx, 20%);
+    margin-bottom: 1rem;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: darken($bx-hover, 10%);
+    }
+
+    &:active {
+        transform: translateY(4px);
+        box-shadow: 0 3px darken($bx, 20%);
+    }
+}
+
+.btn-tag {
+    @include tag-btn($txt: $dark-grey, $bx: $blue, $bx-hover: $blue);
+}
+

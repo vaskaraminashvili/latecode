@@ -66,27 +66,7 @@
                         <div class="row g-4">
                             <!-- Tags START -->
                             <div class="col-md-6 col-xl-12">
-                                <div class="card card-body border p-4">
-                                    <h4 class="mb-3">Popular Tags</h4>
-                                    <ul class="list-inline mb-0">
-                                        <li class="list-inline-item"><a class="btn btn-outline-light btn-sm" href="#">blog</a>
-                                        </li>
-                                        <li class="list-inline-item"><a class="btn btn-outline-light btn-sm" href="#">business</a>
-                                        </li>
-                                        <li class="list-inline-item"><a class="btn btn-outline-light btn-sm" href="#">theme</a>
-                                        </li>
-                                        <li class="list-inline-item"><a class="btn btn-outline-light btn-sm" href="#">bootstrap</a>
-                                        </li>
-                                        <li class="list-inline-item"><a class="btn btn-outline-light btn-sm" href="#">data
-                                                science</a></li>
-                                        <li class="list-inline-item"><a class="btn btn-outline-light btn-sm" href="#">web
-                                                development</a></li>
-                                        <li class="list-inline-item"><a class="btn btn-outline-light btn-sm" href="#">tips</a>
-                                        </li>
-                                        <li class="list-inline-item"><a class="btn btn-outline-light btn-sm" href="#">machine
-                                                learning</a></li>
-                                    </ul>
-                                </div>
+                                <x-popular-tags/>
                             </div>
                             <!-- Tags END -->
                         </div><!-- Row End -->
