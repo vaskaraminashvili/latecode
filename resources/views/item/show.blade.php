@@ -16,11 +16,7 @@
                             <ul class="list-inline mb-0">
                                 @foreach($item->tags as $tag)
                                     <li class="list-inline-item fw-light h6 me-3 mb-1 mb-sm-0">
-                                        <a href="{{route('tag.index', ['tag' => $tag->slug])}}"
-                                           class="badge text-bg-light"><i
-                                                class="fas fa-circle me-2 small fw-bold"></i>
-                                            <span style="color: {{$tag->color}}">{{$tag->title}}</span>
-                                        </a>
+                                        <x-tag class="small" :$tag/>
                                     </li>
 
                                 @endforeach
