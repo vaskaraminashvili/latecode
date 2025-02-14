@@ -3,10 +3,12 @@
 namespace App\Models;
 
 use App\Enums\DifficultyLevel;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
@@ -62,6 +64,40 @@ class Item extends Model
                 return ceil($this->wordCount / $wordsPerMinute);
             }
         );
+    }
+
+    public function scopeFilter(Builder $query, Request $request)
+    {
+        if ($request->has('search')) {
+            $query->where('title', 'like', '%' . $request->input('search') . '%');
+        }
+
+        if ($request->has('tag')) {
+            $query->whereHas('tags', function ($query) use ($request) {
+                $query->where('slug', $request->input('tag'));
+            });
+        }
+
+        if ($request->has('sortBy')) {
+            switch ($request->input('sortBy')) {
+                case 'latest':
+                    $query->orderBy('created_at', 'desc');
+                    break;
+                case 'oldest':
+                    $query->orderBy('created_at', 'asc');
+                    break;
+                case 'name_asc':
+                    $query->orderBy('name', 'asc');
+                    break;
+                case 'name_desc':
+                    $query->orderBy('name', 'desc');
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        return $query;
     }
 
     protected function casts(): array
