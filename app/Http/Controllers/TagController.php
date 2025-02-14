@@ -18,7 +18,8 @@ class TagController extends Controller
             ->whereHas('tags', function ($query) use ($tag) {
                 $query->where('slug', $tag);
             })
-            ->paginate(12);
+            ->paginate(12)
+            ->withQueryString();
         return view('tag.index', ['items' => $items]);
     }
 }
