@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Resources\ItemResource;
 use App\Models\Item;
 use App\Http\Controllers\api\ItemApiController;
+use App\Http\Controllers\api\TagApiController;
  
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -43,12 +44,9 @@ Route::get('/test', function (Request $request) {
 });
 
 
-// Route::get('/item/{id}', function (string $id) {
-//     return new ItemResource(Item::findOrFail($id));
-// });
 
 
-
+Route::get('/tag/{tag}', [TagApiController::class, 'index'])->name('tag.index');
 Route::get('/items', [ItemApiController::class, 'index']);
 Route::get('/item/{slug}', [ItemApiController::class, 'show']);
 
