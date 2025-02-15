@@ -23,9 +23,11 @@ class ItemApiController extends Controller
      public function show($slug)
     {
         $item = Item::query()
+            ->with([
+                'tags'
+            ])
             ->where('status', 1)
             ->where('slug', $slug)
-             ->orderBy('created_at', 'desc')
             ->first();
 // dd($item);
         return new ItemResource($item);
