@@ -1,3 +1,4 @@
+@use 'sass:color';
 // Colours
 $dark-grey: #fff;
 $yellow: #FDE74C;
@@ -29,7 +30,7 @@ $extra-bold: 800;
     padding: 0.5rem 0.7rem;
     font-size: 1rem;
     background-color: $bx;
-    box-shadow: 0 8px darken($bx, 20%);
+    box-shadow: 0 8px color.scale($bx, $lightness: 20%);
     margin-bottom: 1rem;
 
     &:hover {
@@ -42,12 +43,12 @@ $extra-bold: 800;
 
     &:hover,
     &:focus {
-        background-color: darken($bx-hover, 10%);
+        background-color: color.scale($bx-hover, $lightness: 10%);
     }
 
     &:active {
         transform: translateY(4px);
-        box-shadow: 0 3px darken($bx, 20%);
+        box-shadow: 0 3px color.scale($bx, $lightness: 20%);
     }
 }
 
