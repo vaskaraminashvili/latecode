@@ -18,6 +18,7 @@ class ItemResource extends JsonResource
             'id' => $this->id,
             'title' => $this->title,
             'description' => $this->description,
+            'slug' => $this->slug,
             'status' => $this->status,
             'updated_at' => $this->updated_at,
             'tags' => $this->whenLoaded('tags', function() {
