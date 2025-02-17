@@ -14,6 +14,9 @@ class ItemApiController extends Controller
     {
         $item = Item::query()
             ->where('status', 1)
+            ->with([
+                'tags'
+            ])
             ->orderBy('created_at', 'desc')
             ->get();
         return new ItemCollection($item);
