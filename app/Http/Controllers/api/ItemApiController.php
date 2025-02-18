@@ -32,7 +32,7 @@ class ItemApiController extends Controller
             ->where('status', 1)
             ->where('slug', $slug)
             ->first();
-// dd($item);
+dd($item);
         return new ItemResource($item);
 
     }
