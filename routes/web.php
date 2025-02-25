@@ -3,6 +3,7 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\TagController;
+use App\Http\Controllers\UserLoginController;
 use App\Http\Controllers\UserRegisterController;
 use Illuminate\Support\Facades\Route;
 
@@ -11,6 +12,13 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::prefix('register')->name('register.')->controller(UserRegisterController::class)->group(function () {
     Route::get('/', 'registerForm')->name('form');
     Route::post('/', 'register')->name('user');
+});
+
+
+Route::prefix('login')->name('login.')->controller(UserLoginController::class)->group(function () {
+    Route::get('/', 'loginForm')->name('form');
+    Route::post('/', 'login')->name('user');
+    Route::post('/logout', 'destroy')->name('logout');
 });
 
 Route::get('/tag/{tag}', [TagController::class, 'index'])->name('tag.index');
