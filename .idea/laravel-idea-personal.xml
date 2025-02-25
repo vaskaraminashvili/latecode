@@ -4,6 +4,7 @@
     <option name="generationStringOptionValues">
       <map>
         <entry key="createBladeComponent.type" value="Class and blade" />
+        <entry key="createController.singleAction" value="1" />
         <entry key="newModelSimpleOption:addFillable" value="1" />
         <entry key="newModelSimpleOption:softDeletes" value="1" />
         <entry key="postGeneration:databaseClassFactory" value="1" />
