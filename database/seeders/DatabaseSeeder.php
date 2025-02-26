@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Enums\UserType;
 use App\Models\Category;
 use App\Models\CodeLanguage;
 use App\Models\Item;
@@ -22,6 +23,7 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name'     => 'Creator',
             'email'    => 'admin@admin.com',
+            'type'     => UserType::ADMIN,
             'password' => bcrypt('password'),
         ]);
 

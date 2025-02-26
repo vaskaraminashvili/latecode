@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+@props([
+    'header' => true,
+    'footer' => true,
+])
+    <!DOCTYPE html>
 <html lang="en">
 
 <!-- Mirrored from .late.com/course-detail-adv.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 16 Jan 2025 10:12:30 GMT -->
@@ -91,8 +95,9 @@
 </head>
 
 <body>
-
-<x-header/>
+@if ($header)
+    <x-header/>
+@endif
 <!-- **************** MAIN CONTENT START **************** -->
 <main>
 
@@ -103,86 +108,88 @@
 
 </main>
 <!-- **************** MAIN CONTENT END **************** -->
-
-<!-- =======================
+@if ($footer)
+    <!-- =======================
 Footer START -->
-<footer class="pt-5 bg-light">
-    <div class="container">
-        <!-- Row START -->
-        <div class="row g-4">
+    <footer class="pt-5 bg-light">
+        <div class="container">
+            <!-- Row START -->
+            <div class="row g-4">
 
-            <!-- Widget 1 START -->
-            <div class="col-lg-3">
-                <!-- logo -->
-                <a class="navbar-brand font-heading fs-1" href="{{route('home')}}">
-                    <img class="light-mode-item navbar-brand-item main-logo w-50"
-                         src="{{asset('assets/images/logo.png')}}"
-                         alt="logo">
-                    Late <br> Code
-                </a>
-            </div>
-            <!-- Widget 1 END -->
+                <!-- Widget 1 START -->
+                <div class="col-lg-3">
+                    <!-- logo -->
+                    <a class="navbar-brand font-heading fs-1" href="{{route('home')}}">
+                        <img class="light-mode-item navbar-brand-item main-logo w-50"
+                             src="{{asset('assets/images/logo.png')}}"
+                             alt="logo">
+                        Late <br> Code
+                    </a>
+                </div>
+                <!-- Widget 1 END -->
 
 
-            <!-- Widget 3 START -->
-            <div class="col-lg-3 ms-auto">
-                <div class="row g-2 mt-2">
-                    <!-- Google play store button -->
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-6">
-                        <a href="#"> <img src="{{asset('assets/images/client/google-play.svg')}}" alt=""> </a>
-                    </div>
-                    <!-- App store button -->
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-6">
-                        <a href="#"> <img src="{{asset('assets/images/client/app-store.svg')}}" alt="app-store"> </a>
-                    </div>
-                </div> <!-- Row END -->
-            </div>
-            <!-- Widget 3 END -->
-        </div><!-- Row END -->
+                <!-- Widget 3 START -->
+                <div class="col-lg-3 ms-auto">
+                    <div class="row g-2 mt-2">
+                        <!-- Google play store button -->
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-6">
+                            <a href="#"> <img src="{{asset('assets/images/client/google-play.svg')}}" alt=""> </a>
+                        </div>
+                        <!-- App store button -->
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-6">
+                            <a href="#"> <img src="{{asset('assets/images/client/app-store.svg')}}" alt="app-store">
+                            </a>
+                        </div>
+                    </div> <!-- Row END -->
+                </div>
+                <!-- Widget 3 END -->
+            </div><!-- Row END -->
 
-        <!-- Divider -->
-        <hr class="mt-4 mb-0">
+            <!-- Divider -->
+            <hr class="mt-4 mb-0">
 
-        <!-- Bottom footer -->
-        <div class="py-3">
-            <div class="container px-0">
-                <div class="d-lg-flex justify-content-between align-items-center py-3 text-center text-md-left">
-                    <!-- copyright text -->
-                    <div class="text-body text-primary-hover"> Copyrights ©{{ date("Y") }} Late. Build by <a
-                            href="#" target="_blank" class="text-body">Late</a></div>
-                    <!-- copyright links-->
-                    <div class="justify-content-center mt-3 mt-lg-0">
-                        <ul class="nav list-inline justify-content-center mb-0">
-                            <li class="list-inline-item">
-                                <!-- Language selector -->
-                                <div class="dropup mt-0 text-center text-sm-end">
-                                    <a class="dropdown-toggle nav-link" href="#" role="button" id="languageSwitcher"
-                                       data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="fas fa-globe me-2"></i>Language
-                                    </a>
-                                    <ul class="dropdown-menu min-w-auto" aria-labelledby="languageSwitcher">
-                                        <li>
-                                            <a class="dropdown-item me-4" href="#">
-                                                English
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item me-4" href="#">
-                                                Georgian
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
+            <!-- Bottom footer -->
+            <div class="py-3">
+                <div class="container px-0">
+                    <div class="d-lg-flex justify-content-between align-items-center py-3 text-center text-md-left">
+                        <!-- copyright text -->
+                        <div class="text-body text-primary-hover"> Copyrights ©{{ date("Y") }} Late. Build by <a
+                                href="#" target="_blank" class="text-body">Late</a></div>
+                        <!-- copyright links-->
+                        <div class="justify-content-center mt-3 mt-lg-0">
+                            <ul class="nav list-inline justify-content-center mb-0">
+                                <li class="list-inline-item">
+                                    <!-- Language selector -->
+                                    <div class="dropup mt-0 text-center text-sm-end">
+                                        <a class="dropdown-toggle nav-link" href="#" role="button" id="languageSwitcher"
+                                           data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="fas fa-globe me-2"></i>Language
+                                        </a>
+                                        <ul class="dropdown-menu min-w-auto" aria-labelledby="languageSwitcher">
+                                            <li>
+                                                <a class="dropdown-item me-4" href="#">
+                                                    English
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item me-4" href="#">
+                                                    Georgian
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
-<!-- =======================
-Footer END -->
+    </footer>
+    <!-- =======================
+    Footer END -->
+@endif
 
 <!-- Back to top -->
 <div class="back-top"><i class="bi bi-arrow-up-short position-absolute top-50 start-50 translate-middle"></i></div>
