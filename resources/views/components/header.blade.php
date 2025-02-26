@@ -81,9 +81,11 @@
                             <hr class="dropdown-divider">
                         </li>
                         <!-- Links -->
-                        <li><a class="dropdown-item" href="#"><i class="bi bi-person fa-fw me-2"></i>Edit Profile</a>
+                        <li><a class="dropdown-item" href="{{route('profile.index')}}"><i
+                                    class="bi bi-person fa-fw me-2"></i>Edit Profile</a>
                         </li>
-                        <li><a class="dropdown-item" href="#"><i class="bi bi-gear fa-fw me-2"></i>Account Settings</a>
+                        <li><a class="dropdown-item" href="{{route('profile.index')}}"><i
+                                    class="bi bi-gear fa-fw me-2"></i>Account Settings</a>
                         </li>
                         <li>
                             <form action="{{ route('login.logout') }}" method="POST">
@@ -94,7 +96,7 @@
                                     Sign Out
                                 </button>
                             </form>
-                        
+
                         <li>
                             <hr class="dropdown-divider">
                         </li>

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ItemController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\UserLoginController;
 use App\Http\Controllers\UserRegisterController;
@@ -19,6 +20,10 @@ Route::prefix('login')->name('login.')->controller(UserLoginController::class)->
     Route::get('/', 'loginForm')->name('form');
     Route::post('/', 'login')->name('user');
     Route::post('/logout', 'destroy')->name('logout');
+});
+
+Route::prefix('profile')->name('profile.')->controller(ProfileController::class)->group(function () {
+    Route::get('/', 'index')->name('index');
 });
 
 Route::get('/tag/{tag}', [TagController::class, 'index'])->name('tag.index');
