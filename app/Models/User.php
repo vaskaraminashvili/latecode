@@ -7,11 +7,12 @@ use App\Enums\UserType;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use LakM\Comments\Concerns\Commenter;
+use LakM\Comments\Contracts\CommenterContract;
 
-class User extends Authenticatable
+class User extends Authenticatable implements CommenterContract
 {
-    /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable;
+    use HasFactory, Notifiable, Commenter;
 
     /**
      * The attributes that are mass assignable.
