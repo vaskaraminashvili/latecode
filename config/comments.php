@@ -84,7 +84,7 @@ return [
     /**
      * In Auth mode unauthenticated users will be redirected to this route for login
      */
-    'login_route'       => 'login',
+    'login_route'       => 'https://latecode.test/login',
 
     /**
      * When set to true only approved commands will be displayed.

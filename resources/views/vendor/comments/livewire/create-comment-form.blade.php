@@ -2,12 +2,13 @@
 
 <div @logout.window="$wire.$refresh()">
     <div class="lakm_commenter w-full" method="POST">
-        <x-honeypot wire:model="honeyPostData" />
+        <x-honeypot wire:model="honeyPostData"/>
 
         @if($guestEmailVerified)
             <div x-data="{show:true}">
                 <x-comments::modal>
-                    <div class="text-green-600 text-lg text-center font-bold p-4">Your email verified successfully!</div>
+                    <div class="text-green-600 text-lg text-center font-bold p-4">Your email verified successfully!
+                    </div>
                 </x-comments::modal>
             </div>
         @endif
@@ -48,7 +49,7 @@
         @endif
 
         <div>
-            <livewire:comments-editor wire:model="text" :$editorId :$guestModeEnabled :$disableEditor />
+            <livewire:comments-editor wire:model="text" :$editorId :$guestModeEnabled :$disableEditor/>
         </div>
 
         <div class="min-h-6">
@@ -73,7 +74,7 @@
                     <span>
                         {{ __('Please') }}
                         <x-comments::link
-                            wire:click.prevent="redirectToLogin(window.location.href)"
+                            :route="route('login.user')"
                             class="font-bold text-blue-600"
                         >
                             {{ __('login') }}
@@ -130,13 +131,15 @@
 
                         @if(!$rateLimitExceeded)
                             <div wire:click="sendVerifyLink(window.location.href)">
-                                <x-comments::button size="sm"  loadingTarget="sendVerifyLink">
+                                <x-comments::button size="sm" loadingTarget="sendVerifyLink">
                                     Send Link
                                 </x-comments::button>
                             </div>
                         @else
-                            <div x-cloak x-data="countdown(@js(GuestModeRateLimiter::$decaySeconds))" @counter-finished.window="$wire.set('rateLimitExceeded', false)">
-                                <span x-init="start" class="text-red-600">Max limit exceeded ({{GuestModeRateLimiter::$maxAttempts}}) try again in: <span x-text="count"></span></span>
+                            <div x-cloak x-data="countdown(@js(GuestModeRateLimiter::$decaySeconds))"
+                                 @counter-finished.window="$wire.set('rateLimitExceeded', false)">
+                                <span x-init="start" class="text-red-600">Max limit exceeded ({{GuestModeRateLimiter::$maxAttempts}}) try again in: <span
+                                        x-text="count"></span></span>
                             </div>
                         @endif
                     </div>
