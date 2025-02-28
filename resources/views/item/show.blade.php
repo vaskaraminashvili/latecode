@@ -52,6 +52,10 @@
                         </div>
                         <!-- About course END -->
 
+                        <!-- Comments START -->
+                        <x-comments::index :model="$item"/>
+                        <!-- Comments END -->
+
                     </div>
                 </div>
                 <!-- Main content END -->
