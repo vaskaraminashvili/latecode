@@ -3,7 +3,7 @@
     <ul class="list-inline mb-0">
         @foreach($tags as $tag)
             <li class="list-inline-item">
-                <x-tag :$tag/>
+                <x-tag counter="true" class="mb-2" :$tag/>
             </li>
         @endforeach
     </ul>

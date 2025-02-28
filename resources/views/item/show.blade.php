@@ -14,9 +14,14 @@
                             <h2>{{$item->title}}</h2>
                             <!-- Content -->
                             <ul class="list-inline mb-0">
+                                <li class="list-inline-item fw-light h6 me-3 mb-1 mb-sm-0">
+                                    <a class="d-flex justify-content-center align-items-center px-3 py-2 bg-opacity-15 rounded-3 tag-counter">
+                                        <p class="mb-0 fw-bold">Topics : </p>
+                                    </a>
+                                </li>
                                 @foreach($item->tags as $tag)
                                     <li class="list-inline-item fw-light h6 me-3 mb-1 mb-sm-0">
-                                        <x-tag class="small" :$tag/>
+                                        <x-tag class="small" :tag="$tag"/>
                                     </li>
 
                                 @endforeach
