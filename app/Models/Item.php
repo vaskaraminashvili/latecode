@@ -10,17 +10,19 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use LakM\Comments\Concerns\Commentable;
+use LakM\Comments\Contracts\CommentableContract;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 use Spatie\Translatable\HasTranslations;
 
-class Item extends Model
+class Item extends Model implements CommentableContract
 {
-    use SoftDeletes, HasFactory, HasTranslations, HasSlug;
+    use SoftDeletes, HasFactory, HasTranslations, HasSlug, Commentable;
 
+    public $guestMode = false; // Auth mode
+    public $commentLimit = 10;
     protected $translatable = ['title', 'description'];
-
-
     protected $fillable = [
         'title',
         'slug',

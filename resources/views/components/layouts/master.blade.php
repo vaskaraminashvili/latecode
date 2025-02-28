@@ -92,6 +92,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}">
     @vite(['resources/css/app.scss', 'resources/js/app.js'])
     @stack('styles')
+    @commentsStyles
 </head>
 
 <body>
@@ -201,7 +202,7 @@ Footer START -->
 <script src="{{asset('assets/vendor/sticky-js/sticky.min.js')}}"></script>
 <script src="{{asset('assets/vendor/plyr/plyr.js')}}"></script>
 <script src="{{asset('assets/vendor/purecounterjs/dist/purecounter_vanilla.js')}}"></script>
-
+@commentsScripts
 <!-- Template Functions -->
 <script src="{{asset('assets/js/functions.js')}}"></script>
 
