@@ -56,3 +56,16 @@ $extra-bold: 800;
     @include tag-btn($txt: $dark-grey, $bx: $blue, $bx-hover: $blue);
 }
 
+.tag-counter {
+    background-color: #e7ebed;
+
+}
+
+[data-bs-theme=dark] {
+    .tag-counter {
+        background-color: #232c3d;
+
+    }
+
+}
+

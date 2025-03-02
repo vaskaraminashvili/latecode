@@ -39,7 +39,180 @@ class DatabaseSeeder extends Seeder
             ],
             "status"      => true
         ]);
-        Tag::factory(20)->create();
+        $tags = [
+            [
+                'title'  => 'Laravel',
+                'slug'   => 'laravel',
+                'color'  => 'rgb(245, 104, 87)',
+                'status' => 1,
+            ],
+            [
+                'title'  => 'General',
+                'slug'   => 'general',
+                'color'  => 'rgb(78, 137, 218)',
+                'status' => 1,
+            ],
+            [
+                'title'  => 'Eloquent',
+                'slug'   => 'eloquent',
+                'color'  => 'rgb(9, 215, 193)',
+                'status' => 1,
+            ],
+            [
+                'title'  => 'Vue',
+                'slug'   => 'vue',
+                'color'  => 'rgb(58, 185, 129)',
+                'status' => 1,
+            ],
+            [
+                'title'  => 'Code Review',
+                'slug'   => 'code-review',
+                'color'  => 'rgb(140, 211, 98)',
+                'status' => 1,
+            ],
+            [
+                'title'  => 'Testing',
+                'slug'   => 'testing',
+                'color'  => 'rgb(218, 87, 87)',
+                'status' => 1,
+            ],
+            [
+                'title'  => 'Livewire',
+                'slug'   => 'livewire',
+                'color'  => 'rgb(251, 112, 169)',
+                'status' => 1,
+            ],
+            [
+                'title'  => 'JavaScript',
+                'slug'   => 'javascript',
+                'color'  => 'rgb(154, 212, 224)',
+                'status' => 1,
+            ],
+            [
+                'title'  => 'Requests',
+                'slug'   => 'requests',
+                'color'  => 'rgb(187, 130, 78)',
+                'status' => 1,
+            ],
+            [
+                'title'  => 'Servers',
+                'slug'   => 'servers',
+                'color'  => 'rgb(249, 169, 122)',
+                'status' => 1,
+            ],
+            [
+                'title'  => 'Feedback',
+                'slug'   => 'feedback',
+                'color'  => 'rgb(136, 173, 72)',
+                'status' => 1,
+            ],
+            [
+                'title'  => 'Forge',
+                'slug'   => 'forge',
+                'color'  => 'rgb(93, 179, 183)',
+                'status' => 1,
+            ],
+            [
+                'title'  => 'Mix',
+                'slug'   => 'mix',
+                'color'  => 'rgb(247, 201, 83)',
+                'status' => 1,
+            ],
+            [
+                'title'  => 'Tips',
+                'slug'   => 'tips',
+                'color'  => 'rgb(131, 126, 182)',
+                'status' => 1,
+            ],
+            [
+                'title'  => 'Nova',
+                'slug'   => 'nova',
+                'color'  => 'rgb(12, 248, 197)',
+                'status' => 1,
+            ],
+            [
+                'title'  => 'PHP',
+                'slug'   => 'php',
+                'color'  => 'rgb(79, 91, 147)',
+                'status' => 1,
+            ],
+            [
+                'title'  => 'Spark',
+                'slug'   => 'spark',
+                'color'  => 'rgb(102, 173, 211)',
+                'status' => 1,
+            ],
+            [
+                'title'  => 'Lumen',
+                'slug'   => 'lumen',
+                'color'  => 'rgb(249, 169, 122)',
+                'status' => 1,
+            ],
+            [
+                'title'  => 'Inertia',
+                'slug'   => 'inertia',
+                'color'  => 'rgb(159, 122, 234)',
+                'status' => 1,
+            ],
+            [
+                'title'  => 'Filament',
+                'slug'   => 'filament',
+                'color'  => 'rgb(253, 174, 75)',
+                'status' => 1,
+            ],
+            [
+                'title'  => 'Guides',
+                'slug'   => 'guides',
+                'color'  => 'rgb(213, 30, 34)',
+                'status' => 1,
+            ],
+            [
+                'title'  => 'Vite',
+                'slug'   => 'vite',
+                'color'  => 'rgb(116, 123, 255)',
+                'status' => 1,
+            ],
+            [
+                'title'  => 'Design',
+                'slug'   => 'design',
+                'color'  => 'rgb(245, 205, 87)',
+                'status' => 1,
+            ],
+            [
+                'title'  => 'Envoyer',
+                'slug'   => 'envoyer',
+                'color'  => 'rgb(245, 104, 87)',
+                'status' => 1,
+            ],
+            [
+                'title'  => 'Vapor',
+                'slug'   => 'vapor',
+                'color'  => 'rgb(37, 196, 242)',
+                'status' => 1,
+            ],
+            [
+                'title'  => 'React',
+                'slug'   => 'react',
+                'color'  => 'rgb(97, 218, 251)',
+                'status' => 1,
+            ],
+            [
+                'title'  => 'DevOps',
+                'slug'   => 'devops',
+                'color'  => 'rgb(136, 150, 175)',
+                'status' => 1,
+            ],
+            [
+                'title'  => 'Reverb',
+                'slug'   => 'reverb',
+                'color'  => 'rgb(131, 70, 49)',
+                'status' => 1,
+            ],
+        ];
+        foreach ($tags as $tag) {
+            Tag::create($tag);
+        }
+//        Tag::factory(20)->create();
 
         Item::factory()
             ->count(500)

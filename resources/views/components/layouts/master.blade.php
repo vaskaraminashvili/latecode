@@ -121,7 +121,7 @@ Footer START -->
                 <div class="col-lg-3">
                     <!-- logo -->
                     <a class="navbar-brand font-heading fs-1" href="{{route('home')}}">
-                        <img class="light-mode-item navbar-brand-item main-logo w-50"
+                        <img class="navbar-brand-item main-logo w-50"
                              src="{{asset('assets/images/logo.png')}}"
                              alt="logo">
                         Late <br> Code
