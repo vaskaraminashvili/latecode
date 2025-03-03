@@ -9,8 +9,7 @@
                    placeholder="Search course">
         </div>
     </div>
-    {{--    @if(Route::current()->getName() != 'tag.index')--}}
-    @if(true)
+    @if(Route::current()->getName() != 'tag.index')
         <!-- Select option -->
         <div class="col-sm-6 col-xl-3 mt-3 mt-lg-0">
             <select class="form-select form-select-sm js-choice" aria-label=".form-select-sm" name="tag">

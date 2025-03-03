@@ -1,29 +1,22 @@
 <x-layouts.master>
-    <!-- =======================
-Page Banner START -->
-    <section class="bg-dark align-items-center d-flex"
-             style="background:url(assets/images/pattern/04.png) no-repeat center center; background-size:cover;">
-        <!-- Main banner background image -->
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <!-- Title -->
-                    <h1 class="text-white">NEWS / SOULTUIONS / TIPS / PACKAGES list </h1>
-                    <!-- Breadcrumb -->
-                    <div class="d-flex">
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb breadcrumb-dark breadcrumb-dots mb-0">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Courses</li>
-                            </ol>
-                        </nav>
+    @if(Route::current()->getName() === 'tag.index')
+        @php
+            $tag = $items[0]->tags->where('slug', Route::current()->parameter('tag'))->first();
+            $tag_title = $tag->title;
+        @endphp
+            <!-- ======================= Page Banner START -->
+        <section class="align-items-center d-flex page_banner">
+            <!-- Main banner background image -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h1 class="" style="color: {{$tag->color}}">{{$tag_title}}</h1>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- =======================
-    Page Banner END -->
+        </section>
+        <!-- ======================= Page Banner END -->
+    @endif
 
     <!-- =======================
     Page content START -->

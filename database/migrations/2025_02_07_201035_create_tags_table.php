@@ -16,7 +16,10 @@ return new class extends Migration {
             $table->string('slug');
             $table->string('color')->nullable();
             $table->boolean('status');
+            $table->unsignedBigInteger('parent_id')->nullable();
             $table->timestamps();
+
+            $table->foreign('parent_id')->references('id')->on('tags')->onDelete('cascade');
         });
     }
 
