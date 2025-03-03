@@ -87,6 +87,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('assets/vendor/font-awesome/css/all.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/vendor/bootstrap-icons/bootstrap-icons.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/vendor/plyr/plyr.css')}}"/>
+    @stack('vendor_style')
 
     <!-- Theme CSS -->
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}">
@@ -202,9 +203,11 @@ Footer START -->
 <script src="{{asset('assets/vendor/sticky-js/sticky.min.js')}}"></script>
 <script src="{{asset('assets/vendor/plyr/plyr.js')}}"></script>
 <script src="{{asset('assets/vendor/purecounterjs/dist/purecounter_vanilla.js')}}"></script>
+@stack('vendor_script')
 @commentsScripts
 <!-- Template Functions -->
 <script src="{{asset('assets/js/functions.js')}}"></script>
+
 
 </body>
 

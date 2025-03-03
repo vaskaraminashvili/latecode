@@ -3,7 +3,6 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\TagController;
 use App\Http\Controllers\UserLoginController;
 use App\Http\Controllers\UserRegisterController;
 use Illuminate\Support\Facades\Route;
@@ -25,10 +24,9 @@ Route::prefix('login')->name('login.')->controller(UserLoginController::class)->
 Route::prefix('profile')->name('profile.')->controller(ProfileController::class)->group(function () {
     Route::get('/', 'index')->name('index');
 });
-Route::get('vocabulary', [ItemController::class, 'show'])->name('vocabulary');
+Route::get('vocabulary', [ItemController::class, 'show'])->name('vocabulary'); // es shesacvlelia
 
-Route::get('/tag/{tag}', [TagController::class, 'index'])->name('tag.index');
-Route::get('/items', [ItemController::class, 'index'])->name('item.index');
+Route::get('/items/{tag?}', [ItemController::class, 'index'])->name('item.index');
 Route::get('{slug}', [ItemController::class, 'show'])->name('item.show');
 
 

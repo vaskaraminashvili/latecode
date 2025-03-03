@@ -71,10 +71,11 @@ class DatabaseSeeder extends Seeder
         }
         $tags = [
             [
-                'title'  => 'Laravel',
-                'slug'   => 'laravel',
-                'color'  => 'rgb(245, 104, 87)',
-                'status' => 1,
+                'title'     => 'Laravel',
+                'slug'      => 'laravel',
+                'parent_id' => '16',
+                'color'     => 'rgb(245, 104, 87)',
+                'status'    => 1,
             ],
             [
                 'title'  => 'General',
@@ -185,10 +186,11 @@ class DatabaseSeeder extends Seeder
                 'status' => 1,
             ],
             [
-                'title'  => 'Filament',
-                'slug'   => 'filament',
-                'color'  => 'rgb(253, 174, 75)',
-                'status' => 1,
+                'title'     => 'Filament',
+                'slug'      => 'filament',
+                'parent_id' => '16',
+                'color'     => 'rgb(253, 174, 75)',
+                'status'    => 1,
             ],
             [
                 'title'  => 'Guides',
