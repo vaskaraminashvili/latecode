@@ -25,6 +25,7 @@ Route::prefix('login')->name('login.')->controller(UserLoginController::class)->
 Route::prefix('profile')->name('profile.')->controller(ProfileController::class)->group(function () {
     Route::get('/', 'index')->name('index');
 });
+Route::get('vocabulary', [ItemController::class, 'show'])->name('vocabulary');
 
 Route::get('/tag/{tag}', [TagController::class, 'index'])->name('tag.index');
 Route::get('/items', [ItemController::class, 'index'])->name('item.index');

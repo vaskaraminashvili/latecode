@@ -27,18 +27,48 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('password'),
         ]);
 
-        Category::create([
-            "title"       => [
-                "ka" => 'ამოხსნები',
-                "en" => 'solutions'
+        $categories = [
+            [
+                "title"       => [
+                    "ka" => 'ამოხსნები',
+                    "en" => 'solutions'
+                ],
+                "slug"        => str()->slug('solutions'),
+                "description" => [
+                    "ka" => "solutions category description",
+                    "en" => "solutions category description"
+                ],
+                "status"      => true
             ],
-            "slug"        => str()->slug('solutions'),
-            "description" => [
-                "ka" => "solutions category description",
-                "en" => "solutions category description"
+            [
+                "title"       => [
+                    "ka" => 'სწრაფი რჩევები',
+                    "en" => 'Quick tips'
+                ],
+                "slug"        => str()->slug('quick-tips'),
+                "description" => [
+                    "ka" => "solutions category description",
+                    "en" => "solutions category description"
+                ],
+                "status"      => true
             ],
-            "status"      => true
-        ]);
+            [
+                "title"       => [
+                    "ka" => 'კოდი მაგალითები',
+                    "en" => 'code-examples'
+                ],
+                "slug"        => str()->slug('code-examples'),
+                "description" => [
+                    "ka" => "solutions category description",
+                    "en" => "solutions category description"
+                ],
+                "status"      => true
+            ],
+        ];
+        foreach ($categories as $category) {
+            Category::create($category);
+
+        }
         $tags = [
             [
                 'title'  => 'Laravel',
