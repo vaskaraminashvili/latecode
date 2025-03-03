@@ -27,9 +27,12 @@
             <div class="row">
                 <!-- Main content START -->
                 <div class="col-lg-8 col-xl-9">
-                    <x-filter :route="route('item.index', ['tag' => Route::current()->parameter('tag')])"/>
-
-
+                    <x-filter
+                        :total="$items->total()"
+                        :firstItem="$items->firstItem()"
+                        :lastItem="$items->lastItem()"
+                        :route="route('item.index', ['tag' => Route::current()->parameter('tag')])"/>
+                    
                     <!-- Course Grid START -->
                     <div class="row g-4">
                         @foreach($items as $item)
@@ -111,7 +114,22 @@
                                 </div>
                                 <!-- Category END -->
 
-
+                                <!-- Language START -->
+                                <div class="card card-body shadow p-4 mb-4">
+                                    <!-- Title -->
+                                    <h4 class="mb-3">HERE WILL GO PARENT TAGS </h4>
+                                    <ul class="list-inline mb-0 g-3">
+                                        @foreach($parent_tags as $tag)
+                                            <!-- Item -->
+                                            <li class="list-inline-item mb-2">
+                                                <input type="checkbox" class="btn-check" id="btn-check-2">
+                                                <label class="btn btn-light btn-primary-soft-check"
+                                                       for="btn-check-2">{{$tag->title}}</label>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                                <!-- Language END -->
                                 <!-- Skill level START -->
                                 <div class="card card-body shadow p-4 mb-4">
                                     <!-- Title -->
@@ -136,22 +154,7 @@
                                 </div>
                                 <!-- Skill level END -->
 
-                                <!-- Language START -->
-                                <div class="card card-body shadow p-4 mb-4">
-                                    <!-- Title -->
-                                    <h4 class="mb-3">HERE WILL GO PARENT TAGS </h4>
-                                    <ul class="list-inline mb-0 g-3">
-                                        @foreach($parent_tags as $tag)
-                                            <!-- Item -->
-                                            <li class="list-inline-item mb-2">
-                                                <input type="checkbox" class="btn-check" id="btn-check-2">
-                                                <label class="btn btn-light btn-primary-soft-check"
-                                                       for="btn-check-2">{{$tag->title}}</label>
-                                            </li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                                <!-- Language END -->
+
                             </form><!-- Form End -->
                         </div>
 

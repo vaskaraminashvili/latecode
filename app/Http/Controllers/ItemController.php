@@ -23,13 +23,10 @@ class ItemController extends Controller
             })
             ->paginate(12)
             ->withQueryString();
-
-        $all_tags = Tag::query()
+        $parent_tags = Tag::whereHas('children')->get();
+        $tags = Tag::query()
             ->popular()
-            ->limit(20)
-            ->get();
-        $tags = $all_tags->where('parent_id', null);
-        $parent_tags = $all_tags->where('parent_id', '<>', null);
+            ->whereDoesntHave('children')->get();
         return view('item.index', compact('items', 'tags', 'parent_tags'));
     }
 

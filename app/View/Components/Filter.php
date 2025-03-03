@@ -15,7 +15,6 @@ class Filter extends Component
 
     public function render(): View
     {
-        $tst = 'sd';
         return view('components.filter', ['data' => request()->all()]);
     }
 }

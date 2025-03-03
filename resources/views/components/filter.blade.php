@@ -1,4 +1,4 @@
-@props(['route'])
+@props(['route' , 'total' , 'firstItem', 'lastItem'])
 <form class="row mb-4 align-items-center" method="get" action="{{ $route }}">
     <!-- Search option START -->
     <div class="row mb-4 align-items-center">
@@ -34,7 +34,7 @@
                 <i class="fas fa-sliders-h me-1"></i> Show filter
             </button>
             <!-- Advanced filter responsive toggler END -->
-            <p class="mb-0 text-end">Showing 1-7 of 32 result</p>
+            <p class="mb-0 text-end">Showing {{$firstItem}}-{{$lastItem}} of {{$total}} result</p>
         </div>
 
     </div>
