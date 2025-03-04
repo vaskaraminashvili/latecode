@@ -4,23 +4,38 @@ namespace App\Livewire\Components;
 
 use App\Models\Item;
 use App\Models\Tag;
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 use Livewire\Component;
+use Livewire\WithoutUrlPagination;
 use Livewire\WithPagination;
 
 class Items extends Component
 {
-    use WithPagination;
+    use WithPagination, WithoutUrlPagination;
 
+    public $filter = [
+        'search_term' => null,
+        'sort_by'     => null,
+        'tags'        => [],
+        'parent_tags' => [],
+        'skill_level' => [],
+    ];
     public $parent_tags;
     public $tags;
     public $current_tag;
 
+    public function updatingFilter()
+    {
+        $this->resetPage();
+    }
+
     public function render(Request $request)
     {
-        $current_tag = $request->tag;
 
+        $current_tag = $request->tag;
+        if ($current_tag) {
+            $this->filter['tags'][] = $current_tag;
+        }
         $this->parent_tags = Tag::whereHas('children')->get();
         $this->tags = Tag::query()
             ->popular()
@@ -30,16 +45,17 @@ class Items extends Component
             ->with([
                 'tags'
             ])
-            ->filter($request)
+            ->filter($this->filter)
             ->where('status', 1)
-            ->when($current_tag !== null, function (Builder $query) use ($current_tag) {
-                return $query->whereHas('tags', function (Builder $query) use ($current_tag) {
-                    $query->where('slug', $current_tag);
-                });
-            })
             ->paginate(12);
         return view('livewire.components.items', [
             'items' => $items
         ]);
     }
+//
+//    public function paginationView()
+//    {
+//        return 'vendor.pagination.custom';
+//    }
+
 }

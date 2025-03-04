@@ -32,11 +32,9 @@
                             <div class="border rounded p-2">
                                 <div class="input-group input-borderless">
                                     <input class="form-control me-1" type="search" name="search"
-                                           value="{{$data['search'] ?? ''}}"
+                                           wire:model.live.debounce.300ms="filter.search_term"
+                                           value="{{$filter['search_term'] ?? ''}}"
                                            placeholder="Find your course">
-                                    <button type="button" class="btn btn-primary mb-0 rounded z-index-1"><i
-                                            class="fas fa-search"></i>
-                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -44,11 +42,11 @@
                         <div class="col-xl-3 mt-3 mt-xl-0">
                             <div class="border rounded p-2 input-borderless">
                                 <select class="form-select form-select-sm js-choice border-0"
-                                        aria-label=".form-select-sm">
-                                    <option value="">Most Viewed</option>
-                                    <option>Recently search</option>
-                                    <option>Most popular</option>
-                                    <option>Top rated</option>
+                                        aria-label=".form-select-sm"
+                                        wire:model.change="filter.sort_by"
+                                >
+                                    <option value="newest">{{__('Newest')}}</option>
+                                    <option value="oldest">{{__('Oldest')}}</option>
                                 </select>
                             </div>
                         </div>
@@ -77,7 +75,7 @@
                     </div>
                     <!-- Course Grid END -->
                     <!-- Pagination START -->
-                    {{ $items->onEachSide(1)->links('vendor.pagination.custom') }}
+                    {{ $items->onEachSide(1)->links() }}
                     <!-- Pagination END -->
 
                 </div>
@@ -107,7 +105,9 @@
                                             <!-- Checkbox -->
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
+                                                    <input class="form-check-input" type="checkbox"
+                                                           value="{{$tag->slug}}"
+                                                           wire:model.change="filter.tags"
                                                            id="flexCheckDefault{{$tag->id}}">
                                                     <label class="form-check-label"
                                                            for="flexCheckDefault{{$tag->id}}">{{$tag->title}}</label>
@@ -126,7 +126,9 @@
                                                     <!-- Checkbox -->
                                                     <div class="d-flex justify-content-between align-items-center">
                                                         <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value=""
+                                                            <input class="form-check-input" type="checkbox"
+                                                                   value="{{$tag->slug}}"
+                                                                   wire:model.change="filter.tags"
                                                                    id="flexCheckDefault{{$tag->id}}">
                                                             <label class="form-check-label"
                                                                    for="flexCheckDefault{{$tag->id}}">{{$tag->title}}</label>
@@ -169,17 +171,15 @@
                                     <!-- Title -->
                                     <h4 class="mb-3">Skill level</h4>
                                     <ul class="list-inline mb-0">
-                                        <!-- Item -->
-                                        <li class="list-inline-item mb-2">
-                                            <input type="checkbox" class="btn-check" id="btn-check-12">
-                                            <label class="btn btn-light btn-primary-soft-check" for="btn-check-12">All
-                                                levels</label>
-                                        </li>
                                         @foreach(\App\Enums\DifficultyLevel::cases() as $level)
                                             <!-- Item -->
                                             <li class="list-inline-item mb-2">
-                                                <input type="checkbox" class="btn-check" id="btn-check-12">
-                                                <label class="btn btn-light btn-primary-soft-check" for="btn-check-12">
+                                                <input type="checkbox" class="btn-check" id="btn-check-{{$level->name}}"
+                                                       value="{{$level->value}}"
+                                                       wire:model.change="filter.skill_level"
+                                                >
+                                                <label class="btn btn-light btn-primary-soft-check"
+                                                       for="btn-check-{{$level->name}}">
                                                     {{ $level->name }}
                                                 </label>
                                             </li>
@@ -191,12 +191,6 @@
 
                             </form><!-- Form End -->
                         </div>
-
-                        <!-- Button -->
-                        <div class="d-grid p-2 p-lg-0 text-center">
-                            <button class="btn btn-primary mb-0">Filter Results</button>
-                        </div>
-
                     </div>
                     <!-- Responsive offcanvas body END -->
                 </div>
