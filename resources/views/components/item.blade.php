@@ -6,15 +6,18 @@
         <div class="card-body pb-0">
             <!-- Badge and favorite -->
             <div class="d-flex justify-content-between mb-2">
-                <a href="#" class="badge bg-purple bg-opacity-10 text-purple">{{$item->difficulty->label()}}</a>
-                <a href="#" class="h6 fw-light mb-0"><i class="far fa-heart"></i></a>
+                <a href="#"
+                   class="badge bg-{{$item->difficulty->getColor()}} bg-opacity-10 text-{{$item->difficulty->getColor()}}">{{$item->difficulty->label()}}</a>
+                {{--                <a href="#" class="h6 fw-light mb-0"><i class="far fa-heart"></i></a>--}}
             </div>
             <!-- Title -->
             <h5 class="card-title fw-normal">
                 <a href="{{route('item.show', ['slug' => $item->slug])}}">{{$item->title}}</a>
             </h5>
             <p class="mb-2 text-truncate-2">
-                {!! Str::limit($item->description, 60, preserveWords: true) !!}
+                <a class="text-white"
+                   href="{{route('item.show', ['slug' => $item->slug])}}">{!! Str::limit($item->description, 60, preserveWords: true) !!}</a>
+
             </p>
 
         </div>

@@ -90,7 +90,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
                                     data-bs-target="#offcanvasSidebar" aria-label="Close"></button>
                         </div>
-                        <div class="offcanvas-body p-3 p-lg-0">
+                        <div class="offcanvas-body p-3 p-lg-0" x-data="{ isOpen: @entangle('isCollapseOpen') }">
                             <form>
                                 <!-- Category START -->
                                 <div class="card card-body shadow p-4 mb-4">
@@ -117,34 +117,38 @@
                                             <!-- Checkbox -->
                                         @endforeach
                                         <!-- Collapse body -->
-                                        <div class="collapse multi-collapse" id="multiCollapseExample1">
-                                            <div class="card card-body p-0">
-                                                @foreach($tags as $tag)
-                                                    @if($loop->iteration < 10)
-                                                        @continue
-                                                    @endif
-                                                    <!-- Checkbox -->
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox"
-                                                                   value="{{$tag->slug}}"
-                                                                   wire:model.change="filter.tags"
-                                                                   id="flexCheckDefault{{$tag->id}}">
-                                                            <label class="form-check-label"
-                                                                   for="flexCheckDefault{{$tag->id}}">{{$tag->title}}</label>
+                                        <div>
+                                            <div x-show="isOpen" x-collapse>
+                                                <div class="card card-body p-0">
+                                                    @foreach($tags as $tag)
+                                                        @if($loop->iteration < 10)
+                                                            @continue
+                                                        @endif
+                                                        <!-- Checkbox -->
+                                                        <div class="d-flex justify-content-between align-items-center">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox"
+                                                                       value="{{$tag->slug}}"
+                                                                       wire:model.change="filter.tags"
+                                                                       id="flexCheckDefault{{$tag->id}}">
+                                                                <label class="form-check-label"
+                                                                       for="flexCheckDefault{{$tag->id}}">{{$tag->title}}</label>
+                                                            </div>
+                                                            <span class="small">({{$tag->items_count}})</span>
                                                         </div>
-                                                        <span class="small">({{$tag->items_count}})</span>
-                                                    </div>
-                                                    <!-- Checkbox -->
-                                                @endforeach
+                                                        <!-- Checkbox -->
+                                                    @endforeach
+                                                </div>
                                             </div>
                                         </div>
                                         <!-- Collapse button -->
-                                        <a class=" p-0 mb-0 mt-2 btn-more d-flex align-items-center"
-                                           data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
-                                           aria-expanded="false" aria-controls="multiCollapseExample1">
-                                            See <span class="see-more ms-1">more</span><span
-                                                class="see-less ms-1">less</span><i class="fas fa-angle-down ms-2"></i>
+                                        <a class="p-0 mb-0 mt-2 btn-more d-flex align-items-center"
+                                           wire:click.prevent="$toggle('isCollapseOpen')">
+                                            See
+                                            <span x-show="!isOpen" class="see-more ms-1">more</span>
+                                            <span x-show="isOpen" class="see-more ms-1">less</span>
+                                            <i class="fas fa-angle-down ms-2"
+                                               x-bind:class="{ 'rotate-180': isOpen }"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -158,7 +162,9 @@
                                         @foreach($parent_tags as $tag)
                                             <!-- Item -->
                                             <li class="list-inline-item mb-2">
-                                                <input type="checkbox" class="btn-check" id="btn-check-2">
+                                                <input type="checkbox" class="btn-check" id="btn-check-2"
+                                                       value="{{$tag->id}}"
+                                                       wire:model.change="filter.parent_tags">
                                                 <label class="btn btn-light btn-primary-soft-check"
                                                        for="btn-check-2">{{$tag->title}}</label>
                                             </li>

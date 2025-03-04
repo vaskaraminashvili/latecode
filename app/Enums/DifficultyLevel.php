@@ -17,4 +17,13 @@ enum DifficultyLevel: string
             self::EXPERT => 'Expert',
         };
     }
+
+    public function getColor(): string
+    {
+        return match ($this) {
+            self::BEGINNER => 'success',
+            self::INTERMEDIATE => 'info',
+            self::EXPERT => 'purple',
+        };
+    }
 }

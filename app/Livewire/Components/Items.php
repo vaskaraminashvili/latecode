@@ -23,10 +23,12 @@ class Items extends Component
     public $parent_tags;
     public $tags;
     public $current_tag;
+    public $isCollapseOpen = false;
 
     public function updatingFilter()
     {
         $this->resetPage();
+
     }
 
     public function render(Request $request)
@@ -41,6 +43,13 @@ class Items extends Component
             ->popular()
             ->whereDoesntHave('children')->get();
 
+        $collapsedTags = $this->tags->slice(10);
+        foreach ($collapsedTags as $tag) {
+            if (in_array($tag->slug, $this->filter['tags'])) {
+                $this->isCollapseOpen = true;
+                break;
+            }
+        }
         $items = Item::query()
             ->with([
                 'tags'

@@ -78,6 +78,13 @@ class Item extends Model implements CommentableContract
                 $query->whereIn('slug', $filter['tags']);
             });
         });
+
+        $query->when(!empty($filter['parent_tags']), function (Builder $query) use ($filter) {
+            return $query->whereHas('tags', function (Builder $query) use ($filter) {
+                $query->whereIn('parent_id', $filter['parent_tags']);
+            });
+        });
+
         $query->when(!empty($filter['skill_level']), function (Builder $query) use ($filter) {
             $query->where('difficulty', $filter['skill_level']);
         });
