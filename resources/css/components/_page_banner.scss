@@ -1,0 +1,13 @@
+@use "../utilities/variables" as v;
+
+.page_banner {
+    background-color: #e7ebed;
+}
+
+//from here start DARK theme specific
+[data-bs-theme=dark] {
+    .page_banner {
+        background-color: v.$dark-grey-color;
+    }
+
+}

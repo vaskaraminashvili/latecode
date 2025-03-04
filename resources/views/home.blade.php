@@ -3,7 +3,7 @@
 
     <!-- =======================
     Popular course START -->
-    <section>
+    <section class="pt-0">
         <div class="container">
             <!-- Title -->
             <div class="row mb-4">
