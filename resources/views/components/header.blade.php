@@ -31,6 +31,8 @@
                         <li class="nav-item"><a class="nav-link"
                                                 href="{{route('item.index')}}">{{__($category->title)}}</a></li>
                     @endforeach
+                    <li class="nav-item"><a class="nav-link"
+                                            href="{{route('vocabulary')}}">{{__('Vocabulary')}}</a></li>
                 </ul>
                 <!-- Nav Main menu END -->
 

@@ -14,7 +14,7 @@ class Counter extends Component
     {
         $this->tags = Tag::query()
             ->popular()
-            ->limit(4)
+            ->limit(6)
             ->get();
         return view('components.counter', ['tags' => $this->tags]);
     }

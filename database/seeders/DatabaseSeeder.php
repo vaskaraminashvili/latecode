@@ -27,18 +27,48 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('password'),
         ]);
 
-        Category::create([
-            "title"       => [
-                "ka" => 'ამოხსნები',
-                "en" => 'solutions'
+        $categories = [
+            [
+                "title"       => [
+                    "ka" => 'ამოხსნები',
+                    "en" => 'solutions'
+                ],
+                "slug"        => str()->slug('solutions'),
+                "description" => [
+                    "ka" => "solutions category description",
+                    "en" => "solutions category description"
+                ],
+                "status"      => true
             ],
-            "slug"        => str()->slug('solutions'),
-            "description" => [
-                "ka" => "solutions category description",
-                "en" => "solutions category description"
+            [
+                "title"       => [
+                    "ka" => 'სწრაფი რჩევები',
+                    "en" => 'Quick tips'
+                ],
+                "slug"        => str()->slug('quick-tips'),
+                "description" => [
+                    "ka" => "solutions category description",
+                    "en" => "solutions category description"
+                ],
+                "status"      => true
             ],
-            "status"      => true
-        ]);
+            [
+                "title"       => [
+                    "ka" => 'კოდი მაგალითები',
+                    "en" => 'code-examples'
+                ],
+                "slug"        => str()->slug('code-examples'),
+                "description" => [
+                    "ka" => "solutions category description",
+                    "en" => "solutions category description"
+                ],
+                "status"      => true
+            ],
+        ];
+        foreach ($categories as $category) {
+            Category::create($category);
+
+        }
         $tags = [
             [
                 'title'  => 'Laravel',
@@ -211,6 +241,15 @@ class DatabaseSeeder extends Seeder
         ];
         foreach ($tags as $tag) {
             Tag::create($tag);
+        }
+        $child_tags = Tag::query()
+            ->whereIn('title', ['Laravel', 'Filament'])
+            ->get();
+        $parent_php = Tag::query()
+            ->where('title', 'PHP')
+            ->first();
+        foreach ($child_tags as $tag) {
+            $parent_php->appendNode($tag);
         }
 //        Tag::factory(20)->create();
 

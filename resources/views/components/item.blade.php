@@ -1,15 +1,13 @@
 <!-- Card item START -->
-<div class="col-sm-6 col-lg-4 col-xl-3">
+<div class="col-sm-6 col-xl-4">
     <div class="card shadow h-100">
 
         <!-- Card body -->
         <div class="card-body pb-0">
             <!-- Badge and favorite -->
             <div class="d-flex justify-content-between mb-2">
-                <span class="h6 fw-light mb-0">
-                    <i class="fas fa-signal text-success me-1"></i>
-                    {{$item->difficulty->label()}}
-                </span>
+                <a href="#" class="badge bg-purple bg-opacity-10 text-purple">{{$item->difficulty->label()}}</a>
+                <a href="#" class="h6 fw-light mb-0"><i class="far fa-heart"></i></a>
             </div>
             <!-- Title -->
             <h5 class="card-title fw-normal">

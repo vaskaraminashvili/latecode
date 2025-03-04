@@ -1,0 +1,21 @@
+@use "../utilities/variables" as v;
+
+.pagination-primary-soft .page-item.active .page-link {
+    background-color: v.$dark-grey-color;
+}
+
+
+//from here start DARK theme specific
+[data-bs-theme=dark] {
+    .pagination-primary-soft .page-item.active .page-link {
+        background-color: v.$dark-grey-color-5;
+    }
+
+    .pagination-primary-soft .page-link {
+        background-color: v.$dark-grey-color;
+    }
+
+    .pagination-primary-soft .page-link {
+        color: #b12739;
+    }
+}
