@@ -1,6 +1,6 @@
-@props(['counter' => false, 'tag' => [], 'class' => 't'])
+@props(['counter' => false, 'tag' => [], 'class' => 'px-3 py-2 small'])
 <a
-    class="{{ $class }} d-flex justify-content-center align-items-center px-3 py-2 bg-opacity-15 rounded-3 tag-counter "
+    class="d-flex justify-content-center align-items-center  bg-opacity-15 rounded-3 tag-counter {{ $class }} "
     href="{{route('item.index' , ['tag' => $tag->slug])}}"
 >
     <p class="mb-0 fw-bold" style="color: {{$tag->color}}">{{$tag->title}}</p>

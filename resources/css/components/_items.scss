@@ -1,0 +1,10 @@
+[data-bs-theme=dark] {
+    .card-link {
+        color: #f2f2f2;
+    }
+
+}
+
+.card-link {
+    color: var(--bs-card-title-color);
+}

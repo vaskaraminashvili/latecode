@@ -21,7 +21,7 @@
                                 </li>
                                 @foreach($item->tags as $tag)
                                     <li class="list-inline-item fw-light h6 me-3 mb-1 mb-sm-0">
-                                        <x-tag class="small" :tag="$tag"/>
+                                        <x-tag :tag="$tag"/>
                                     </li>
 
                                 @endforeach

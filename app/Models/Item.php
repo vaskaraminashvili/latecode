@@ -52,7 +52,9 @@ class Item extends Model implements CommentableContract
     {
         return Attribute::make(
             get: function () {
-                return Str::of($this->description)->wordCount();
+                $words = preg_split('/\s+/u', strip_tags($this->description), -1, PREG_SPLIT_NO_EMPTY);
+                $wordCount = count($words);
+                return $wordCount;
             }
         );
     }
