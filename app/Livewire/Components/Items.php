@@ -61,10 +61,5 @@ class Items extends Component
             'items' => $items
         ]);
     }
-//
-//    public function paginationView()
-//    {
-//        return 'vendor.pagination.custom';
-//    }
 
 }
