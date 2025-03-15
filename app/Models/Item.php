@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use LakM\Comments\Concerns\Commentable;
 use LakM\Comments\Contracts\CommentableContract;
@@ -68,36 +67,40 @@ class Item extends Model implements CommentableContract
         );
     }
 
-    public function scopeFilter(Builder $query, Request $request)
+    public function scopeFilter(Builder $query, $filter)
     {
-        if ($request->has('search')) {
-            $query->where('title', 'like', '%' . $request->input('search') . '%');
-        }
+        $query->when(!empty($filter['search_term']), function ($query) use ($filter) {
+            $query->where('title', 'like', '%' . $filter['search_term'] . '%');
+        });
 
-        if ($request->has('tag')) {
-            $query->whereHas('tags', function ($query) use ($request) {
-                $query->where('slug', $request->input('tag'));
+        $query->when(!empty($filter['tags']), function (Builder $query) use ($filter) {
+            return $query->whereHas('tags', function (Builder $query) use ($filter) {
+                $query->whereIn('slug', $filter['tags']);
             });
-        }
+        });
 
-        if ($request->has('sortBy')) {
-            switch ($request->input('sortBy')) {
+        $query->when(!empty($filter['parent_tags']), function (Builder $query) use ($filter) {
+            return $query->whereHas('tags', function (Builder $query) use ($filter) {
+                $query->whereIn('parent_id', $filter['parent_tags']);
+            });
+        });
+
+        $query->when(!empty($filter['skill_level']), function (Builder $query) use ($filter) {
+            $query->where('difficulty', $filter['skill_level']);
+        });
+
+        $query->when(!empty($filter['sort_by']), function ($query) use ($filter) {
+            switch ($filter['sort_by']) {
                 case 'latest':
                     $query->orderBy('created_at', 'desc');
                     break;
                 case 'oldest':
-                    $query->orderBy('created_at', 'asc');
-                    break;
-                case 'name_asc':
-                    $query->orderBy('name', 'asc');
-                    break;
-                case 'name_desc':
-                    $query->orderBy('name', 'desc');
+                    $query->orderBy('created_at');
                     break;
                 default:
                     break;
             }
-        }
+        });
 
         return $query;
     }

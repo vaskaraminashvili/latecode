@@ -26,7 +26,7 @@ Route::prefix('profile')->name('profile.')->controller(ProfileController::class)
 });
 Route::get('vocabulary', [ItemController::class, 'show'])->name('vocabulary'); // es shesacvlelia
 
-Route::get('/items/{tag?}', [ItemController::class, 'index'])->name('item.index');
+Route::get('/items', [ItemController::class, 'index'])->name('item.index');
 Route::get('{slug}', [ItemController::class, 'show'])->name('item.show');
 
 
