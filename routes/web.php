@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GlossaryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\ProfileController;
@@ -24,7 +25,7 @@ Route::prefix('login')->name('login.')->controller(UserLoginController::class)->
 Route::prefix('profile')->name('profile.')->controller(ProfileController::class)->group(function () {
     Route::get('/', 'index')->name('index');
 });
-Route::get('vocabulary', [ItemController::class, 'show'])->name('vocabulary'); // es shesacvlelia
+Route::get('glossary', [GlossaryController::class, 'index'])->name('glossary');
 
 Route::get('/items', [ItemController::class, 'index'])->name('item.index');
 Route::get('{slug}', [ItemController::class, 'show'])->name('item.show');
