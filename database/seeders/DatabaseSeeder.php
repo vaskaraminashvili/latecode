@@ -5,7 +5,6 @@ namespace Database\Seeders;
 use App\Enums\UserType;
 use App\Models\Category;
 use App\Models\CodeLanguage;
-use App\Models\Item;
 use App\Models\Tag;
 use App\Models\User;
 use Illuminate\Database\Seeder;
@@ -253,15 +252,15 @@ class DatabaseSeeder extends Seeder
         }
 //        Tag::factory(20)->create();
 
-        Item::factory()
-            ->count(500)
-            ->create()
-            ->each(function ($item) {
-                $randomTags = Tag::all()->random(3);
-
-                // Attach the random tags to the item
-                $item->tags()->attach($randomTags);
-            });
+//        Item::factory()
+//            ->count(500)
+//            ->create()
+//            ->each(function ($item) {
+//                $randomTags = Tag::all()->random(3);
+//
+//                // Attach the random tags to the item
+//                $item->tags()->attach($randomTags);
+//            });
 
         $languages = [
             '1C',
