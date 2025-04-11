@@ -14,7 +14,6 @@ class Vocabulary extends Model
     protected $translatable = [
         'title',
         'definition',
-        'example',
         'notes',
     ];
 

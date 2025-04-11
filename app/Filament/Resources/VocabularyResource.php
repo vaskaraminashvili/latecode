@@ -3,8 +3,11 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\VocabularyResource\Pages;
+use App\Models\CodeLanguage;
 use App\Models\Vocabulary;
+use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Forms\Form;
@@ -19,8 +22,10 @@ use Filament\Tables\Actions\ForceDeleteBulkAction;
 use Filament\Tables\Actions\RestoreAction;
 use Filament\Tables\Actions\RestoreBulkAction;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Filters\TrashedFilter;
 use Filament\Tables\Table;
+use Wiebenieuwenhuis\FilamentCodeEditor\Components\CodeEditor;
 
 class VocabularyResource extends Resource
 {
@@ -41,13 +46,26 @@ class VocabularyResource extends Resource
                     ->required(),
                 RichEditor::make('definition')
                     ->columnSpanFull(),
-                RichEditor::make('example')
-                    ->columnSpanFull(),
+                Repeater::make('example')
+                    ->label('კოდის ბლოკი')
+                    ->schema([
+                        Select::make('language')
+                            ->options(
+                                CodeLanguage::where('status', 1)
+                                    ->pluck('name', 'name')
+                            )
+                            ->searchable()
+                            ->preload(),
+                        CodeEditor::make('content'),
+                    ])
+                    ->columnSpanFull()
+                    ->collapsible(),
                 RichEditor::make('notes')
                     ->columnSpanFull(),
                 Toggle::make('status')
             ]);
     }
+
 
     public static function table(Table $table): Table
     {
@@ -61,13 +79,7 @@ class VocabularyResource extends Resource
                     ->searchable()
                     ->sortable(),
 
-                TextColumn::make('definition'),
-
-                TextColumn::make('example'),
-
-                TextColumn::make('notes'),
-
-                TextColumn::make('status'),
+                ToggleColumn::make('status'),
             ])
             ->filters([
                 TrashedFilter::make(),
