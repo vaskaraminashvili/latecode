@@ -1,3 +1,21 @@
+.glossary {
+    &__result {
+        &__item {
+
+        }
+    }
+}
+
+.card {
+    &__content {
+        padding: 10px;
+    }
+}
+
+.inactive {
+    display: none;
+}
+
 [data-bs-theme=dark] {
     .site-content {
         background-color: var(--bs-body-bg);
@@ -31,6 +49,7 @@
                 }
             }
         }
+
     }
 
     .glossary {
@@ -41,6 +60,16 @@
 
                     &:hover, &:focus {
                         color: #FFF;
+                    }
+                }
+
+                &.active {
+                    @extend .glossary__nav__item--active;
+                }
+
+                &--active {
+                    .card {
+                        background-color: lighten(#343a40, 15%);
                     }
                 }
             }

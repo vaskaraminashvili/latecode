@@ -6,14 +6,17 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}">
     @vite(['resources/css/app.scss', 'resources/js/app.js'])
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}">
 </head>
 <body>
 <main class="site-content" id="main">
     <div class="container py-4">
         <nav class="glossary__nav mb-4">
             <ul class="list-inline d-flex">
+                <li class="glossary__nav__item me-2">
+                    <a class="card card__content" data-nav="all" data-toggle="glossary" href="#">All</a>
+                </li>
                 <li class="glossary__nav__item me-2 active">
                     <a class="card card__content" data-nav="#" data-toggle="glossary" href="#">#</a>
                 </li>
