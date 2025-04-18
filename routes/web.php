@@ -27,7 +27,7 @@ Route::prefix('profile')->name('profile.')->controller(ProfileController::class)
 });
 Route::get('glossary', [GlossaryController::class, 'index'])->name('glossary');
 
-Route::get('/items', [ItemController::class, 'index'])->name('item.index');
+Route::get('/items/{category?}', [ItemController::class, 'index'])->name('item.index');
 Route::get('{slug}', [ItemController::class, 'show'])->name('item.show');
 
 

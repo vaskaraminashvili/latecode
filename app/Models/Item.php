@@ -36,6 +36,12 @@ class Item extends Model implements CommentableContract
         return 'slug'; // Use the 'slug' column for route binding
     }
 
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
     public function tags()
     {
         return $this->belongsToMany(Tag::class);
@@ -89,6 +95,12 @@ class Item extends Model implements CommentableContract
 
         $query->when(!empty($filter['skill_level']), function (Builder $query) use ($filter) {
             $query->where('difficulty', $filter['skill_level']);
+        });
+
+        $query->when(!empty($filter['category']), function (Builder $query) use ($filter) {
+            $query->whereHas('category', function ($q) use ($filter) {
+                $q->where('title->en', 'like', '%' . $filter['category'] . '%');
+            });
         });
 
         $query->when(!empty($filter['sort_by']), function ($query) use ($filter) {

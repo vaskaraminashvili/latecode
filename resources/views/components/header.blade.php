@@ -28,8 +28,13 @@
                 <!-- Nav Main menu START -->
                 <ul class="navbar-nav navbar-nav-scroll mx-auto">
                     @foreach($categories as $category)
-                        <li class="nav-item"><a class="nav-link"
-                                                href="{{route('item.index')}}">{{__($category->title)}}</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               href="{{route('item.index', ['category' => $category->getTranslation('title', 'en')])}}">
+                                {{__($category->title)}}
+
+                            </a>
+                        </li>
                     @endforeach
                     <li class="nav-item"><a class="nav-link"
                                             href="{{route('glossary')}}">{{__('სარჩევი')}}</a></li>
